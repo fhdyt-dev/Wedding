@@ -1,32 +1,29 @@
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<style>
 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATbt8-twgKGsQZ7EksugTLb9aQDNLvVO8&callback=initMap"
-type="text/javascript"></script>
-  <style type="text/css">
-    /* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
-    #map {
-      height: 100%;
-    }
-
-    /* Optional: Makes the sample page fill the window. */
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-  <script>
-    let map;
-
-    function initMap() {
-      map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
-      });
-    }
-  </script>
+#map {
+  width: 100%;
+  height: 100%;
+  z-index:100;
+}
+#mapSearchContainer{
+  position:fixed;
+  top:20px;
+  right: 40px;
+  height:30px;
+  width:180px;
+  z-index:110;
+  font-size:10pt;
+  color:#5d5d5d;
+  border:solid 1px #bbb;
+  background-color:#f8f8f8;
+}
+.pointer{
+  position:absolute;
+  top:86px;
+  left:60px;
+  z-index:99999;
+}
+</style>
 
 <?php if(!empty($tersimpan))
 {
@@ -103,6 +100,7 @@ else{
                 <div class="form-group">
                     <label for="exampleInputEmail1">Lokasi</label>
                     <div id="map"></div>
+                    <div class='pointer'><< Klik Untuk Mencari</div>
                 </div>
                 <div class="form-group">
                   <div class="form-group clearfix">
@@ -167,3 +165,34 @@ else{
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
+  <script type="text/javascript">
+  // Initialize the map and assign it to a variable for later use
+var map = L.map('map', {
+  // Set latitude and longitude of the map center (required)
+  center: [37.7833, -122.4167],
+  // Set the initial zoom level, values 0-18, where 0 is most zoomed-out (required)
+  zoom: 10
+});
+
+L.control.scale().addTo(map);
+
+// Create a Tile Layer and add it to the map
+//var tiles = new L.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png').addTo(map);
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var searchControl = new L.esri.Controls.Geosearch().addTo(map);
+
+var results = new L.LayerGroup().addTo(map);
+
+searchControl.on('results', function(data){
+  results.clearLayers();
+  for (var i = data.results.length - 1; i >= 0; i--) {
+    results.addLayer(L.marker(data.results[i].latlng));
+  }
+});
+
+setTimeout(function(){$('.pointer').fadeOut('slow');},3400);
+  </script>
