@@ -9,7 +9,7 @@
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
   <meta property="og:title" content="?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> & <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?>">
-  <meta property="og:description" content="Offering tour packages for individuals or groups.">
+  <meta property="og:description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami yang begitu indah dalam resepsi pernikahan Kami">
   <meta property="og:image" content="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
 
   <!-- Favicons -->
