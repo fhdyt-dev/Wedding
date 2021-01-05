@@ -31,24 +31,32 @@
   $acara1_status = $tersimpan[0]->KONF_JADWAL_ACARA1_STATUS;
   $acara1_judul = $tersimpan[0]->KONF_JADWAL_ACARA1_JUDUL;
   $acara1_tanggal = $tersimpan[0]->KONF_JADWAL_ACARA1_TANGGAL;
+  $acara1_jam = $tersimpan[0]->KONF_JADWAL_ACARA1_JAM;
   $acara1_alamat = $tersimpan[0]->KONF_JADWAL_ACARA1_ALAMAT;
+  $kordinat_acara1 = $tersimpan[0]->KONF_JADWAL_ACARA1_MAP;
 
   $acara2_status = $tersimpan[0]->KONF_JADWAL_ACARA2_STATUS;
-  $acara2_judul =$tersimpan[0]->KONF_JADWAL_ACARA2_JUDUL;
-  $acara2_tanggal =$tersimpan[0]->KONF_JADWAL_ACARA2_TANGGAL;
+  $acara2_judul = $tersimpan[0]->KONF_JADWAL_ACARA2_JUDUL;
+  $acara2_tanggal = $tersimpan[0]->KONF_JADWAL_ACARA2_TANGGAL;
+  $acara2_jam = $tersimpan[0]->KONF_JADWAL_ACARA2_JAM;
   $acara2_alamat = $tersimpan[0]->KONF_JADWAL_ACARA2_ALAMAT;
+  $kordinat_acara2 = $tersimpan[0]->KONF_JADWAL_ACARA2_MAP;
   $acaraintro = $tersimpan[0]->KONF_JADWAL_INTRO;
 }
 else{
   $acara1_status = "";
   $acara1_judul = "";
   $acara1_tanggal = "";
+  $acara1_jam = "";
   $acara1_alamat = "";
+  $kordinat_acara1 = "";
 
   $acara2_status = "";
   $acara2_judul = "";
   $acara2_tanggal = "";
+  $acara2_jam = "";
   $acara2_alamat = "";
+  $kordinat_acara2 = "";
   $acaraintro = "";
 }
  ?>
@@ -94,13 +102,17 @@ else{
                     <input type="date" class="form-control" name="tanggal_acara1" value="<?php echo $acara1_tanggal; ?>">
                 </div>
                 <div class="form-group">
+                    <label for="exampleInputEmail1">Jam Acara</label>
+                    <input type="time" class="form-control" name="jam_acara1" value="<?php echo $acara1_jam; ?>">
+                </div>
+                <div class="form-group">
                     <label for="exampleInputEmail1">Alamat</label>
                     <textarea class="form-control" rows="3" name="alamat_acara1"><?php echo $acara1_alamat; ?></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Lokasi</label>
-                    <div id="map"></div>
-                    <div class='pointer'><< Klik Untuk Mencari</div>
+                    <label for="exampleInputEmail1">Kordinat Google Map</label>
+                    <input type="text" class="form-control" name="kordinat_acara1" value="<?php echo $kordinat_acara1; ?>" autocomplete="off">
+                    <small class="text-muted">Cara mendapatkan kordinat lokasi acara anda <i class="far fa-question-circle"></i></small>
                 </div>
                 <div class="form-group">
                   <div class="form-group clearfix">
@@ -138,8 +150,17 @@ else{
                     <input type="date" class="form-control" name="tanggal_acara2" value="<?php echo $acara2_tanggal; ?>">
                 </div>
                 <div class="form-group">
+                    <label for="exampleInputEmail1">Jam Acara</label>
+                    <input type="time" class="form-control" name="jam_acara2" value="<?php echo $acara2_jam; ?>">
+                </div>
+                <div class="form-group">
                     <label for="exampleInputEmail1">Alamat</label>
                     <textarea class="form-control" rows="3" name="alamat_acara2"><?php echo $acara2_alamat; ?></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Kordinat Google Map</label>
+                    <input type="text" class="form-control" name="kordinat_acara2" value="<?php echo $kordinat_acara2; ?>" autocomplete="off">
+                    <small class="text-muted">Cara mendapatkan kordinat lokasi acara anda <i class="far fa-question-circle"></i></small>
                 </div>
                 <div class="form-group">
                   <div class="form-group clearfix">
@@ -165,34 +186,3 @@ else{
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
-  <script type="text/javascript">
-  // Initialize the map and assign it to a variable for later use
-var map = L.map('map', {
-  // Set latitude and longitude of the map center (required)
-  center: [37.7833, -122.4167],
-  // Set the initial zoom level, values 0-18, where 0 is most zoomed-out (required)
-  zoom: 10
-});
-
-L.control.scale().addTo(map);
-
-// Create a Tile Layer and add it to the map
-//var tiles = new L.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png').addTo(map);
-L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-var searchControl = new L.esri.Controls.Geosearch().addTo(map);
-
-var results = new L.LayerGroup().addTo(map);
-
-searchControl.on('results', function(data){
-  results.clearLayers();
-  for (var i = data.results.length - 1; i >= 0; i--) {
-    results.addLayer(L.marker(data.results[i].latlng));
-  }
-});
-
-setTimeout(function(){$('.pointer').fadeOut('slow');},3400);
-  </script>

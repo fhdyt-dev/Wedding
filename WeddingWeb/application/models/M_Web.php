@@ -36,6 +36,7 @@ class M_Web extends CI_Model
 			'RSVP_NAMA' => $this->input->post('nama'),
 			'RSVP_KEHADIRAN' => $this->input->post('kehadiran'),
 			'RSVP_PESAN' => $this->input->post('pesan'),
+			'RSVP_STATUS' => "hide",
 		);
 
 	$result=$this->db->insert('RSVP',$data);

@@ -57,6 +57,7 @@ else{
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nama Panggilan</label>
                     <input type="text" class="form-control" name="nama_pria" value="<?php echo $nama_pria; ?>" autocomplete="off">
+                    <small class="text-muted">Nama Panggilan akan digunakan pada Intro Website</small>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Keterangan</label>
@@ -66,6 +67,7 @@ else{
                     <label for="exampleInputEmail1">Foto</label>
                     <input type="hidden" name="foto_pria" class="foto_pria" value="<?php echo $foto_pria; ?>">
                     <button type="button" nama_input="foto_pria" class="btn btn-primary btn-block btn_upload mb-2">Pilih Gambar</button>
+                    <small class="text-muted">Disarankan menggunkana foto dengan ukuran 500px X 500px</small>
                     <img height="50" src="<?php echo base_url(); ?>uploads/cover/<?php echo $foto_pria; ?>" class="img-fluid foto_pria" alt="foto tidak ada">
                 </div>
               </div>
@@ -88,6 +90,7 @@ else{
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nama Panggilan</label>
                     <input type="text" class="form-control" name="nama_wanita" value="<?php echo $nama_wanita; ?>" autocomplete="off">
+                    <small class="text-muted">Nama Panggilan akan digunakan pada Intro Website</small>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Keterangan</label>
@@ -97,6 +100,7 @@ else{
                     <label for="exampleInputEmail1">Foto</label>
                     <input type="hidden" name="foto_wanita" class="foto_wanita" value="<?php echo $foto_wanita; ?>">
                     <button type="button" nama_input="foto_wanita" class="btn btn-primary btn-block btn_upload mb-2">Pilih Gambar</button>
+                    <small class="text-muted">Disarankan menggunkana foto dengan ukuran 500px X 500px</small>
                     <img height="50" src="<?php echo base_url(); ?>uploads/cover/<?php echo $foto_wanita; ?>" class="img-fluid foto_wanita" alt="foto tidak ada">
                 </div>
               </div>

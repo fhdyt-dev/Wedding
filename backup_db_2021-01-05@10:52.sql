@@ -79,7 +79,7 @@ CREATE TABLE `KONF_INFORMASI` (
   `KONF_INFORMASI_JUDUL` varchar(100) NOT NULL DEFAULT '0',
   `KONF_INFORMASI_ISI` text NOT NULL,
   PRIMARY KEY (`KONF_INFORMASI_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -88,7 +88,7 @@ CREATE TABLE `KONF_INFORMASI` (
 
 LOCK TABLES `KONF_INFORMASI` WRITE;
 /*!40000 ALTER TABLE `KONF_INFORMASI` DISABLE KEYS */;
-INSERT INTO `KONF_INFORMASI` VALUES (16,'localhost','on','PEMBUKAAN','                                                                                                                                                                                                                                                                    <b style=\"\"><font color=\"#ffffff\"><span style=\"margin: 0px; padding: 0px;\" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\">Lorem Ipsum</span><span style=\"\" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></font></b>                                                                                                                                                                                                                                          ');
+INSERT INTO `KONF_INFORMASI` VALUES (17,'localhost',NULL,'PEMBUKAAN','                                                                                                                                                                                                                                                                                        <b style=\"\"><font color=\"#ffffff\"><span style=\"margin: 0px; padding: 0px;\" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\">Lorem Ipsum</span><span style=\"\" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></font></b>                                                                                                                                                                                                                                                            ');
 /*!40000 ALTER TABLE `KONF_INFORMASI` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -105,16 +105,18 @@ CREATE TABLE `KONF_JADWAL` (
   `KONF_JADWAL_ACARA1_STATUS` varchar(50) DEFAULT NULL,
   `KONF_JADWAL_ACARA1_JUDUL` varchar(50) NOT NULL,
   `KONF_JADWAL_ACARA1_TANGGAL` date NOT NULL,
+  `KONF_JADWAL_ACARA1_JAM` time NOT NULL,
   `KONF_JADWAL_ACARA1_ALAMAT` text NOT NULL,
   `KONF_JADWAL_ACARA1_MAP` text NOT NULL,
   `KONF_JADWAL_ACARA2_STATUS` varchar(50) DEFAULT NULL,
   `KONF_JADWAL_ACARA2_JUDUL` varchar(50) NOT NULL,
   `KONF_JADWAL_ACARA2_TANGGAL` date NOT NULL,
+  `KONF_JADWAL_ACARA2_JAM` time NOT NULL,
   `KONF_JADWAL_ACARA2_ALAMAT` text NOT NULL,
   `KONF_JADWAL_ACARA2_MAP` text NOT NULL,
   `KONF_JADWAL_INTRO` varchar(50) NOT NULL,
   PRIMARY KEY (`KONF_JADWAL_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,7 +125,7 @@ CREATE TABLE `KONF_JADWAL` (
 
 LOCK TABLES `KONF_JADWAL` WRITE;
 /*!40000 ALTER TABLE `KONF_JADWAL` DISABLE KEYS */;
-INSERT INTO `KONF_JADWAL` VALUES (19,'localhost','on','Akad Nikah','2020-12-01','Alamat 1Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...','','on','Resepsi','2020-12-02','Alamat 2 Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...','','acara1');
+INSERT INTO `KONF_JADWAL` VALUES (28,'localhost','on','Akad Nikah','2020-12-01','08:00:00','Alamat 1Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...','0.487627,101.394762','on','Resepsi','2020-12-02','12:00:00','Alamat 2 Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...','0.474664,101.380175','acara2');
 /*!40000 ALTER TABLE `KONF_JADWAL` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,7 +144,7 @@ CREATE TABLE `KONF_PEMBUKAAN` (
   `KONF_PEMBUKAAN_SAMPUL` varchar(50) NOT NULL,
   `KONF_PEMBUKAAN_GAMBAR` text NOT NULL,
   PRIMARY KEY (`KONF_PEMBUKAAN_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,7 +153,7 @@ CREATE TABLE `KONF_PEMBUKAAN` (
 
 LOCK TABLES `KONF_PEMBUKAAN` WRITE;
 /*!40000 ALTER TABLE `KONF_PEMBUKAAN` DISABLE KEYS */;
-INSERT INTO `KONF_PEMBUKAAN` VALUES (14,'localhost','Bismillah','                                                                                                                                                                                                                                                                    <span style=\"font-weight: bolder;\"><font color=\"#ffffff\"><span open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\" style=\"margin: 0px; padding: 0px;\">Lorem Ipsum</span><span open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></font></span>                                                                                                                                                                                                                                                                                ','tema','ebc31d486420ef43d1bf9fe3e748b3711ca76ac9.jpg');
+INSERT INTO `KONF_PEMBUKAAN` VALUES (16,'localhost','Bismillah','                                                                                                                                                                                                                                                                                                            <span style=\"font-weight: bolder;\"><font color=\"#ffffff\"><span open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\" style=\"margin: 0px; padding: 0px;\">Lorem Ipsum</span><span open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></font></span>                                                                                                                                                                                                                                                                                                                    ','gambar','33e628a9d1fcea14c3acc367a5b300d638095935.jpg');
 /*!40000 ALTER TABLE `KONF_PEMBUKAAN` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -200,7 +202,7 @@ CREATE TABLE `KONF_VIDEO` (
   `KONF_VIDEO_STATUS` varchar(50) DEFAULT NULL,
   `KONF_VIDEO_LINK` varchar(100) NOT NULL DEFAULT '0',
   PRIMARY KEY (`KONF_VIDEO_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -209,7 +211,7 @@ CREATE TABLE `KONF_VIDEO` (
 
 LOCK TABLES `KONF_VIDEO` WRITE;
 /*!40000 ALTER TABLE `KONF_VIDEO` DISABLE KEYS */;
-INSERT INTO `KONF_VIDEO` VALUES (3,'localhost',NULL,'https://www.youtube.com/watch?v=tUWLIKzeOkc');
+INSERT INTO `KONF_VIDEO` VALUES (4,'localhost','on','https://www.youtube.com/watch?v=tUWLIKzeOkc');
 /*!40000 ALTER TABLE `KONF_VIDEO` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -255,8 +257,9 @@ CREATE TABLE `RSVP` (
   `RSVP_NAMA` varchar(50) NOT NULL DEFAULT '0',
   `RSVP_KEHADIRAN` varchar(50) NOT NULL DEFAULT '0',
   `RSVP_PESAN` varchar(50) NOT NULL DEFAULT '0',
+  `RSVP_STATUS` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`RSVP_INDEX`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -265,6 +268,7 @@ CREATE TABLE `RSVP` (
 
 LOCK TABLES `RSVP` WRITE;
 /*!40000 ALTER TABLE `RSVP` DISABLE KEYS */;
+INSERT INTO `RSVP` VALUES (1,'localhost','test','tidak','adfadf','0'),(2,'localhost','Fikri','hadir','Insyaallah hadir','0');
 /*!40000 ALTER TABLE `RSVP` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -284,7 +288,7 @@ CREATE TABLE `USER` (
   `USER_PASSWORD` text NOT NULL,
   `USER_STATUS` varchar(50) NOT NULL,
   PRIMARY KEY (`USER_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -293,7 +297,7 @@ CREATE TABLE `USER` (
 
 LOCK TABLES `USER` WRITE;
 /*!40000 ALTER TABLE `USER` DISABLE KEYS */;
-INSERT INTO `USER` VALUES (1,'localhost','fikri','fhidayat2206@gmail.com','fhdyt','$2y$10$SAtu.OV/wM7e.Wof7rdWkepK91aR6hbKmZbjLO2OqWsmy.WVptnNu','');
+INSERT INTO `USER` VALUES (1,'localhost','fikri','fhidayat2206@gmail.com','fhdyt','$2y$10$SAtu.OV/wM7e.Wof7rdWkepK91aR6hbKmZbjLO2OqWsmy.WVptnNu',''),(2,'','fikri','fhidayat2206@gmail.com','demo','$2y$10$.cTmu4BynhQH54f2QWt7CuVm88/ESsYYoCSeTqDf3nDbKopmtyYoy','');
 /*!40000 ALTER TABLE `USER` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -331,4 +335,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-31 10:21:28
+-- Dump completed on 2021-01-05 10:52:17

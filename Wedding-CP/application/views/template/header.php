@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wedding</title>
+  <title><?php echo $this->session->userdata('USER_LINK'); ?></title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -20,6 +20,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/theme/dist/css/adminlte.min.css">
+
+  <!-- jQuery -->
+  <script src="<?php echo base_url(); ?>assets/theme/plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="<?php echo base_url(); ?>assets/theme/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="<?php echo base_url(); ?>assets/theme/dist/js/adminlte.min.js"></script>
+
+  <script src="<?php echo base_url(); ?>assets/theme/plugins/select2/js/select2.full.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/theme/plugins/summernote/summernote-bs4.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/theme/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/theme/plugins/inputmask/jquery.inputmask.min.js"></script>
 
 </head>
 <body class="hold-transition sidebar-mini">
@@ -83,7 +95,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="<?php echo base_url(); ?>assets/theme/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Wedding</span>
+      <span class="brand-text font-weight-light"><?php echo $this->session->userdata('USER_LINK'); ?></span>
     </a>
 
     <!-- Sidebar -->
@@ -110,7 +122,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           $this->uri->segment(2) == "jadwal" ||
           $this->uri->segment(2) == "informasi" ||
           $this->uri->segment(2) == "prewed" ||
-          $this->uri->segment(2) == "komentar"
+          $this->uri->segment(2) == "pesan"
           )
           {
             echo "menu-is-opening menu-open";
@@ -171,18 +183,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url(); ?>konfigurasi/komentar" class="nav-link">
+                <a href="<?php echo base_url(); ?>konfigurasi/pesan" class="nav-link">
                   <i class="fas fa-comments nav-icon"></i>
-                  <p>Komentar</p>
+                  <p>Pesan (RSVP)</p>
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-user-friends"></i>
+              <i class="nav-icon fas fa-envelope-open-text"></i>
               <p>
-                Tamu
+                Undangan Spesial
               </p>
             </a>
           </li>

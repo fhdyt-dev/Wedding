@@ -40,7 +40,8 @@ else{
               <div class="col-md-12">
                 <div class="form-group">
                   <label>Link Youtube</label>
-                  <input type="text" class="form-control" name="youtube" value="<?php echo $youtube; ?>"
+                  <input type="text" class="form-control" name="youtube" value="<?php echo $youtube; ?>">
+                  <small class="text-muted">Contoh : https://www.youtube.com/watch?v=XRuDQ6aYeD0</small>
                 </div>
                 <!-- /.form-group -->
               </div>
