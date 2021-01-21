@@ -23,7 +23,12 @@ class Web extends CI_Controller {
 		$this->load->model('M_Web');
 		$data['detail']=$this->M_Web->detail();
 		$data['font']=$this->M_Web->font_list();
+		if(empty($data['detail'])){
+			echo "Website belum dikonfigurasi";
+		}
+		else{
 		$this->load->view('v_web',$data);
+		}
 	}
 
 	public function kirim()

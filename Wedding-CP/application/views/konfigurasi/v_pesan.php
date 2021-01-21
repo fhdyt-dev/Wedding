@@ -79,7 +79,7 @@
           $("tbody#zone_data").append("<tr class='"+tr+"'>" +
           "<td>" + no++ +".</td>" +
           "<td>" + data[i].RSVP_NAMA + "</td>" +
-          "<td>" + data[i].RSVP_PESAN + "</td>" +
+          "<td><small class='text-muted'>" + data[i].RSVP_TANGGAL + "</small><br>" + data[i].RSVP_PESAN + "</td>" +
           "<td>" + status_kehadiran + "</td>" +
           "</tr>");
         }

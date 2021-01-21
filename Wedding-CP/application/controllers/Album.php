@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Upload extends CI_Controller {
+class Album extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -29,38 +29,19 @@ class Upload extends CI_Controller {
 
 	public function index()
 	{
-
+		$this->load->view('template/header');
+		$this->load->view('konfigurasi/v_album');
+		$this->load->view('template/footer');
 	}
 
 	public function simpan()
 	{
-		$config['name']					= random_string('sha1', 40);
-		$config['upload_path']          = './uploads/cover';
-		$config['allowed_types']        = 'gif|jpg|png';
-		$config['file_name']            = $config['name'].".".pathinfo($_FILES["userfile"]["name"], PATHINFO_EXTENSION);
-		$config['max_size']             = 1024;
-
-		$this->load->library('upload', $config);
-		if ( ! $this->upload->do_upload('userfile'))
-		{
-		    $error = array('error' => $this->upload->display_errors());
-				print_r($error);
-		}
-		else{
-			$data=$this->M_Upload->m_simpan($config);
-		}
-	}
-
-
-	public function list()
+		$data=$this->M_Upload->m_simpan();
+    }
+    
+    public function list()
 	{
 			$data=$this->M_Upload->m_list();
-			echo json_encode($data);
-	}
-	public function hapus()
-	{
-			$id = $this->uri->segment('3');
-			$data=$this->M_Upload->m_hapus($id);
 			echo json_encode($data);
 	}
 

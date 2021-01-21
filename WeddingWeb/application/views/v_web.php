@@ -5,12 +5,20 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title><?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> & <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?></title>
+  <title><?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> dan <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?></title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
-  <meta property="og:title" content="?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> & <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?>">
-  <meta property="og:description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami yang begitu indah dalam resepsi pernikahan Kami">
-  <meta property="og:image" content="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
+
+  <meta property="og:title" content="<?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> & <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?>">
+  <meta property="og:description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami">
+  <meta property="og:image" content="http://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
+
+  <meta property="twitter:title" content="<?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> & <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?>">
+  <meta property="twitter:description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami">
+  <meta property="twitter:image" content="http://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta data-rh="true" name="description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami"/>
 
   <!-- Favicons -->
   <link href="<?php echo base_url(); ?>assets/theme/assets/img/favicon.png" rel="icon">
@@ -77,7 +85,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "<?php echo $detail[0]->KONF_WEB_FONT_JUDUL ?>", sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
@@ -159,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-header h2 {
   font-size: 36px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-align: center;
   font-weight: 700;
   margin-bottom: 10px;
@@ -194,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 991px) {
   #header {
-    background: rgba(6, 12, 34, 0.98);
+    background: rgba(<?php echo $detail[0]->KONF_WEB_WARNA_RGB ?>, 0.98);
     height: 70px;
     padding: 15px 0;
     transition: all 0.5s;
@@ -208,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-scrolled, #header.header-fixed {
-  background: rgba(6, 12, 34, 0.98);
+  background: rgba(<?php echo $detail[0]->KONF_WEB_WARNA_RGB ?>, 0.98);
   height: 70px;
   padding: 15px 0;
   transition: all 0.5s;
@@ -219,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 6px 0;
   line-height: 1;
-  font-family: "Great Vibes", sans-serif;
+  font-family: "<?php echo $detail[0]->KONF_WEB_FONT_JUDUL ?>", sans-serif;
   font-weight: 700;
   letter-spacing: 3px;
   color: #fff;
@@ -439,7 +447,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 18px;
   bottom: 0;
   z-index: 998;
-  background: rgba(6, 12, 34, 0.9);
+  background: rgba(<?php echo $detail[0]->KONF_WEB_WARNA_RGB ?>, 0.9);
   left: -260px;
   width: 260px;
   overflow-y: auto;
@@ -500,7 +508,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   position: fixed;
-  background: rgba(6, 12, 34, 0.8);
+  background: rgba(<?php echo $detail[0]->KONF_WEB_WARNA_RGB ?>, 0.8);
   display: none;
 }
 
@@ -523,7 +531,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
   width: 100%;
   height: 100vh;
-  background: url(http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>) top center;
+  background: url(http://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>) top center;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -537,7 +545,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro:before {
   content: "";
-  background: rgb(0,0,0, 0.7);
+  background: rgb(0,0,0, 0.6);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -720,7 +728,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
   else{
   ?>
-  background: url(http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PEMBUKAAN_GAMBAR ?>);
+  background: url(http://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_PEMBUKAAN_GAMBAR ?>);
   <?php
   }
   ?>
@@ -747,7 +755,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
   else{
   ?>
-  background: rgba(13, 20, 41, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   <?php
   }
   ?>
@@ -803,7 +811,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #pengantin .speaker .details {
-  background: rgba(6, 12, 34, 0.76);
+  background: rgba(<?php echo $detail[0]->KONF_WEB_WARNA_RGB ?>, 0.76);
   position: absolute;
   left: 0;
   bottom: -30px;
@@ -825,6 +833,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 15px;
   margin-bottom: 10px;
   font-style: italic;
+  
 }
 
 #pengantin .speaker .details .social {
@@ -1034,7 +1043,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #jadwal .jadwal-info:before {
   content: "";
-  background: rgba(13, 20, 41, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1276,7 +1285,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------------------------------------*/
 #subscribe {
   padding: 60px;
-  background: url(http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>) center center no-repeat;
+  background: url(http://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>) center center no-repeat;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -1284,7 +1293,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #subscribe:before {
   content: "";
-  background: rgba(6, 12, 34, 0.6);
+  background: rgba(<?php echo $detail[0]->KONF_WEB_WARNA_RGB ?>, 0.6);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1579,7 +1588,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #101522;
+  background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
   padding: 0 0 25px 0;
   color: #eee;
   font-size: 14px;
@@ -1744,7 +1753,6 @@ body.mobile-nav-active #mobile-nav-toggle {
           <li><a href="#pembukaan">Pembukaan</a></li>
           <li><a href="#pengantin">Pengantin</a></li>
           <li><a href="#jadwal">Jadwal & Lokasi</a></li>
-          <li><a href="#hotels">Hotels</a></li>
           <li><a href="#gallery">Galleri</a></li>
           <li><a href="#rsvp">RSVP</a></li>
         </ul>
@@ -1813,17 +1821,17 @@ body.mobile-nav-active #mobile-nav-toggle {
         <div class="row">
           <div class="col-lg-6 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_PRIA_FOTO ?>" alt="Speaker 2" class="img-fluid">
+              <img src="http://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_PRIA_FOTO ?>" alt="Speaker 2" class="img-fluid">
               <div class="details">
                 <h3><a href="#"><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA_LENGKAP; ?></a></h3>
-                <p><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?></p>
+                <p><center><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?></center></p>
               </div>
             </div>
             <p class="detail_pengantin"><?php echo $detail[0]->KONF_PENGANTIN_PRIA_KETERANGAN; ?></p>
           </div>
           <div class="col-lg-6 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-              <img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_WANITA_FOTO ?>" alt="Speaker 3" class="img-fluid">
+              <img src="http://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_WANITA_FOTO ?>" alt="Speaker 3" class="img-fluid">
               <div class="details">
                 <h3><a href="#"><?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA_LENGKAP; ?></a></h3>
                 <p><?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?></p>
@@ -1900,7 +1908,6 @@ body.mobile-nav-active #mobile-nav-toggle {
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Galeri</h2>
-          <p>Check our gallery from the recent events</p>
         </div>
       </div>
 
@@ -1986,7 +1993,7 @@ body.mobile-nav-active #mobile-nav-toggle {
         Licensing information: https://bootstrapmade.com/license/
         Purchase the pro version with working PHP/AJAX rsvp form: https://bootstrapmade.com/buy/?theme=TheEvent
       -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <a href="https://bootstrapmade.com/">Designed by BootstrapMade</a>
       </div>
     </div>
   </footer><!-- End  Footer -->

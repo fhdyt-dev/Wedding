@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?php echo $this->session->userdata('USER_LINK'); ?></title>
+  <title>Client Area | <?php echo $this->session->userdata('USER_LINK'); ?></title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -45,6 +45,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Kontak</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="https://<?php echo $this->session->userdata('USER_LINK'); ?>" target="_blank" class="nav-link">Lihat Website</a>
       </li>
     </ul>
     <!-- Right navbar links -->
@@ -95,7 +98,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="<?php echo base_url(); ?>assets/theme/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light"><?php echo $this->session->userdata('USER_LINK'); ?></span>
+      <span class="brand-text font-weight-light">Client Area</span>
     </a>
 
     <!-- Sidebar -->
@@ -191,7 +194,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-envelope-open-text"></i>
               <p>
                 Undangan Spesial
@@ -199,7 +202,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="<?php echo base_url(); ?>album" class="nav-link <?php if($this->uri->segment(1)=="album"){echo "active";} ?>">
               <i class="nav-icon fas fa-images"></i>
               <p>
                 Album Gambar
@@ -207,11 +210,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="<?php echo base_url(); ?>Password" class="nav-link">
+              <i class="nav-icon fas fa-key"></i>
               <p>
-                Simple Link
-                <span class="right badge badge-danger">New</span>
+                Ganti Password
               </p>
             </a>
           </li>

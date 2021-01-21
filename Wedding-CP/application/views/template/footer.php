@@ -70,7 +70,9 @@ $(".btn_upload").on("click", function(){
   list()
   $("#uploadModal").modal("show")
 })
+
 $('#submit').submit(function(e){
+  console.log("Uploading...")
   e.preventDefault();
   $.ajax({
      url:'<?php echo base_url();?>index.php/upload/simpan',

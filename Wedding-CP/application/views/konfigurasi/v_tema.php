@@ -8,6 +8,7 @@
 {
   $web_warna = $tersimpan[0]->KONF_WEB_WARNA;
   $web_font = $tersimpan[0]->KONF_WEB_FONT;
+  $web_font_judul = $tersimpan[0]->KONF_WEB_FONT_JUDUL;
   $web_font_intro = $tersimpan[0]->KONF_WEB_FONT_INTRO;
   $web_sampul=$tersimpan[0]->KONF_WEB_SAMPUL;
   $web_judul=$tersimpan[0]->KONF_WEB_JUDUL;
@@ -15,6 +16,7 @@
 else{
   $web_warna = '';
   $web_font = '';
+  $web_font_judul = '';
   $web_font_intro = '';
   $web_sampul='';
   $web_judul='';
@@ -87,6 +89,41 @@ else{
                       <?php
                     } ?>
                   </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- /.form-group -->
+              </div>
+              <div class="col-md-6">
+                <div class="card card-secondary">
+                  <div class="card-header">
+                    <h3 class="card-title">Font Judul</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group">
+                      <div class="form-group clearfix">
+                        <?php foreach ($font as $key){
+                          ?>
+                          <div class="icheck-primary mr-4 mb-2">
+                            <input type="radio" id="<?php echo $key->FONT_KODE ?>_judul" name="font_judul" value="<?php echo $key->FONT_NAMA ?>"
+                            <?php
+                            if($key->FONT_NAMA == $web_font_judul)
+                            {
+                              echo "checked";
+                            }
+                            else{
+                              echo "";
+                            }
+                             ?>
+                            >
+                            <label for="<?php echo $key->FONT_KODE ?>_judul">
+                              <p style="font-family: '<?php echo $key->FONT_NAMA ?>';font-size:25px"><?php echo $key->FONT_NAMA ?></p>
+                            </label>
+                          </div>
+                          <?php
+                        } ?>
+                      </div>
                     </div>
                   </div>
                 </div>

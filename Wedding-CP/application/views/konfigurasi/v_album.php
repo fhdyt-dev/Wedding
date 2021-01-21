@@ -1,0 +1,142 @@
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Album Gambar</h1>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="card card-default color-palette-box">
+          <div class="card-body">
+          <form id="submit_album">
+          <div class="row">
+                    <div class="col-md-10">
+                        <input type="hidden" class="form-control nama_input">
+                        <input type="file" name="userfile" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary upload_gambar">Upload</button>
+                    </div>
+            </div>
+            </form>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+            <table class="table table-bordered">
+            <thead>
+            <th>No.</th>
+            <th>Gambar</th>
+            <th></th>
+            </thead>
+              <tbody id="zone_data">
+                <tr>
+                  <td colspan="9">
+                    <center>
+                      <div class="loader"></div>
+                    </center>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+        </div>
+           
+          </div>
+          <!-- /.card-body -->
+        </div>
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+<script>
+  $(function()
+  {
+  foto_list();
+  });
+
+  function foto_list()
+  {
+  $.ajax({
+    type  : 'ajax',
+    url   : "<?php echo base_url() ?>index.php/upload/list",
+    async : false,
+    dataType : 'json',
+    success : function(data)
+    {
+      $("tbody#zone_data").empty();
+      if (data.length === 0)
+      {
+      }
+      else
+      {
+        var no = 1
+        for (i = 0; i < data.length; i++) {
+          $("tbody#zone_data").append("<tr>" +
+          "<td>" + no++ +". </td>" +
+          "<td><img height='100' src='<?php echo base_url() ?>uploads/cover/" + data[i].ALBUM_USER_FOTO + "' alt=''></td>" +
+          "<td><a class='btn btn-danger btn-sm' onclick='hapus(\"" + data[i].ALBUM_USER_INDEX + "\")'><i class='fas fa-trash'></i></a></td>"+
+          "</tr>");
+        }
+      }
+    },
+    error: function(x, e) {
+      console.log("Gagal")
+    }
+  });
+  }
+
+
+
+  $('#submit_album').submit(function(e){
+  e.preventDefault();
+  $.ajax({
+     url:'<?php echo base_url();?>index.php/upload/simpan',
+     type:"post",
+     data:new FormData(this),
+     processData:false,
+     contentType:false,
+     cache:false,
+     async:false,
+      success: function(data){
+      foto_list();
+   }
+  });
+})
+
+function hapus(id){
+	if(confirm("Hapus gambar ?"))
+	{
+		$.ajax({
+ 		type  : 'ajax',
+ 		url   : '<?php echo base_url() ?>index.php/upload/hapus/'+id,
+ 		async : false,
+ 		dataType : 'json',
+ 		success : function(data)
+ 		{
+ 			if (data.length === 0)
+ 			{
+ 			}
+ 			else
+ 			{
+        foto_list();
+ 			}
+ 		},
+     error: function(x, e) {
+       alert("Gagal Menghapus")
+     } //end error
+ 	});
+	}
+}
+
+  </script>

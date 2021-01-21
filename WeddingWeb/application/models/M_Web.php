@@ -19,7 +19,9 @@ class M_Web extends CI_Model
                                 LEFT JOIN KONF_VIDEO AS VIDEO
                                 ON
                                 WEB.KONF_LINK=VIDEO.KONF_LINK
-                                LIMIT 1'
+                                WHERE WEB.KONF_LINK="'.$_SERVER['HTTP_HOST'].'"
+                                LIMIT 1
+                                '
                             )->result();
 		return $hasil;
 	}
