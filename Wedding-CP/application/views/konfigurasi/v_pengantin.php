@@ -8,6 +8,7 @@
   $keterangan_wanita = $tersimpan[0]->KONF_PENGANTIN_WANITA_KETERANGAN;
   $foto_pria = $tersimpan[0]->KONF_PENGANTIN_PRIA_FOTO;
   $foto_wanita = $tersimpan[0]->KONF_PENGANTIN_WANITA_FOTO;
+  $subtitle = $tersimpan[0]->KONF_PENGANTIN_SUB_TITLE;
 }
 else{
   $nama_lengkap_pria = '';
@@ -18,6 +19,7 @@ else{
   $keterangan_wanita = '';
   $foto_pria = '';
   $foto_wanita = '';
+  $subtitle = '';
 }
  ?>
   <!-- Content Wrapper. Contains page content -->
@@ -41,6 +43,13 @@ else{
           <div class="card-body">
         <form action="pengantin/simpan" method="post">
         <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+                    <label for="exampleInputEmail1">Sub Judul</label>
+                    <input type="text" class="form-control" name="sub_title" value="<?php echo $subtitle; ?>" autocomplete="off">
+                </div>
+                <hr>
+          </div>
           <div class="col-md-6">
             <div class="card card-default color-palette-box">
               <div class="card-header">

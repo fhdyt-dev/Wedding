@@ -2,29 +2,33 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title><?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> dan <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?></title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
+	<title><?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> dan <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?></title>
+	<meta content="" name="descriptison">
+	<meta content="" name="keywords">
 
-  <meta property="og:title" content="<?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> & <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?>">
-  <meta property="og:description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami">
-  <meta property="og:image" content="http://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
+	<meta property="og:title" content="<?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> & <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?>">
+	<meta property="og:description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami">
+	<meta property="og:image" content="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
 
-  <meta property="twitter:title" content="<?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> & <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?>">
-  <meta property="twitter:description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami">
-  <meta property="twitter:image" content="http://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
-  <meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:title" content="<?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> & <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?>">
+	<meta property="twitter:description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami">
+	<meta property="twitter:image" content="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
+	<meta name="twitter:card" content="summary_large_image">
 
-  <meta data-rh="true" name="description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami"/>
+	<meta data-rh="true" name="description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami"/>
 
-  <!-- Favicons -->
-  <link href="<?php echo base_url(); ?>assets/theme/assets/img/favicon.png" rel="icon">
-  <link href="<?php echo base_url(); ?>assets/theme/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
+	<!-- Favicons -->
+	<link href="<?php echo base_url(); ?>assets/theme/assets/img/favicon.png" rel="icon">
+	<link href="<?php echo base_url(); ?>assets/theme/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
 	<?php
 		foreach($font as $row)
 		{
@@ -33,1986 +37,2747 @@
 	<?php
 		}
 	 ?>
+	<!-- Vendor CSS Files -->
+	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/venobox/venobox.css" rel="stylesheet">
+	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="<?php echo base_url(); ?>assets/theme/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="<?php echo base_url(); ?>assets/theme/assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="<?php echo base_url(); ?>assets/theme/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="<?php echo base_url(); ?>assets/theme/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="<?php echo base_url(); ?>assets/theme/assets/vendor/aos/aos.css" rel="stylesheet">
+	<!-- Template Main CSS File -->
+	<!-- <link href="<?php echo base_url(); ?>assets/theme/assets/css/style.css" rel="stylesheet"> -->
 
-  <!-- Template Main CSS File -->
-  <link href="<?php echo base_url(); ?>assets/theme/assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: TheEvent - v2.2.0
-  * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+	<!-- =======================================================
+  * Template Name: Tempo - v2.2.1
+  * Template URL: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-<style media="screen">
-/**
-* Template Name: TheEvent - v2.2.0
-* Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+<style>
+	/**
+* Template Name: Tempo - v2.2.1
+* Template URL: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
 
-/*--------------------------------------------------------------
+	/*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
-  background: #fff;
-  color: #2f3138;
-  font-family: "<?php echo $detail[0]->KONF_WEB_FONT ?>", sans-serif;
-}
+	body {
+		font-family: "<?php echo $detail[0]->KONF_WEB_FONT ?>", sans-serif;
+		color: #444444;
+	}
 
-a {
-  color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  transition: 0.5s;
-}
+	a {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
 
-a:hover, a:active, a:focus {
-  color: #f8234a;
-  outline: none;
-  text-decoration: none;
-}
+	a:hover {
+		color: #ea6981;
+		text-decoration: none;
+	}
 
-p {
-  padding: 0;
-  margin: 0 0 30px 0;
-}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: "Nunito", sans-serif;
+	}
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "<?php echo $detail[0]->KONF_WEB_FONT_JUDUL ?>", sans-serif;
-  font-weight: 400;
-  margin: 0 0 20px 0;
-  padding: 0;
-  color: #0e1b4d;
-}
+	/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+	.back-to-top {
+		position: fixed;
+		display: none;
+		right: 15px;
+		bottom: 15px;
+		z-index: 99999;
+		transition: 0.5s;
+	}
 
+	.back-to-top i {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 18px;
+		width: 40px;
+		height: 40px;
+		border-radius: 50px;
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		color: #fff;
+		transition: all 0.4s;
+	}
 
-.main-page {
-  margin-top: 70px;
-}
+	.back-to-top:hover {
+		bottom: 19px;
+	}
 
-/* Prelaoder */
-#preloader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  background: #fff url("<?php echo base_url(); ?>assets/theme/assets/img/preloader.svg") no-repeat center center;
-}
-
-/* Back to top button */
-.back-to-top {
-  position: fixed;
-  display: none;
-  background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  border-radius: 50px;
-  right: 15px;
-  bottom: 15px;
-  transition: background 0.5s ease-in-out;
-}
-
-.back-to-top i {
-  font-size: 24px;
-  padding-top: 6px;
-}
-
-@media (max-width: 768px) {
-  .back-to-top {
-    bottom: 15px;
-  }
-}
-
-.back-to-top:focus {
-  background: #e0072f;
-  color: #fff;
-  outline: none;
-}
-
-.back-to-top:hover {
-  background: #e0072f;
-  color: #fff;
-}
-
-/* Sections Header
---------------------------------*/
-.section-header {
-  margin-bottom: 60px;
-  position: relative;
-  padding-bottom: 20px;
-}
-
-.section-header::before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 60px;
-  height: 5px;
-  background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  bottom: 0;
-  left: calc(50% - 25px);
-}
-
-.section-header h2 {
-  font-size: 36px;
-  /* text-transform: uppercase; */
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.section-header p {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-  font-weight: 500;
-  color: #9195a2;
-}
-
-.section-with-bg {
-  background-color: #f6f7fd;
-}
-
-/*--------------------------------------------------------------
+	/*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header {
-  height: 90px;
-  padding: 25px 0;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  transition: all 0.5s;
-  z-index: 997;
-}
+	#header {
+		transition: all 0.5s;
+		z-index: 997;
+		padding: 20px 0;
+	}
 
-@media (max-width: 991px) {
-  #header {
-    background: rgba(<?php echo $detail[0]->KONF_WEB_WARNA_RGB ?>, 0.98);
-    height: 70px;
-    padding: 15px 0;
-    transition: all 0.5s;
-  }
-}
+	#header .logo {
+		font-size: 32px;
+		margin: 0;
+		padding: 0;
+		line-height: 1;
+		font-weight: 600;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
 
-@media (max-width: 1199px) {
-  #header .container {
-    max-width: 100%;
-  }
-}
+	#header .logo a {
+		color: #fff;
+	}
 
-#header.header-scrolled, #header.header-fixed {
-  background: rgba(<?php echo $detail[0]->KONF_WEB_WARNA_RGB ?>, 0.98);
-  height: 70px;
-  padding: 15px 0;
-  transition: all 0.5s;
-}
+	#header .logo img {
+		max-height: 40px;
+	}
 
-#header #logo h1 {
-  font-size: 35px;
-  margin: 0;
-  padding: 6px 0;
-  line-height: 1;
-  font-family: "<?php echo $detail[0]->KONF_WEB_FONT_JUDUL ?>", sans-serif;
-  font-weight: 700;
-  letter-spacing: 3px;
-  color: #fff;
-}
+	#header.header-scrolled,
+	#header.header-inner-pages {
+		background: #fff;
+		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+		padding: 12px 0;
+	}
 
-#header #logo h1 span {
-  color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-}
+	#header.header-scrolled .logo a,
+	#header.header-inner-pages .logo a {
+		color: #493c3e;
+	}
 
-#header #logo h1 a, #header #logo h1 a:hover {
-  color: #fff;
-}
+	@media (max-width: 992px) {
+		#header .logo {
+			font-size: 28px;
+		}
+	}
 
-#header #logo img {
-  padding: 0;
-  margin: 0;
-  max-height: 40px;
-}
-
-/*--------------------------------------------------------------
+	/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Nav Menu Essentials */
-.nav-menu, .nav-menu * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+	/* Desktop Navigation */
+	.nav-menu ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
 
-.nav-menu ul {
-  position: absolute;
-  display: none;
-  top: 100%;
-  left: 0;
-  z-index: 99;
-}
+	.nav-menu>ul {
+		display: flex;
+	}
 
-.nav-menu li {
-  position: relative;
-  white-space: nowrap;
-}
+	.nav-menu>ul>li {
+		position: relative;
+		white-space: nowrap;
+		padding: 10px 0 10px 25px;
+	}
 
-.nav-menu > li {
-  float: left;
-}
+	.nav-menu a {
+		display: block;
+		position: relative;
+		color: #fff;
+		transition: 0.3s;
+		font-size: 15px;
+		padding: 0 4px;
+		letter-spacing: 0.4px;
+		font-family: "Poppins", sans-serif;
+	}
 
-.nav-menu li:hover > ul,
-.nav-menu li.sfHover > ul {
-  display: block;
-}
+	.nav-menu>ul>li>a:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		bottom: -6px;
+		left: 0;
+		background-color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		visibility: hidden;
+		transform: scaleX(0);
+		transition: all 0.3s ease-in-out 0s;
+	}
 
-.nav-menu ul ul {
-  top: 0;
-  left: 100%;
-}
+	.nav-menu a:hover:before,
+	.nav-menu li:hover>a:before,
+	.nav-menu .active>a:before {
+		visibility: visible;
+		transform: scaleX(1);
+	}
 
-.nav-menu ul li {
-  min-width: 180px;
-}
+	.nav-menu .drop-down ul {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: calc(100% + 30px);
+		z-index: 99;
+		opacity: 0;
+		visibility: hidden;
+		padding: 10px 0;
+		background: #fff;
+		box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+		transition: 0.3s;
+	}
 
-/* Nav Menu Arrows */
-.sf-arrows .sf-with-ul {
-  padding-right: 30px;
-}
+	.nav-menu .drop-down:hover>ul {
+		opacity: 1;
+		top: 100%;
+		visibility: visible;
+	}
 
-.sf-arrows .sf-with-ul:after {
-  content: "\f107";
-  position: absolute;
-  right: 15px;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-}
+	.nav-menu .drop-down li {
+		min-width: 180px;
+		position: relative;
+	}
 
-.sf-arrows ul .sf-with-ul:after {
-  content: "\f105";
-}
+	.nav-menu .drop-down ul a {
+		padding: 10px 20px;
+		font-size: 14px;
+		text-transform: none;
+		color: #493c3e;
+	}
 
-/* Nav Meu Container */
-#nav-menu-container {
-  float: right;
-  margin: 0;
-}
+	.nav-menu .drop-down ul a:hover,
+	.nav-menu .drop-down ul .active>a,
+	.nav-menu .drop-down ul li:hover>a {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
 
-@media (max-width: 991px) {
-  #nav-menu-container {
-    display: none;
-  }
-}
+	.nav-menu .drop-down>a:after {
+		content: "\ea99";
+		font-family: IcoFont;
+		padding-left: 5px;
+	}
 
-/* Nav Meu Styling */
-.nav-menu a {
-  padding: 8px;
-  text-decoration: none;
-  display: inline-block;
-  color: rgba(202, 206, 221, 0.8);
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  outline: none;
-}
+	.nav-menu .drop-down .drop-down ul {
+		top: 0;
+		left: calc(100% - 30px);
+	}
 
-@media (max-width: 1199px) {
-  .nav-menu a {
-    padding: 8px 4px;
-  }
-}
+	.nav-menu .drop-down .drop-down:hover>ul {
+		opacity: 1;
+		top: 0;
+		left: 100%;
+	}
 
-.nav-menu .menu-active a, .nav-menu a:hover {
-  color: #fff;
-}
+	.nav-menu .drop-down .drop-down>a {
+		padding-right: 35px;
+	}
 
-.nav-menu > li {
-  margin-left: 8px;
-}
+	.nav-menu .drop-down .drop-down>a:after {
+		content: "\eaa0";
+		font-family: IcoFont;
+		position: absolute;
+		right: 15px;
+	}
 
-.nav-menu > li > a:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out 0s;
-}
+	.header-scrolled .nav-menu>ul>li>a,
+	.header-inner-pages .nav-menu>ul>li>a {
+		color: #493c3e;
+	}
 
-.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .menu-active > a:before {
-  visibility: visible;
-  width: 100%;
-}
+	@media (max-width: 1366px) {
+		.nav-menu .drop-down .drop-down ul {
+			left: -90%;
+		}
 
-.nav-menu li.buy-tickets a {
-  color: #fff;
-  background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  padding: 7px 22px;
-  border-radius: 50px;
-  border: 2px solid <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  transition: all ease-in-out 0.3s;
-  font-weight: 500;
-  margin-left: 8px;
-  margin-top: 2px;
-  line-height: 1;
-  font-size: 13px;
-}
+		.nav-menu .drop-down .drop-down:hover>ul {
+			left: -100%;
+		}
 
-.nav-menu li.buy-tickets a:hover {
-  background: none;
-}
+		.nav-menu .drop-down .drop-down>a:after {
+			content: "\ea9d";
+		}
+	}
 
-.nav-menu li.buy-tickets:hover a:before, .nav-menu li.buy-tickets.menu-active a:before {
-  visibility: hidden;
-}
+	/* Mobile Navigation */
+	.mobile-nav-toggle {
+		position: fixed;
+		right: 15px;
+		top: 15px;
+		z-index: 9998;
+		border: 0;
+		background: none;
+		font-size: 24px;
+		transition: all 0.4s;
+		outline: none !important;
+		line-height: 1;
+		cursor: pointer;
+		text-align: right;
+	}
 
-.nav-menu ul {
-  margin: 4px 0 0 0;
-  padding: 10px;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  background: #fff;
-  border-radius: 3px;
-}
+	.mobile-nav-toggle i {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
 
-.nav-menu ul li {
-  transition: 0.3s;
-}
+	.mobile-nav {
+		position: fixed;
+		top: 55px;
+		right: 15px;
+		bottom: 15px;
+		left: 15px;
+		z-index: 9999;
+		overflow-y: auto;
+		background: #fff;
+		transition: ease-in-out 0.2s;
+		opacity: 0;
+		visibility: hidden;
+		border-radius: 10px;
+		padding: 10px 0;
+	}
 
-.nav-menu ul li a {
-  padding: 10px;
-  color: #060c22;
-  transition: 0.3s;
-  display: block;
-  font-size: 13px;
-  text-transform: none;
-  border-radius: 3px;
-}
+	.mobile-nav * {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
 
-.nav-menu ul li:hover > a {
-  background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  color: #fff;
-}
+	.mobile-nav a {
+		display: block;
+		position: relative;
+		color: #493c3e;
+		padding: 10px 20px;
+		font-weight: 500;
+		outline: none;
+	}
 
-.nav-menu ul ul {
-  margin: 0;
-}
+	.mobile-nav a:hover,
+	.mobile-nav .active>a,
+	.mobile-nav li:hover>a {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		text-decoration: none;
+	}
 
-/* Mobile Nav Toggle */
-#mobile-nav-toggle {
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 999;
-  margin: 15px 15px 0 0;
-  border: 0;
-  background: none;
-  font-size: 24px;
-  display: none;
-  transition: all 0.4s;
-  outline: none;
-  cursor: pointer;
-}
+	.mobile-nav .drop-down>a:after {
+		content: "\ea99";
+		font-family: IcoFont;
+		padding-left: 10px;
+		position: absolute;
+		right: 15px;
+	}
 
-#mobile-nav-toggle i {
-  color: #fff;
-}
+	.mobile-nav .active.drop-down>a:after {
+		content: "\eaa1";
+	}
 
-@media (max-width: 991px) {
-  #mobile-nav-toggle {
-    display: inline;
-  }
-}
+	.mobile-nav .drop-down>a {
+		padding-right: 35px;
+	}
 
-/* Mobile Nav Styling */
-#mobile-nav {
-  position: fixed;
-  top: 0;
-  padding-top: 18px;
-  bottom: 0;
-  z-index: 998;
-  background: rgba(<?php echo $detail[0]->KONF_WEB_WARNA_RGB ?>, 0.9);
-  left: -260px;
-  width: 260px;
-  overflow-y: auto;
-  transition: 0.4s;
-}
+	.mobile-nav .drop-down ul {
+		display: none;
+		overflow: hidden;
+	}
 
-#mobile-nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
+	.mobile-nav .drop-down li {
+		padding-left: 20px;
+	}
 
-#mobile-nav ul li {
-  position: relative;
-}
+	.mobile-nav-overly {
+		width: 100%;
+		height: 100%;
+		z-index: 9997;
+		top: 0;
+		left: 0;
+		position: fixed;
+		background: rgba(45, 37, 38, 0.6);
+		overflow: hidden;
+		display: none;
+		transition: ease-in-out 0.2s;
+	}
 
-#mobile-nav ul li a {
-  color: #fff;
-  font-size: 17px;
-  overflow: hidden;
-  padding: 10px 22px 10px 15px;
-  position: relative;
-  text-decoration: none;
-  width: 100%;
-  display: block;
-  outline: none;
-}
+	.mobile-nav-active {
+		overflow: hidden;
+	}
 
-#mobile-nav ul li a:hover {
-  color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-}
+	.mobile-nav-active .mobile-nav {
+		opacity: 1;
+		visibility: visible;
+	}
 
-#mobile-nav ul li li {
-  padding-left: 30px;
-}
+	.mobile-nav-active .mobile-nav-toggle i {
+		color: #fff;
+	}
 
-#mobile-nav ul .menu-has-children i {
-  position: absolute;
-  right: 0;
-  z-index: 99;
-  padding: 15px;
-  cursor: pointer;
-  color: #fff;
-}
-
-#mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-}
-
-#mobile-nav ul .menu-item-active {
-  color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-}
-
-#mobile-body-overly {
-  width: 100%;
-  height: 100%;
-  z-index: 997;
-  top: 0;
-  left: 0;
-  position: fixed;
-  background: rgba(<?php echo $detail[0]->KONF_WEB_WARNA_RGB ?>, 0.8);
-  display: none;
-}
-
-/* Mobile Nav body classes */
-body.mobile-nav-active {
-  overflow: hidden;
-}
-
-body.mobile-nav-active #mobile-nav {
-  left: 0;
-}
-
-body.mobile-nav-active #mobile-nav-toggle {
-  color: #fff;
-}
-
-/*--------------------------------------------------------------
-# Intro Section
+	/*--------------------------------------------------------------
+# Hero Section
 --------------------------------------------------------------*/
-#intro {
-  width: 100%;
-  height: 100vh;
-  background: url(http://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>) top center;
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
-}
+	#hero {
+		width: 100%;
+		height: 100vh;
+		background: url("http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>") top center;
+		background-size: cover;
+		position: relative;
+	}
 
-@media (min-width: 1024px) {
-  #intro {
-    background-attachment: fixed;
-  }
-}
+	#hero:before {
+		content: "";
+		background: rgba(0, 0, 0, 0.6);
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
 
-#intro:before {
-  content: "";
-  background: rgb(0,0,0, 0.6);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
+	#hero .hero-container {
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+		padding: 0 15px;
+	}
 
-#intro .intro-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 90px;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 0 15px;
-}
+	#hero h3 {
+		background: rgba(255, 255, 255, 0.1);
+		color: #fff;
+		font-size: 26px;
+		padding: 10px 30px;
+		margin-bottom: 30px;
+		border-radius: 50px;
+		
+	}
 
-@media (max-width: 991px) {
-  #intro .intro-container {
-    top: 70px;
-  }
-}
+	#hero h1 {
+		margin: 0 0 10px 0;
+		font-size: 60px;
+		font-weight: 700;
+		line-height: 56px;
+		color: #fff;
+		font-family: "<?php echo $detail[0]->KONF_WEB_FONT_INTRO ?>", sans-serif;
+	}
 
-#intro h1 {
-  color: #fff;
-  font-family: "<?php echo $detail[0]->KONF_WEB_FONT_INTRO ?>", sans-serif;
-  font-size: 85px;
-  font-weight: 600;
-}
+	#hero h1 span {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
 
-#intro h1 span {
-  color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-}
+	#hero h2 {
+		color: #eee;
+		margin-bottom: 40px;
+		font-size: 24px;
+	}
 
-@media (max-width: 991px) {
-  #intro h1 {
-    font-size: 50px;
-  }
-}
+	#hero .btn-get-started {
+		font-family: "Poppins", sans-serif;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 13px;
+		letter-spacing: 1px;
+		display: inline-block;
+		padding: 8px 30px 9px 30px;
+		border-radius: 50px;
+		transition: 0.5s;
+		border: 2px solid #fff;
+		color: #fff;
+	}
 
-#intro p {
-  color: #ebebeb;
-  font-weight: 700;
-  font-size: 20px;
-}
+	#hero .btn-get-started:hover {
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		border: 2px solid <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
 
-@media (max-width: 991px) {
-  #intro p {
-    font-size: 16px;
-  }
-}
+	@media (min-width: 1024px) {
+		#hero {
+			background-attachment: fixed;
+		}
+	}
 
-#intro .play-btn {
-  width: 94px;
-  height: 94px;
-  background: radial-gradient(<?php echo $detail[0]->KONF_WEB_WARNA ?> 50%, rgba(101, 111, 150, 0.15) 52%);
-  border-radius: 50%;
-  display: block;
-  position: relative;
-  overflow: hidden;
-}
+	@media (max-width: 768px) {
+		#hero h3 {
+			font-size: 22px;
+		}
 
-#intro .play-btn::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-40%) translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid #fff;
-  z-index: 100;
-  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
+		#hero h1 {
+			font-size: 40px;
+			line-height: 36px;
+		}
 
-#intro .play-btn:before {
-  content: '';
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-  -webkit-animation: pulsate-btn 2s;
-  animation: pulsate-btn 2s;
-  -webkit-animation-direction: forwards;
-  animation-direction: forwards;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: steps;
-  animation-timing-function: steps;
-  opacity: 1;
-  border-radius: 50%;
-  border: 2px solid rgba(163, 163, 163, 0.4);
-  top: -15%;
-  left: -15%;
-  background: rgba(198, 16, 0, 0);
-}
+		#hero h2 {
+			font-size: 15px;
+			line-height: 24px;
+			margin-bottom: 30px;
+		}
+	}
 
-#intro .play-btn:hover::after {
-  border-left: 15px solid <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  transform: scale(20);
-}
+	@media (max-height: 500px) {
+		#hero {
+			height: 150vh;
+		}
+	}
 
-#intro .play-btn:hover::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-40%) translateY(-50%);
-  width: 0;
-  height: 0;
-  border: none;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid #fff;
-  z-index: 200;
-  -webkit-animation: none;
-  animation: none;
-  border-radius: 0;
-}
-
-#intro .pembukaan-btn {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 32px;
-  border-radius: 50px;
-  transition: 0.5s;
-  line-height: 1;
-  margin: 10px;
-  color: #fff;
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-  border: 2px solid <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-}
-
-#intro .pembukaan-btn:hover {
-  background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  color: #fff;
-}
-
-@-webkit-keyframes pulsate-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
-  }
-}
-
-@keyframes pulsate-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
-  }
-}
-
-/*--------------------------------------------------------------
-# pembukaan Section
+	/*--------------------------------------------------------------
+# Sections General
 --------------------------------------------------------------*/
-#pembukaan {
-  <?php if($detail[0]->KONF_PEMBUKAAN_SAMPUL == "tema"){
-  ?>
+	section {
+		padding: 60px 0;
+	}
 
-  <?php
-  }
-  else{
-  ?>
-  background: url(http://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_PEMBUKAAN_GAMBAR ?>);
-  <?php
-  }
-  ?>
+	.section-bg {
+		background-color: white;
+	}
 
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
-  color: #fff;
-  padding: 60px 0 40px 0;
-}
+	.section-title {
+		text-align: center;
+		padding-bottom: 30px;
+	}
 
-@media (min-width: 1024px) {
-  #pembukaan {
-    background-attachment: fixed;
-  }
-}
+	.section-title h2 {
+		font-size: 13px;
+		letter-spacing: 1px;
+		font-weight: 700;
+		padding: 8px 20px;
+		line-height: 1;
+		margin: 0;
+		background: #fdeff2;
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		display: inline-block;
+		text-transform: uppercase;
+		border-radius: 50px;
+		
+	}
 
-#pembukaan:before {
-  content: "";
-  <?php if($detail[0]->KONF_PEMBUKAAN_SAMPUL == "tema"){
-  ?>
-    background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  <?php
-  }
-  else{
-  ?>
-  background: rgba(0, 0, 0, 0.7);
-  <?php
-  }
-  ?>
+	.section-title h3 {
+		margin: 15px 0 0 0;
+		font-size: 32px;
+		font-weight: 700;
+		font-family: "<?php echo $detail[0]->KONF_WEB_FONT_JUDUL ?>", sans-serif;
+	}
 
-  /*  */
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
+	.section-title h3 span {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
 
-#pembukaan h2 {
-  font-size: 36px;
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #fff;
-}
+	.section-title p {
+		margin: auto auto 0 auto;
+		font-weight: 600;
+	}
 
-#pembukaan h3 {
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  color: #fff;
-}
+	@media (min-width: 1024px) {
+		.section-title p {
+			width: 50%;
+		}
+	}
 
-#pembukaan p {
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-/*--------------------------------------------------------------
-# pengantin Section
+	/*--------------------------------------------------------------
+# About
 --------------------------------------------------------------*/
-#pengantin {
-  padding: 60px 0 30px 0;
-}
+	.about .content h3 {
+		font-weight: 600;
+		font-size: 26px;
+	}
 
-#pengantin .detail_pengantin {
-  color: #0e1b4d;
-  font-weight: 700;
-  font-size: 15px;
-}
+	.about .content ul {
+		list-style: none;
+		padding: 0;
+	}
 
-#pengantin .speaker {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 30px;
-}
+	.about .content ul li {
+		padding-left: 28px;
+		position: relative;
+	}
 
-#pengantin .speaker .details {
-  background: rgba(<?php echo $detail[0]->KONF_WEB_WARNA_RGB ?>, 0.76);
-  position: absolute;
-  left: 0;
-  bottom: -30px;
-  right: 0;
-  text-align: center;
-  padding-top: 10px;
-  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-}
+	.about .content ul li+li {
+		margin-top: 10px;
+	}
 
-#pengantin .speaker .details h3 {
-  color: #fff;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
+	.about .content ul i {
+		position: absolute;
+		left: 0;
+		top: 2px;
+		font-size: 20px;
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		line-height: 1;
+	}
 
-#pengantin .speaker .details p {
-  color: #fff;
-  font-size: 15px;
-  margin-bottom: 10px;
-  font-style: italic;
-  
-}
+	.about .content p:last-child {
+		margin-bottom: 0;
+	}
 
-#pengantin .speaker .details .social {
-  height: 30px;
-}
+	.about .content .btn-learn-more {
+		font-family: "Nunito", sans-serif;
+		font-weight: 600;
+		font-size: 14px;
+		letter-spacing: 1px;
+		display: inline-block;
+		padding: 12px 32px;
+		border-radius: 50px;
+		transition: 0.3s;
+		line-height: 1;
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		-webkit-animation-delay: 0.8s;
+		animation-delay: 0.8s;
+		margin-top: 6px;
+		border: 2px solid <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
 
-#pengantin .speaker .details a {
-  color: #fff;
-}
+	.about .content .btn-learn-more:hover {
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		color: #fff;
+		text-decoration: none;
+	}
 
-#pengantin .speaker .details a:hover {
-  color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-}
-
-#pengantin .speaker:hover .details {
-  bottom: 0;
-}
-
-#pengantin-details {
-  padding: 60px 0;
-}
-
-#pengantin-details .details h2 {
-  color: #112363;
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-#pengantin-details .details .social {
-  margin-bottom: 15px;
-}
-
-#pengantin-details .details .social a {
-  background: #e9edfb;
-  color: #112363;
-  line-height: 1;
-  display: inline-block;
-  text-align: center;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  padding-top: 9px;
-}
-
-#pengantin-details .details .social a:hover {
-  background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  color: #fff;
-}
-
-#pengantin-details .details .social a i {
-  font-size: 18px;
-}
-
-#pengantin-details .details p {
-  color: #112363;
-  font-size: 15px;
-  margin-bottom: 10px;
-}
-
-
-
-/*--------------------------------------------------------------
-# Schedule Section
+	/*--------------------------------------------------------------
+# Services
 --------------------------------------------------------------*/
-#schedule {
-  padding: 60px 0 60px 0;
-}
+	.services {
+		padding-bottom: 30px;
+	}
 
-#schedule .nav-tabs {
-  text-align: center;
-  margin: auto;
-  display: block;
-  border-bottom: 0;
-  margin-bottom: 30px;
-}
+	.services .icon-box {
+		padding: 60px 30px;
+		position: relative;
+		overflow: hidden;
+		background: #fff;
+		box-shadow: 2px 0 35px 0 rgba(68, 88, 144, 0.12);
+		transition: all 0.3s ease-in-out;
+		border-radius: 8px;
+		z-index: 1;
+		text-align: center;
+	}
 
-#schedule .nav-tabs li {
-  display: inline-block;
-  margin-bottom: 0;
-}
+	.services .icon-box::before {
+		content: '';
+		position: absolute;
+		background: #fdeff2;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		top: 100%;
+		transition: all 0.4s;
+		z-index: -1;
+	}
 
-#schedule .nav-tabs a {
-  border: none;
-  border-radius: 50px;
-  font-weight: 600;
-  background-color: #0e1b4d;
-  color: #fff;
-  padding: 10px 100px;
-}
+	.services .icon-box:hover::before {
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		top: 0;
+		border-radius: 0px;
+	}
 
-@media (max-width: 991px) {
-  #schedule .nav-tabs a {
-    padding: 8px 60px;
-  }
-}
+	.services .icon {
+		margin-bottom: 15px;
+	}
 
-@media (max-width: 767px) {
-  #schedule .nav-tabs a {
-    padding: 8px 50px;
-  }
-}
+	.services .icon i {
+		font-size: 48px;
+		line-height: 1;
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		transition: all 0.3s ease-in-out;
+	}
 
-@media (max-width: 480px) {
-  #schedule .nav-tabs a {
-    padding: 8px 30px;
-  }
-}
+	.services .title {
+		font-weight: 700;
+		margin-bottom: 15px;
+		font-size: 18px;
+	}
 
-#schedule .nav-tabs a.active {
-  background-color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  color: #fff;
-}
+	.services .title a {
+		color: #111;
+	}
 
-#schedule .sub-heading {
-  text-align: center;
-  font-size: 18px;
-  font-style: italic;
-  margin: 0 auto 30px auto;
-}
+	.services .description {
+		font-size: 15px;
+		line-height: 28px;
+		margin-bottom: 0;
+	}
 
-@media (min-width: 991px) {
-  #schedule .sub-heading {
-    width: 75%;
-  }
-}
+	.services .icon-box:hover .title a,
+	.services .icon-box:hover .description {
+		color: #fff;
+	}
 
-#schedule .tab-pane {
-  transition: ease-in-out .2s;
-}
+	.services .icon-box:hover .icon i {
+		color: #fff;
+	}
 
-#schedule .schedule-item {
-  border-bottom: 1px solid #fff;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  transition: background-color ease-in-out 0.3s;
-}
-
-#schedule .schedule-item:hover {
-  background-color: #fff;
-}
-
-#schedule .schedule-item time {
-  padding-bottom: 5px;
-  display: inline-block;
-}
-
-#schedule .schedule-item .speaker {
-  width: 60px;
-  height: 60px;
-  overflow: hidden;
-  border-radius: 50%;
-  float: left;
-  margin: 0 10px 10px 0;
-}
-
-#schedule .schedule-item .speaker img {
-  height: 100%;
-  transform: translateX(-50%);
-  margin-left: 50%;
-  transition: all ease-in-out 0.3s;
-}
-
-#schedule .schedule-item h4 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-#schedule .schedule-item h4 span {
-  font-style: italic;
-  color: #19328e;
-  font-weight: normal;
-  font-size: 16px;
-}
-
-#schedule .schedule-item p {
-  font-style: italic;
-  color: #152b79;
-  margin-bottom: 0;
-}
-
-/*--------------------------------------------------------------
-# jadwal Section
+	/*--------------------------------------------------------------
+# Features
 --------------------------------------------------------------*/
-#jadwal {
-  padding: 60px 0;
-}
+	.features {
+		padding-top: 0;
+	}
 
-#jadwal .container-fluid {
-  margin-bottom: 3px;
-}
+	.features .icon-box {
+		display: flex;
+		align-items: center;
+		padding: 20px;
+		transition: ease-in-out 0.3s;
+		box-shadow: 2px 0 35px 0 rgba(68, 88, 144, 0.12);
+	}
 
-#jadwal .jadwal-map iframe {
-  width: 100%;
-  height: 100%;
-  min-height: 300px;
-}
+	.features .icon-box i {
+		font-size: 32px;
+		padding-right: 10px;
+		line-height: 1;
+	}
 
-#jadwal .jadwal-info {
-  background: url("<?php echo base_url(); ?>assets/theme/assets/img/venue-info-bg.jpg") top center no-repeat;
-  background-size: cover;
-  position: relative;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
+	.features .icon-box h3 {
+		font-weight: 700;
+		margin: 0;
+		padding: 0;
+		line-height: 1;
+		font-size: 16px;
+	}
 
-#jadwal .jadwal-info:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
+	.features .icon-box h3 a {
+		color: #493c3e;
+		transition: ease-in-out 0.3s;
+	}
 
-#jadwal .jadwal-info h3 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #fff;
-}
+	.features .icon-box:hover a {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
 
-@media (max-width: 574px) {
-  #jadwal .jadwal-info h3 {
-    font-size: 24px;
-  }
-}
-
-#jadwal .jadwal-info p {
-  color: #fff;
-  margin-bottom: 0;
-}
-
-#jadwal .jadwal-gallery-container {
-  padding-right: 12px;
-}
-
-#jadwal .jadwal-gallery {
-  overflow: hidden;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
-}
-
-#jadwal .jadwal-gallery img {
-  transition: all ease-in-out 0.4s;
-}
-
-#jadwal .jadwal-gallery:hover img {
-  transform: scale(1.1);
-}
-
-/*--------------------------------------------------------------
-# Hotels Section
+	/*--------------------------------------------------------------
+# Cta
 --------------------------------------------------------------*/
-#hotels {
-  padding: 60px 0;
-}
+	.cta {
+		background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.8)), url("<?php echo base_url(); ?>assets/theme/assets/img/cta-bg.jpg") center center;
+		background-size: cover;
+		padding: 60px 0;
+	}
 
-#hotels .hotel {
-  border: 1px solid #e0e5fa;
-  background: #fff;
-  margin-bottom: 30px;
-}
+	.cta h3 {
+		color: #fff;
+		font-size: 28px;
+		font-weight: 700;
+	}
 
-#hotels .hotel:hover .hotel-img img {
-  transform: scale(1.1);
-}
+	.cta p {
+		color: #fff;
+	}
 
-#hotels .hotel-img {
-  overflow: hidden;
-  margin-bottom: 15px;
-}
+	.cta .cta-btn {
+		font-family: "Nunito", sans-serif;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 16px;
+		letter-spacing: 1px;
+		display: inline-block;
+		padding: 8px 28px;
+		border-radius: 25px;
+		transition: 0.5s;
+		margin-top: 10px;
+		border: 2px solid #fff;
+		color: #fff;
+	}
 
-#hotels .hotel-img img {
-  transition: 0.3s ease-in-out;
-}
+	.cta .cta-btn:hover {
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		border: 2px solid <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
 
-#hotels h3 {
-  font-weight: 600;
-  font-size: 20px;
-  margin-bottom: 5px;
-  padding: 0 20px;
-}
+	@media (min-width: 1024px) {
+		.cta {
+			background-attachment: fixed;
+		}
+	}
 
-#hotels a {
-  color: #152b79;
-}
-
-#hotels a:hover {
-  color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-}
-
-#hotels .stars {
-  padding: 0 20px;
-  margin-bottom: 5px;
-}
-
-#hotels .stars i {
-  color: #ffc31d;
-}
-
-#hotels p {
-  padding: 0 20px;
-  margin-bottom: 20px;
-  color: #060c22;
-  font-style: italic;
-  font-size: 15px;
-}
-
-/*--------------------------------------------------------------
-# Gallery Section
+	/*--------------------------------------------------------------
+# Portfolio
 --------------------------------------------------------------*/
-#gallery {
-  padding: 60px;
-  overflow: hidden;
-}
+	.portfolio #portfolio-flters {
+		padding: 0;
+		margin: 0 auto 25px auto;
+		list-style: none;
+		text-align: center;
+		border-radius: 50px;
+	}
 
-#gallery .owl-nav, #gallery .owl-dots {
-  margin-top: 25px;
-  text-align: center;
-}
+	.portfolio #portfolio-flters li {
+		cursor: pointer;
+		display: inline-block;
+		padding: 7px 17px 9px 17px;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1;
+		color: #444444;
+		margin: 0 3px 10px 3px;
+		transition: all ease-in-out 0.3s;
+		background: #ede9e9;
+		border-radius: 50px;
+	}
 
-#gallery .owl-item {
-  border-left: 2px solid #fff;
-  border-right: 2px solid #fff;
-}
+	.portfolio #portfolio-flters li:hover,
+	.portfolio #portfolio-flters li.filter-active {
+		color: #fff;
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
 
-#gallery .owl-dot {
-  display: inline-block;
-  margin: 0 5px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ddd;
-}
+	.portfolio #portfolio-flters li:last-child {
+		margin-right: 0;
+	}
 
-#gallery .owl-dot.active {
-  background-color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-}
+	.portfolio .portfolio-item {
+		margin-bottom: 30px;
+		overflow: hidden;
+	}
 
-#gallery .gallery-carousel .owl-stage-outer {
-  overflow: visible;
-}
+	.portfolio .portfolio-item img {
+		position: relative;
+		top: 0;
+		transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+	}
 
-#gallery .gallery-carousel .center {
-  border: 6px solid <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  margin: -10px;
-  box-sizing: content-box;
-  padding: 4px;
-  background: #fff;
-  z-index: 1;
-}
+	.portfolio .portfolio-item .portfolio-info {
+		opacity: 0;
+		position: absolute;
+		left: 15px;
+		right: 15px;
+		bottom: -50px;
+		z-index: 3;
+		transition: all ease-in-out 0.3s;
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		padding: 15px 20px;
+	}
 
-/*--------------------------------------------------------------
-# Sponsors Section
+	.portfolio .portfolio-item .portfolio-info h4 {
+		font-size: 18px;
+		color: #fff;
+		font-weight: 600;
+	}
+
+	.portfolio .portfolio-item .portfolio-info p {
+		color: #fff;
+		font-size: 14px;
+		margin-bottom: 0;
+	}
+
+	.portfolio .portfolio-item .portfolio-info .preview-link,
+	.portfolio .portfolio-item .portfolio-info .details-link {
+		position: absolute;
+		right: 50px;
+		font-size: 24px;
+		top: calc(50% - 18px);
+		color: white;
+		transition: ease-in-out 0.3s;
+	}
+
+	.portfolio .portfolio-item .portfolio-info .preview-link:hover,
+	.portfolio .portfolio-item .portfolio-info .details-link:hover {
+		color: #f7c2cc;
+	}
+
+	.portfolio .portfolio-item .portfolio-info .details-link {
+		right: 15px;
+	}
+
+	.portfolio .portfolio-item:hover img {
+		top: -30px;
+	}
+
+	.portfolio .portfolio-item:hover .portfolio-info {
+		opacity: 1;
+		bottom: 0;
+	}
+
+	/*--------------------------------------------------------------
+# Pricing
 --------------------------------------------------------------*/
-#supporters {
-  padding: 60px 0;
-}
+	.pricing .box {
+		padding: 20px;
+		background: #f9f9f9;
+		text-align: center;
+		border-radius: 8px;
+		position: relative;
+		overflow: hidden;
+		border: 2px solid #f9f9f9;
+	}
 
-#supporters .supporters-wrap {
-  border-top: 1px solid #e0e5fa;
-  border-left: 1px solid #e0e5fa;
-  margin-bottom: 30px;
-}
+	.pricing .box h3 {
+		font-weight: 400;
+		padding: 15px;
+		margin-top: 15px;
+		font-size: 20px;
+		font-weight: 600;
+		color: #493c3e;
+	}
 
-#supporters .supporter-logo {
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-right: 1px solid #e0e5fa;
-  border-bottom: 1px solid #e0e5fa;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.5);
-  height: 160px;
-}
+	.pricing .box h4 {
+		font-size: 42px;
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		font-weight: 500;
+		font-family: "Open Sans", sans-serif;
+		margin-bottom: 20px;
+	}
 
-#supporters .supporter-logo:hover img {
-  transform: scale(1.2);
-}
+	.pricing .box h4 sup {
+		font-size: 20px;
+		top: -15px;
+		left: -3px;
+	}
 
-#supporters img {
-  transition: all 0.4s ease-in-out;
-}
+	.pricing .box h4 span {
+		color: #bababa;
+		font-size: 16px;
+		font-weight: 300;
+	}
 
-/*--------------------------------------------------------------
-# F.A.Q Section
+	.pricing .box ul {
+		padding: 0;
+		list-style: none;
+		color: #493c3e;
+		text-align: center;
+		line-height: 20px;
+		font-size: 14px;
+	}
+
+	.pricing .box ul li {
+		padding-bottom: 16px;
+	}
+
+	.pricing .box ul i {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		font-size: 18px;
+		padding-right: 4px;
+	}
+
+	.pricing .box ul .na {
+		color: #ccc;
+		text-decoration: line-through;
+	}
+
+	.pricing .box .btn-wrap {
+		padding: 15px;
+		text-align: center;
+	}
+
+	.pricing .box .btn-buy {
+		display: inline-block;
+		padding: 8px 40px 10px 40px;
+		border-radius: 50px;
+		border: 2px solid <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		font-size: 14px;
+		font-weight: 400;
+		font-family: "Nunito", sans-serif;
+		font-weight: 600;
+		transition: 0.3s;
+	}
+
+	.pricing .box .btn-buy:hover {
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		color: #fff;
+	}
+
+	.pricing .recommended {
+		border-color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
+
+	.pricing .recommended .btn-buy {
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		color: #fff;
+	}
+
+	.pricing .recommended .btn-buy:hover {
+		background: #d91e42;
+		border-color: #d91e42;
+	}
+
+	.pricing .recommended-badge {
+		position: absolute;
+		top: 5px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+		font-size: 13px;
+		padding: 3px 25px 6px 25px;
+		background: #fce6ea;
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		border-radius: 50px;
+	}
+
+	/*--------------------------------------------------------------
+# F.A.Q
 --------------------------------------------------------------*/
-#faq {
-  padding: 60px 0;
-}
+	.faq {
+		padding: 60px 0;
+	}
 
-#faq #faq-list {
-  padding: 0;
-  list-style: none;
-}
+	.faq .faq-list {
+		padding: 0;
+		list-style: none;
+	}
 
-#faq #faq-list li {
-  border-bottom: 1px solid #ddd;
-}
+	.faq .faq-list li {
+		padding: 0 0 20px 25px;
+	}
 
-#faq #faq-list a {
-  padding: 18px 0;
-  display: block;
-  position: relative;
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 600;
-  padding-right: 20px;
-}
+	.faq .faq-list a {
+		display: block;
+		position: relative;
+		font-family: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		font-size: 18px;
+		font-weight: 500;
+	}
 
-#faq #faq-list i {
-  font-size: 24px;
-  position: absolute;
-  right: 0;
-  top: 16px;
-}
+	.faq .faq-list i {
+		font-size: 18px;
+		position: absolute;
+		left: -25px;
+		top: 6px;
+	}
 
-#faq #faq-list p {
-  margin-bottom: 20px;
-}
+	.faq .faq-list p {
+		margin-bottom: 20px;
+		font-size: 15px;
+	}
 
-@media (max-width: 768px) {
-  #faq #faq-list a {
-    font-size: 18px;
-  }
-  #faq #faq-list i {
-    top: 13px;
-  }
-}
+	.faq .faq-list a.collapse {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
 
-#faq #faq-list a.collapse {
-  color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-}
+	.faq .faq-list a.collapsed {
+		color: #343a40;
+	}
 
-#faq #faq-list a.collapsed {
-  color: #000;
-}
+	.faq .faq-list a.collapsed:hover {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
 
-#faq #faq-list a.collapsed i::before {
-  content: "\f055" !important;
-}
+	.faq .faq-list a.collapsed i::before {
+		content: "\eab2" !important;
+	}
 
-/*--------------------------------------------------------------
-# Subscribe Section
+	@media (min-width: 1280px) {
+		.faq .container {
+			padding: 0 120px;
+		}
+	}
+
+	/*--------------------------------------------------------------
+# Team
 --------------------------------------------------------------*/
-#subscribe {
-  padding: 60px;
-  background: url(http://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>) center center no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
-}
+	.team {
+		background: #fff;
+		padding: 60px 0;
+	}
 
-#subscribe:before {
-  content: "";
-  background: rgba(<?php echo $detail[0]->KONF_WEB_WARNA_RGB ?>, 0.6);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
+	.team .member {
+		margin-bottom: 20px;
+		overflow: hidden;
+		text-align: center;
+		border-radius: 5px;
+		background: #fff;
+		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+	}
 
-@media (min-width: 1024px) {
-  #subscribe {
-    background-attachment: fixed;
-  }
-}
+	.team .member .member-img {
+		position: relative;
+		overflow: hidden;
+	}
 
-#subscribe .section-header h2, #subscribe p {
-  color: #fff;
-}
+	.team .member .social {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: 40px;
+		opacity: 0;
+		transition: ease-in-out 0.3s;
+		text-align: center;
+		background: rgba(255, 255, 255, 0.85);
+	}
 
-#subscribe input {
-  background: #fff;
-  color: #060c22;
-  border: 0;
-  outline: none;
-  margin: 0;
-  padding: 9px 20px;
-  border-radius: 50px;
-  font-size: 14px;
-}
+	.team .member .social a {
+		transition: color 0.3s;
+		color: #493c3e;
+		margin: 0 10px;
+		padding-top: 8px;
+		display: inline-block;
+	}
 
-@media (min-width: 767px) {
-  #subscribe input {
-    min-width: 400px;
-  }
-}
+	.team .member .social a:hover {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
 
-#subscribe button {
-  border: 0;
-  padding: 9px 25px;
-  cursor: pointer;
-  background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  color: #fff;
-  transition: all 0.3s ease;
-  outline: none;
-  font-size: 14px;
-  border-radius: 50px;
-}
+	.team .member .social i {
+		font-size: 18px;
+		margin: 0 2px;
+	}
 
-#subscribe button:hover {
-  background: #e0072f;
-}
+	.team .member .member-info {
+		padding: 25px 15px;
+	}
 
-@media (max-width: 460px) {
-  #subscribe button {
-    margin-top: 10px;
-  }
-}
+	.team .member .member-info h2 {
+		font-weight: 700;
+		margin-bottom: 5px;
+		font-size: 30px;
+		color: #493c3e;
+		font-family: "<?php echo $detail[0]->KONF_WEB_FONT_JUDUL ?>", sans-serif;
+	}
 
-/*--------------------------------------------------------------
-# Buy Tickets Section
+	.team .member .member-info span {
+		display: block;
+		font-size: 13px;
+		font-weight: 400;
+		color: #aaaaaa;
+	}
+
+	.team .member .member-info p {
+		font-style: italic;
+		font-size: 14px;
+		line-height: 26px;
+		color: #777777;
+	}
+
+	.team .member:hover .social {
+		opacity: 1;
+	}
+
+	/*--------------------------------------------------------------
+# Contact
 --------------------------------------------------------------*/
-#buy-tickets {
-  padding: 60px 0;
-}
+	.contact .info {
+		width: 100%;
+		background: #fff;
+	}
 
-#buy-tickets .card {
-  border: none;
-  border-radius: 5px;
-  transition: all  0.3s ease-in-out;
-  box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
-}
+	.contact .info i {
+		font-size: 20px;
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		float: left;
+		width: 44px;
+		height: 44px;
+		background: #fdeff2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50px;
+		transition: all 0.3s ease-in-out;
+	}
 
-#buy-tickets .card:hover {
-  box-shadow: 0 10px 35px 0 rgba(6, 12, 34, 0.2);
-}
+	.contact .info h4 {
+		padding: 0 0 0 60px;
+		font-size: 22px;
+		font-weight: 600;
+		margin-bottom: 5px;
+		color: #493c3e;
+	}
 
-#buy-tickets .card hr {
-  margin: 25px 0;
-}
+	.contact .info p {
+		padding: 0 0 0 60px;
+		margin-bottom: 0;
+		font-size: 14px;
+		color: #816a6e;
+	}
 
-#buy-tickets .card .card-title {
-  margin: 10px 0;
-  font-size: 14px;
-  letter-spacing: 1px;
-  font-weight: bold;
-}
+	.contact .info .email,
+	.contact .info .phone {
+		margin-top: 40px;
+	}
 
-#buy-tickets .card .card-price {
-  font-size: 48px;
-  margin: 0;
-}
+	.contact .info .email:hover i,
+	.contact .info .address:hover i,
+	.contact .info .phone:hover i {
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		color: #fff;
+	}
 
-#buy-tickets .card ul li {
-  margin-bottom: 20px;
-}
+	.contact .php-email-form {
+		width: 100%;
+		background: #fff;
+	}
 
-#buy-tickets .card .text-muted {
-  opacity: 0.7;
-}
+	.contact .php-email-form .form-group {
+		padding-bottom: 8px;
+	}
 
-#buy-tickets .card .btn {
-  font-size: 15px;
-  border-radius: 50px;
-  padding: 10px 40px;
-  transition: all 0.2s;
-  background-color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  border: 0;
-  color: #fff;
-}
+	.contact .php-email-form .validate {
+		display: none;
+		color: red;
+		margin: 0 0 15px 0;
+		font-weight: 400;
+		font-size: 13px;
+	}
 
-#buy-tickets .card .btn:hover {
-  background-color: #e0072f;
-}
+	.contact .php-email-form .error-message {
+		display: none;
+		color: #fff;
+		background: #ed3c0d;
+		text-align: left;
+		padding: 15px;
+		font-weight: 600;
+	}
 
-#buy-tickets #buy-ticket-modal input, #buy-tickets #buy-ticket-modal select {
-  border-radius: 0;
-}
+	.contact .php-email-form .error-message br+br {
+		margin-top: 25px;
+	}
 
-#buy-tickets #buy-ticket-modal .btn {
-  font-size: 15px;
-  border-radius: 50px;
-  padding: 10px 40px;
-  transition: all 0.2s;
-  background-color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  border: 0;
-  color: #fff;
-}
+	.contact .php-email-form .sent-message {
+		display: none;
+		color: #fff;
+		background: #18d26e;
+		text-align: center;
+		padding: 15px;
+		font-weight: 600;
+	}
 
-#buy-tickets #buy-ticket-modal .btn:hover {
-  background-color: #e0072f;
-}
+	.contact .php-email-form .loading {
+		display: none;
+		background: #fff;
+		text-align: center;
+		padding: 15px;
+	}
 
-/*--------------------------------------------------------------
-# rsvp Section
+	.contact .php-email-form .loading:before {
+		content: "";
+		display: inline-block;
+		border-radius: 50%;
+		width: 24px;
+		height: 24px;
+		margin: 0 10px -6px 0;
+		border: 3px solid #18d26e;
+		border-top-color: #eee;
+		-webkit-animation: animate-loading 1s linear infinite;
+		animation: animate-loading 1s linear infinite;
+	}
+
+	.contact .php-email-form input,
+	.contact .php-email-form textarea {
+		border-radius: 0;
+		box-shadow: none;
+		font-size: 14px;
+	}
+
+	.contact .php-email-form input:focus,
+	.contact .php-email-form textarea:focus {
+		border-color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
+
+	.contact .php-email-form input {
+		height: 44px;
+	}
+
+	.contact .php-email-form textarea {
+		padding: 10px 12px;
+	}
+
+	.contact .php-email-form button[type="submit"] {
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		border: 0;
+		padding: 10px 28px;
+		color: #fff;
+		transition: 0.4s;
+		border-radius: 50px;
+	}
+
+	.contact .php-email-form button[type="submit"]:hover {
+		background: #d01d3f;
+	}
+
+	@-webkit-keyframes animate-loading {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes animate-loading {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	/*--------------------------------------------------------------
+# Breadcrumbs
 --------------------------------------------------------------*/
-#rsvp {
-  padding: 60px 0;
-}
+	.breadcrumbs {
+		padding: 15px 0;
+		background: #f6f4f4;
+		margin-top: 67px;
+	}
 
-#rsvp .rsvp-info {
-  margin-bottom: 20px;
-  text-align: center;
-}
+	@media (max-width: 992px) {
+		.breadcrumbs {
+			margin-top: 50px;
+		}
+	}
 
-#rsvp .rsvp-info i {
-  font-size: 48px;
-  display: inline-block;
-  margin-bottom: 10px;
-  color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-}
+	.breadcrumbs h2 {
+		font-size: 26px;
+		font-weight: 600;
+	}
 
-#rsvp .rsvp-info address, #rsvp .rsvp-info p {
-  margin-bottom: 0;
-  color: #112363;
-}
+	.breadcrumbs ol {
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		padding: 0 0 10px 0;
+		margin: 0;
+		font-size: 14px;
+	}
 
-#rsvp .rsvp-info h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #112363;
-}
+	.breadcrumbs ol li+li {
+		padding-left: 10px;
+	}
 
-#rsvp .rsvp-info a {
-  color: #4869df;
-}
+	.breadcrumbs ol li+li::before {
+		display: inline-block;
+		padding-right: 10px;
+		color: #655356;
+		content: "/";
+	}
 
-#rsvp .rsvp-info a:hover {
-  color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-}
+	/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+	.portfolio-details {
+		padding-top: 40px;
+	}
 
-#rsvp .rsvp-address, #rsvp .rsvp-phone, #rsvp .rsvp-email {
-  margin-bottom: 20px;
-}
+	.portfolio-details .portfolio-details-container {
+		position: relative;
+	}
 
-@media (min-width: 768px) {
-  #rsvp .rsvp-address, #rsvp .rsvp-phone, #rsvp .rsvp-email {
-    padding: 20px 0;
-  }
-}
+	.portfolio-details .portfolio-details-carousel {
+		position: relative;
+		z-index: 1;
+	}
 
-@media (min-width: 768px) {
-  #rsvp .rsvp-phone {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-  }
-}
+	.portfolio-details .portfolio-details-carousel .owl-nav,
+	.portfolio-details .portfolio-details-carousel .owl-dots {
+		margin-top: 5px;
+		text-align: left;
+	}
 
-#rsvp .php-email-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
+	.portfolio-details .portfolio-details-carousel .owl-dot {
+		display: inline-block;
+		margin: 0 10px 0 0;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background-color: #ddd !important;
+	}
 
-#rsvp .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
+	.portfolio-details .portfolio-details-carousel .owl-dot.active {
+		background-color: <?php echo $detail[0]->KONF_WEB_WARNA ?> !important;
+	}
 
-#rsvp .php-email-form .error-message br + br {
-  margin-top: 25px;
-}
+	.portfolio-details .portfolio-info {
+		padding: 30px;
+		position: absolute;
+		right: 0;
+		bottom: -70px;
+		background: #fff;
+		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+		z-index: 2;
+	}
 
-#rsvp .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
+	.portfolio-details .portfolio-info h3 {
+		font-size: 22px;
+		font-weight: 700;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #eee;
+	}
 
-#rsvp .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
+	.portfolio-details .portfolio-info ul {
+		list-style: none;
+		padding: 0;
+		font-size: 15px;
+	}
 
-#rsvp .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
+	.portfolio-details .portfolio-info ul li+li {
+		margin-top: 10px;
+	}
 
-#rsvp .php-email-form input, #rsvp .php-email-form textarea, #rsvp .php-email-form select {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-}
+	.portfolio-details .portfolio-description {
+		padding-top: 50px;
+	}
 
-#rsvp .php-email-form input::focus, #rsvp .php-email-form textarea::focus, #rsvp .php-email-form select::focus {
-  background-color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-}
+	.portfolio-details .portfolio-description h2 {
+		width: 50%;
+		font-size: 26px;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
 
-#rsvp .php-email-form input {
-  padding: 20px 15px;
-}
-#rsvp .php-email-form select-selected {
-  padding: 20px 15px;
-}
+	.portfolio-details .portfolio-description p {
+		padding: 0 0 0 0;
+	}
 
-#rsvp .php-email-form textarea {
-  padding: 12px 15px;
-}
+	@media (max-width: 768px) {
+		.portfolio-details .portfolio-info {
+			position: static;
+			margin-top: 30px;
+		}
+	}
 
-#rsvp .php-email-form button[type="submit"] {
-  background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  border: 0;
-  padding: 10px 40px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 50px;
-  cursor: pointer;
-}
+	/*--------------------------------------------------------------
+# Blog
+--------------------------------------------------------------*/
+	.blog {
+		padding: 40px 0 20px 0;
+	}
 
-#rsvp .php-email-form button[type="submit"]:hover {
-  background: #e0072f;
-}
+	.blog .entry {
+		padding: 20px;
+		margin-bottom: 60px;
+		overflow: hidden;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+	}
 
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+	.blog .entry .entry-img {
+		max-height: 400px;
+		margin: -20px -20px 20px -20px;
+		overflow: hidden;
+	}
 
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+	.blog .entry .entry-title {
+		font-size: 20px;
+		line-height: 26px;
+		font-weight: bold;
+		padding: 0;
+		margin: 0 0 20px 0;
+	}
 
-/*--------------------------------------------------------------
+	.blog .entry .entry-title a {
+		color: #493c3e;
+		transition: 0.3s;
+	}
+
+	.blog .entry .entry-title a:hover {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
+
+	.blog .entry .entry-meta {
+		color: #9a8487;
+	}
+
+	.blog .entry .entry-meta ul {
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.blog .entry .entry-meta ul li {
+		margin-bottom: 15px;
+	}
+
+	.blog .entry .entry-meta ul li+li {
+		padding-left: 15px;
+	}
+
+	.blog .entry .entry-meta i {
+		font-size: 14px;
+		padding-right: 4px;
+	}
+
+	.blog .entry .entry-meta a {
+		color: #9a8487;
+		font-size: 14px;
+		display: inline-block;
+		line-height: 1;
+	}
+
+	.blog .entry .entry-content p {
+		line-height: 24px;
+		font-size: 15px;
+	}
+
+	.blog .entry .entry-content .read-more {
+		-moz-text-align-last: right;
+		text-align-last: right;
+	}
+
+	.blog .entry .entry-content .read-more a {
+		display: inline-block;
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		color: #fff;
+		padding: 5px 20px 7px 20px;
+		transition: 0.3s;
+		font-size: 14px;
+		border-radius: 50px;
+	}
+
+	.blog .entry .entry-content .read-more a:hover {
+		background: #d01d3f;
+	}
+
+	.blog .entry .entry-content h3 {
+		font-size: 22px;
+		margin-top: 30px;
+		font-weight: bold;
+	}
+
+	.blog .entry .entry-content blockquote {
+		overflow: hidden;
+		background-color: #fafafa;
+		padding: 60px;
+		position: relative;
+		text-align: center;
+		margin: 20px 0;
+	}
+
+	.blog .entry .entry-content blockquote p {
+		color: #444444;
+		line-height: 1.6;
+		margin-bottom: 0;
+		font-style: italic;
+		font-weight: 500;
+		font-size: 22px;
+	}
+
+	.blog .entry .entry-content blockquote .quote-left {
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		font-size: 36px;
+		color: #e7e7e7;
+	}
+
+	.blog .entry .entry-content blockquote .quote-right {
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+		font-size: 36px;
+		color: #e7e7e7;
+	}
+
+	.blog .entry .entry-content blockquote::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 3px;
+		background-color: #493c3e;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.blog .entry .entry-footer {
+		padding-top: 10px;
+		border-top: 1px solid #e6e6e6;
+	}
+
+	.blog .entry .entry-footer i {
+		color: #9a8487;
+		display: inline;
+	}
+
+	.blog .entry .entry-footer a {
+		color: #c3b6b8;
+		transition: 0.3s;
+	}
+
+	.blog .entry .entry-footer a:hover {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
+
+	.blog .entry .entry-footer .cats {
+		list-style: none;
+		display: inline;
+		padding: 0 20px 0 0;
+		font-size: 14px;
+	}
+
+	.blog .entry .entry-footer .cats li {
+		display: inline-block;
+	}
+
+	.blog .entry .entry-footer .tags {
+		list-style: none;
+		display: inline;
+		padding: 0;
+		font-size: 14px;
+	}
+
+	.blog .entry .entry-footer .tags li {
+		display: inline-block;
+	}
+
+	.blog .entry .entry-footer .tags li+li::before {
+		padding-right: 6px;
+		color: #6c757d;
+		content: ",";
+	}
+
+	.blog .entry .entry-footer .share {
+		font-size: 16px;
+	}
+
+	.blog .entry .entry-footer .share i {
+		padding-left: 5px;
+	}
+
+	.blog .entry-single {
+		margin-bottom: 30px;
+	}
+
+	.blog .entry-single .entry-title {
+		font-size: 36px;
+		line-height: 42px;
+	}
+
+	.blog .blog-author {
+		padding: 20px;
+		margin-bottom: 30px;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+	}
+
+	.blog .blog-author img {
+		width: 120px;
+	}
+
+	.blog .blog-author h4 {
+		margin-left: 140px;
+		font-weight: 600;
+		font-size: 22px;
+		margin-bottom: 0px;
+		padding: 0;
+	}
+
+	.blog .blog-author .social-links {
+		margin: 0 0 5px 140px;
+	}
+
+	.blog .blog-author .social-links a {
+		color: #b1a0a3;
+	}
+
+	.blog .blog-author p {
+		margin-left: 140px;
+		font-style: italic;
+		color: #b7b7b7;
+	}
+
+	.blog .blog-comments {
+		margin-bottom: 30px;
+	}
+
+	.blog .blog-comments .comments-count {
+		font-weight: bold;
+	}
+
+	.blog .blog-comments .comment {
+		margin-top: 30px;
+		position: relative;
+	}
+
+	.blog .blog-comments .comment .comment-img {
+		width: 50px;
+	}
+
+	.blog .blog-comments .comment h5 {
+		margin-left: 65px;
+		font-size: 16px;
+		margin-bottom: 2px;
+	}
+
+	.blog .blog-comments .comment h5 a {
+		font-weight: bold;
+		color: #444444;
+		transition: 0.3s;
+	}
+
+	.blog .blog-comments .comment h5 a:hover {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
+
+	.blog .blog-comments .comment h5 .reply {
+		padding-left: 10px;
+		color: #493c3e;
+	}
+
+	.blog .blog-comments .comment time {
+		margin-left: 65px;
+		display: block;
+		font-size: 14px;
+		color: #b1a0a3;
+		margin-bottom: 5px;
+	}
+
+	.blog .blog-comments .comment p {
+		margin-left: 65px;
+	}
+
+	.blog .blog-comments .comment.comment-reply {
+		padding-left: 40px;
+	}
+
+	.blog .blog-comments .reply-form {
+		margin-top: 30px;
+		padding: 30px;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+	}
+
+	.blog .blog-comments .reply-form h4 {
+		font-weight: bold;
+		font-size: 22px;
+	}
+
+	.blog .blog-comments .reply-form p {
+		font-size: 14px;
+	}
+
+	.blog .blog-comments .reply-form input {
+		border-radius: 0;
+		padding: 20px 10px;
+		font-size: 14px;
+	}
+
+	.blog .blog-comments .reply-form input:focus {
+		box-shadow: none;
+		border-color: #f096a7;
+	}
+
+	.blog .blog-comments .reply-form textarea {
+		border-radius: 0;
+		padding: 10px 10px;
+		font-size: 14px;
+	}
+
+	.blog .blog-comments .reply-form textarea:focus {
+		box-shadow: none;
+		border-color: #f096a7;
+	}
+
+	.blog .blog-comments .reply-form .form-group {
+		margin-bottom: 25px;
+	}
+
+	.blog .blog-comments .reply-form .btn-primary {
+		border-radius: 0;
+		padding: 10px 20px;
+		border: 0;
+		border-radius: 50px;
+		background-color: #493c3e;
+	}
+
+	.blog .blog-comments .reply-form .btn-primary:hover {
+		background-color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
+
+	.blog .blog-pagination {
+		color: #816a6e;
+	}
+
+	.blog .blog-pagination ul {
+		display: flex;
+		padding-left: 0;
+		list-style: none;
+	}
+
+	.blog .blog-pagination li {
+		border: 1px solid white;
+		margin: 0 5px;
+		transition: 0.3s;
+	}
+
+	.blog .blog-pagination li.active {
+		background: white;
+	}
+
+	.blog .blog-pagination li a {
+		color: #aaaaaa;
+		padding: 7px 16px;
+		display: inline-block;
+	}
+
+	.blog .blog-pagination li.active,
+	.blog .blog-pagination li:hover {
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		border: 1px solid <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
+
+	.blog .blog-pagination li.active a,
+	.blog .blog-pagination li:hover a {
+		color: #fff;
+	}
+
+	.blog .blog-pagination li.disabled {
+		background: #fff;
+		border: 1px solid white;
+	}
+
+	.blog .blog-pagination li.disabled i {
+		color: #f1f1f1;
+		padding: 10px 16px;
+		display: inline-block;
+	}
+
+	.blog .sidebar {
+		padding: 30px;
+		margin: 0 0 60px 20px;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+	}
+
+	.blog .sidebar .sidebar-title {
+		font-size: 20px;
+		font-weight: 700;
+		padding: 0 0 0 0;
+		margin: 0 0 15px 0;
+		color: #493c3e;
+		position: relative;
+	}
+
+	.blog .sidebar .sidebar-item {
+		margin-bottom: 30px;
+	}
+
+	.blog .sidebar .search-form form {
+		background: #fff;
+		border: 1px solid #d3cacb;
+		padding: 3px 10px;
+		position: relative;
+		border-radius: 50px;
+	}
+
+	.blog .sidebar .search-form form input[type="text"] {
+		border: 0;
+		padding: 4px;
+		width: calc(100% - 42px);
+	}
+
+	.blog .sidebar .search-form form button {
+		position: absolute;
+		border-radius: 50px;
+		top: 0;
+		right: -2px;
+		bottom: 0;
+		border: 0;
+		background: none;
+		font-size: 16px;
+		padding: 0 20px;
+		margin: -1px;
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		color: #fff;
+		transition: 0.3s;
+	}
+
+	.blog .sidebar .search-form form button:hover {
+		background: #d01d3f;
+	}
+
+	.blog .sidebar .categories ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.blog .sidebar .categories ul li+li {
+		padding-top: 10px;
+	}
+
+	.blog .sidebar .categories ul a {
+		color: #655356;
+	}
+
+	.blog .sidebar .categories ul a:hover {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
+
+	.blog .sidebar .categories ul a span {
+		padding-left: 5px;
+		color: #b1a0a3;
+		font-size: 14px;
+	}
+
+	.blog .sidebar .recent-posts .post-item+.post-item {
+		margin-top: 15px;
+	}
+
+	.blog .sidebar .recent-posts img {
+		width: 80px;
+		float: left;
+	}
+
+	.blog .sidebar .recent-posts h4 {
+		font-size: 15px;
+		margin-left: 95px;
+		font-weight: bold;
+	}
+
+	.blog .sidebar .recent-posts h4 a {
+		color: #110e0e;
+		transition: 0.3s;
+	}
+
+	.blog .sidebar .recent-posts h4 a:hover {
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
+
+	.blog .sidebar .recent-posts time {
+		display: block;
+		margin-left: 95px;
+		font-style: italic;
+		font-size: 14px;
+		color: #b1a0a3;
+	}
+
+	.blog .sidebar .tags {
+		margin-bottom: -10px;
+	}
+
+	.blog .sidebar .tags ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.blog .sidebar .tags ul li {
+		display: inline-block;
+	}
+
+	.blog .sidebar .tags ul a {
+		color: #8e767a;
+		font-size: 14px;
+		padding: 6px 14px;
+		margin: 0 6px 8px 0;
+		border: 1px solid #ede9e9;
+		display: inline-block;
+		border-radius: 50px;
+		transition: 0.3s;
+	}
+
+	.blog .sidebar .tags ul a:hover {
+		color: #fff;
+		border: 1px solid <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
+
+	.blog .sidebar .tags ul a span {
+		padding-left: 5px;
+		color: #dfd8d9;
+		font-size: 14px;
+	}
+
+	/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-#footer {
-  background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  padding: 0 0 25px 0;
-  color: #eee;
-  font-size: 14px;
-}
+	#footer {
+		color: #444444;
+		font-size: 14px;
+		background: #f6f4f4;
+		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+	}
 
-#footer .footer-top {
-  background: #040919;
-  padding: 60px 0 30px 0;
-}
+	#footer .footer-top {
+		padding: 60px 0 30px 0;
+		background: #fff;
+	}
 
-#footer .footer-top .footer-info {
-  margin-bottom: 30px;
-}
+	#footer .footer-top .footer-contact {
+		margin-bottom: 30px;
+	}
 
-#footer .footer-top .footer-info h3 {
-  font-size: 26px;
-  margin: 0 0 20px 0;
-  padding: 2px 0 2px 0;
-  line-height: 1;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  color: #fff;
-}
+	#footer .footer-top .footer-contact h4 {
+		font-size: 22px;
+		margin: 0 0 30px 0;
+		padding: 2px 0 2px 0;
+		line-height: 1;
+		font-weight: 700;
+	}
 
-#footer .footer-top .footer-info img {
-  height: 40px;
-  margin-bottom: 10px;
-}
+	#footer .footer-top .footer-contact p {
+		font-size: 14px;
+		line-height: 24px;
+		margin-bottom: 0;
+		font-family: "Nunito", sans-serif;
+		color: #777777;
+	}
 
-#footer .footer-top .footer-info p {
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
-  color: #fff;
-}
+	#footer .footer-top h4 {
+		font-size: 16px;
+		font-weight: bold;
+		color: #444444;
+		position: relative;
+		padding-bottom: 12px;
+	}
 
-#footer .footer-top .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #222636;
-  color: #eee;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
+	#footer .footer-top .footer-links {
+		margin-bottom: 30px;
+	}
 
-#footer .footer-top .social-links a:hover {
-  background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  color: #fff;
-}
+	#footer .footer-top .footer-links ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
 
-#footer .footer-top h4 {
-  font-size: 14px;
-  font-weight: bold;
-  color: #fff;
-  text-transform: uppercase;
-  position: relative;
-  padding-bottom: 12px;
-  border-bottom: 2px solid <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-}
+	#footer .footer-top .footer-links ul i {
+		padding-right: 2px;
+		color: #ea6981;
+		font-size: 18px;
+		line-height: 1;
+	}
 
-#footer .footer-top .footer-links {
-  margin-bottom: 30px;
-}
+	#footer .footer-top .footer-links ul li {
+		padding: 10px 0;
+		display: flex;
+		align-items: center;
+	}
 
-#footer .footer-top .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+	#footer .footer-top .footer-links ul li:first-child {
+		padding-top: 0;
+	}
 
-#footer .footer-top .footer-links ul i {
-  padding-right: 5px;
-  color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  font-size: 18px;
-}
+	#footer .footer-top .footer-links ul a {
+		color: #777777;
+		transition: 0.3s;
+		display: inline-block;
+		line-height: 1;
+	}
 
-#footer .footer-top .footer-links ul li {
-  border-bottom: 1px solid #262c44;
-  padding: 10px 0;
-}
+	#footer .footer-top .footer-links ul a:hover {
+		text-decoration: none;
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+	}
 
-#footer .footer-top .footer-links ul li:first-child {
-  padding-top: 0;
-}
+	#footer .footer-newsletter {
+		font-size: 15px;
+	}
 
-#footer .footer-top .footer-links ul a {
-  color: #eee;
-}
+	#footer .footer-newsletter h4 {
+		font-size: 16px;
+		font-weight: bold;
+		color: #444444;
+		position: relative;
+		padding-bottom: 12px;
+	}
 
-#footer .footer-top .footer-links ul a:hover {
-  color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-}
+	#footer .footer-newsletter form {
+		margin-top: 30px;
+		background: #fff;
+		padding: 6px 10px;
+		position: relative;
+		border-radius: 50px;
+		text-align: left;
+		border: 1px solid #f7c2cc;
+	}
 
-#footer .footer-top .footer-rsvp {
-  margin-bottom: 30px;
-}
+	#footer .footer-newsletter form input[type="email"] {
+		border: 0;
+		padding: 4px 8px;
+		width: calc(100% - 100px);
+	}
 
-#footer .footer-top .footer-rsvp p {
-  line-height: 26px;
-}
+	#footer .footer-newsletter form input[type="submit"] {
+		position: absolute;
+		top: 0;
+		right: -2px;
+		bottom: 0;
+		border: 0;
+		background: none;
+		font-size: 15px;
+		padding: 0 22px;
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		color: #fff;
+		transition: 0.3s;
+		border-radius: 50px;
+		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+	}
 
-#footer .footer-top .footer-newsletter {
-  margin-bottom: 30px;
-}
+	#footer .footer-newsletter form input[type="submit"]:hover {
+		background: #d01d3f;
+	}
 
-#footer .footer-top .footer-newsletter input[type="email"] {
-  border: 0;
-  padding: 6px 8px;
-  width: 65%;
-}
+	#footer .credits {
+		padding-top: 5px;
+		font-size: 13px;
+		color: #444444;
+	}
 
-#footer .footer-top .footer-newsletter input[type="submit"] {
-  background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
-  border: 0;
-  width: 35%;
-  padding: 6px 0;
-  text-align: center;
-  color: #fff;
-  transition: 0.3s;
-  cursor: pointer;
-}
+	#footer .social-links a {
+		font-size: 18px;
+		display: inline-block;
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		color: #fff;
+		line-height: 1;
+		padding: 8px 0;
+		margin-right: 4px;
+		border-radius: 50%;
+		text-align: center;
+		width: 36px;
+		height: 36px;
+		transition: 0.3s;
+	}
 
-#footer .footer-top .footer-newsletter input[type="submit"]:hover {
-  background: #e0072f;
-}
-
-#footer .copyright {
-  text-align: center;
-  padding-top: 30px;
-}
-
-#footer .credits {
-  text-align: center;
-  font-size: 13px;
-  color: #ddd;
-}
-
+	#footer .social-links a:hover {
+		background: #d01d3f;
+		color: #fff;
+		text-decoration: none;
+	}
 </style>
+
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container">
+	<!-- ======= Header ======= -->
+	<header id="header" class="fixed-top ">
+		<div class="container d-flex align-items-center">
 
-      <div id="logo" class="pull-left">
-        <!-- Uncomment below if you prefer to use a text logo -->
-        <!-- <h1><a href="#intro">The<span>Event</span></a></h1> -->
-        <h1><a href="#intro"><?php echo $detail[0]->KONF_WEB_JUDUL; ?></a></h1>
-        <!-- <a href="index.html" class="scrollto"><img src="<?php echo base_url(); ?>assets/theme/assets/img/logo.png" alt="" title=""></a> -->
-      </div>
+			<h1 class="logo mr-auto"><a href="index.html"><?php echo $detail[0]->KONF_WEB_JUDUL; ?></a></h1>
+			<!-- Uncomment below if you prefer to use an image logo -->
+			<!-- <a href="index.html" class="logo mr-auto"><img src="<?php echo base_url(); ?>assets/theme/assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="<?php echo base_url() ?>">Intro</a></li>
-          <li><a href="#pembukaan">Pembukaan</a></li>
-          <li><a href="#pengantin">Pengantin</a></li>
-          <li><a href="#jadwal">Jadwal & Lokasi</a></li>
-          <li><a href="#gallery">Galleri</a></li>
-          <li><a href="#rsvp">RSVP</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- End Header -->
+			<nav class="nav-menu d-none d-lg-block">
+				<ul>
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#team">Team</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li class="drop-down"><a href="">Drop Down</a>
+						<ul>
+							<li><a href="#">Drop Down 1</a></li>
+							<li class="drop-down"><a href="#">Deep Drop Down</a>
+								<ul>
+									<li><a href="#">Deep Drop Down 1</a></li>
+									<li><a href="#">Deep Drop Down 2</a></li>
+									<li><a href="#">Deep Drop Down 3</a></li>
+									<li><a href="#">Deep Drop Down 4</a></li>
+									<li><a href="#">Deep Drop Down 5</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Drop Down 2</a></li>
+							<li><a href="#">Drop Down 3</a></li>
+							<li><a href="#">Drop Down 4</a></li>
+						</ul>
+					</li>
+					<li><a href="#contact">Contact</a></li>
 
-  <!-- ======= Intro Section ======= -->
-  <section id="intro">
-    <div class="intro-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1 class="mb-2 pb-0"><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> <span>&</span> <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?></h1>
-      <p class="mb-4 pb-0">
-        <?php
+				</ul>
+			</nav><!-- .nav-menu -->
+
+		</div>
+	</header><!-- End Header -->
+
+	<!-- ======= Hero Section ======= -->
+	<section id="hero">
+		<div class="hero-container">
+			<!-- <h3>Welcome to <strong>Tempo</strong></h3> -->
+			<h1><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?><br><small>&</small><br><?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?></h1>
+			<h2>
+				<?php
         if($detail[0]->KONF_JADWAL_INTRO == "acara1")
         {
-          echo tanggal($detail[0]->KONF_JADWAL_ACARA1_TANGGAL);
-          echo ", ";
-          echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA1_JAM));
-          echo "<br>";
+          $tanggal = tanggal($detail[0]->KONF_JADWAL_ACARA1_TANGGAL);
+          $waktu = date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA1_JAM));
           echo $detail[0]->KONF_JADWAL_ACARA1_ALAMAT;
         }
         else if($detail[0]->KONF_JADWAL_INTRO == "acara2")
         {
-          echo tanggal($detail[0]->KONF_JADWAL_ACARA2_TANGGAL);
-          echo ", ";
-          echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA2_JAM));
-          echo "<br>";
+          $tanggal = tanggal($detail[0]->KONF_JADWAL_ACARA2_TANGGAL);
+          $waktu = date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA2_JAM));
           echo $detail[0]->KONF_JADWAL_ACARA2_ALAMAT;
         }
          ?>
-      </p>
-      <?php if($detail[0]->KONF_VIDEO_STATUS == "on"){
-      ?>
-        <a href="<?php echo $detail[0]->KONF_VIDEO_LINK; ?>" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-      <?php
-      }
-      else{
+			</h2>
+			<a href="#about" class="btn-get-started scrollto"><?php echo $tanggal;?>, <?php echo $waktu;?></a>
+		</div>
+	</section><!-- End Hero -->
 
-      }
-      ?>
+	<main id="main">
 
-    </div>
-  </section><!-- End Intro Section -->
+		<!-- ======= About Section ======= -->
+		<section id="about" class="about">
+			<div class="container">
 
-  <main id="main">
+				<div class="section-title">
+					<h3><span><?php echo $detail[0]->KONF_PEMBUKAAN_JUDUL; ?></span></h3>
+				</div>
 
-    <!-- ======= pembukaan Section ======= -->
-    <section id="pembukaan">
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          <div class="col-lg-12">
-            <h2><?php echo $detail[0]->KONF_PEMBUKAAN_JUDUL; ?></h2>
-            <p><?php echo $detail[0]->KONF_PEMBUKAAN_ISI; ?></p>
-          </div>
-        </div>
-      </div>
-    </section><!-- End pembukaan Section -->
+				<div class="row content">
 
-    <!-- ======= pengantin Section ======= -->
-    <section id="pengantin">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Memperkenalkan</h2>
-        </div>
+					<div class="col-lg-12">
+						<p style="text-align:center"><?php echo $detail[0]->KONF_PEMBUKAAN_ISI; ?></p>
+					</div>
+				</div>
 
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="http://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_PRIA_FOTO ?>" alt="Speaker 2" class="img-fluid">
-              <div class="details">
-                <h3><a href="#"><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA_LENGKAP; ?></a></h3>
-                <p><center><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?></center></p>
-              </div>
-            </div>
-            <p class="detail_pengantin"><?php echo $detail[0]->KONF_PENGANTIN_PRIA_KETERANGAN; ?></p>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-              <img src="http://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_WANITA_FOTO ?>" alt="Speaker 3" class="img-fluid">
-              <div class="details">
-                <h3><a href="#"><?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA_LENGKAP; ?></a></h3>
-                <p><?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?></p>
-              </div>
-            </div>
-            <p class="detail_pengantin"><?php echo $detail[0]->KONF_PENGANTIN_WANITA_KETERANGAN; ?></p>
-          </div>
-        </div>
-      </div>
+			</div>
+		</section><!-- End About Section -->
+		<!-- ======= Team Section ======= -->
+		<section id="team" class="team">
+			<div class="container">
 
-    </section><!-- End pengantin Section -->
+				<div class="section-title">
+					<h2>Mempelai</h2>
+					<h3><span>Memperkenalkan</span></h3>
+					<p><?php echo $detail[0]->KONF_PENGANTIN_SUB_TITLE; ?></p>
+				</div>
+
+				<div class="row">
+
+					<div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+						<div class="member">
+							<div class="member-img">
+								<img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_PRIA_FOTO ?>" class="img-fluid" alt="">
+								
+							</div>
+							<div class="member-info">
+								<h2><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA_LENGKAP; ?></h2>
+								<span><?php echo $detail[0]->KONF_PENGANTIN_PRIA_KETERANGAN; ?></span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+						<div class="member">
+							<div class="member-img">
+								<img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_WANITA_FOTO ?>" class="img-fluid" alt="">
+								
+							</div>
+							<div class="member-info">
+								<h2><?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA_LENGKAP; ?></h2>
+								<span><?php echo $detail[0]->KONF_PENGANTIN_WANITA_KETERANGAN; ?></span>
+							</div>
+						</div>
+					</div>
+
+					
+				
+
+				</div>
+
+			</div>
+		</section><!-- End Team Section -->
+
+		<!-- ======= Services Section ======= -->
+		<section id="services" class="services">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Services</h2>
+					<h3>We do offer awesome <span>Services</span></h3>
+					<p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas
+						atque vitae autem.</p>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+						<div class="icon-box">
+							<div class="icon"><i class="bx bxl-dribbble"></i></div>
+							<h4 class="title"><a href="">Lorem Ipsum</a></h4>
+							<p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
+								excepturi</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+						<div class="icon-box">
+							<div class="icon"><i class="bx bx-file"></i></div>
+							<h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+							<p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+								dolore</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+						<div class="icon-box">
+							<div class="icon"><i class="bx bx-tachometer"></i></div>
+							<h4 class="title"><a href="">Magni Dolores</a></h4>
+							<p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+								officia</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+						<div class="icon-box">
+							<div class="icon"><i class="bx bx-world"></i></div>
+							<h4 class="title"><a href="">Nemo Enim</a></h4>
+							<p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+								blanditiis</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- End Services Section -->
+
+		<!-- ======= Features Section ======= -->
+		<section id="features" class="features">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-lg-3 col-md-4 col-6 col-6">
+						<div class="icon-box">
+							<i class="ri-store-line" style="color: #ffbb2c;"></i>
+							<h3><a href="">Lorem Ipsum</a></h3>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6">
+						<div class="icon-box">
+							<i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
+							<h3><a href="">Dolor Sitema</a></h3>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6 mt-4 mt-md-0">
+						<div class="icon-box">
+							<i class="ri-calendar-todo-line" style="color: #e80368;"></i>
+							<h3><a href="">Sed perspiciatis</a></h3>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6 mt-4 mt-lg-0">
+						<div class="icon-box">
+							<i class="ri-paint-brush-line" style="color: #e361ff;"></i>
+							<h3><a href="">Magni Dolores</a></h3>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6 mt-4">
+						<div class="icon-box">
+							<i class="ri-database-2-line" style="color: #47aeff;"></i>
+							<h3><a href="">Nemo Enim</a></h3>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6 mt-4">
+						<div class="icon-box">
+							<i class="ri-gradienter-line" style="color: #ffa76e;"></i>
+							<h3><a href="">Eiusmod Tempor</a></h3>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6 mt-4">
+						<div class="icon-box">
+							<i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
+							<h3><a href="">Midela Teren</a></h3>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6 mt-4">
+						<div class="icon-box">
+							<i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
+							<h3><a href="">Pira Neve</a></h3>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6 mt-4">
+						<div class="icon-box">
+							<i class="ri-anchor-line" style="color: #b2904f;"></i>
+							<h3><a href="">Dirada Pack</a></h3>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6 mt-4">
+						<div class="icon-box">
+							<i class="ri-disc-line" style="color: #b20969;"></i>
+							<h3><a href="">Moton Ideal</a></h3>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6 mt-4">
+						<div class="icon-box">
+							<i class="ri-base-station-line" style="color: #ff5828;"></i>
+							<h3><a href="">Verdo Park</a></h3>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6 mt-4">
+						<div class="icon-box">
+							<i class="ri-fingerprint-line" style="color: #29cc61;"></i>
+							<h3><a href="">Flavor Nivelanda</a></h3>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- End Features Section -->
+
+		<!-- ======= Cta Section ======= -->
+		<section id="cta" class="cta">
+			<div class="container">
+
+				<div class="text-center">
+					<h3>Call To Action</h3>
+					<p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+						mollit anim id est laborum.</p>
+					<a class="cta-btn" href="#">Call To Action</a>
+				</div>
+
+			</div>
+		</section><!-- End Cta Section -->
+
+		<!-- ======= Portfolio Section ======= -->
+		<section id="portfolio" class="portfolio">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Portfolio</h2>
+					<h3>Check our <span>Portfolio</span></h3>
+					<p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas
+						atque vitae autem.</p>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-12 d-flex justify-content-center">
+						<ul id="portfolio-flters">
+							<li data-filter="*" class="filter-active">All</li>
+							<li data-filter=".filter-app">App</li>
+							<li data-filter=".filter-card">Card</li>
+							<li data-filter=".filter-web">Web</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="row portfolio-container">
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+						<img src="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+						<div class="portfolio-info">
+							<h4>App 1</h4>
+							<p>App</p>
+							<a href="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery"
+								class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+							<a href="portfolio-details.html" class="details-link" title="More Details"><i
+									class="bx bx-link"></i></a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+						<img src="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+						<div class="portfolio-info">
+							<h4>Web 3</h4>
+							<p>Web</p>
+							<a href="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery"
+								class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+							<a href="portfolio-details.html" class="details-link" title="More Details"><i
+									class="bx bx-link"></i></a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+						<img src="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+						<div class="portfolio-info">
+							<h4>App 2</h4>
+							<p>App</p>
+							<a href="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery"
+								class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+							<a href="portfolio-details.html" class="details-link" title="More Details"><i
+									class="bx bx-link"></i></a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-card">
+						<img src="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+						<div class="portfolio-info">
+							<h4>Card 2</h4>
+							<p>Card</p>
+							<a href="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery"
+								class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+							<a href="portfolio-details.html" class="details-link" title="More Details"><i
+									class="bx bx-link"></i></a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+						<img src="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+						<div class="portfolio-info">
+							<h4>Web 2</h4>
+							<p>Web</p>
+							<a href="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery"
+								class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+							<a href="portfolio-details.html" class="details-link" title="More Details"><i
+									class="bx bx-link"></i></a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+						<img src="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+						<div class="portfolio-info">
+							<h4>App 3</h4>
+							<p>App</p>
+							<a href="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery"
+								class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+							<a href="portfolio-details.html" class="details-link" title="More Details"><i
+									class="bx bx-link"></i></a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-card">
+						<img src="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+						<div class="portfolio-info">
+							<h4>Card 1</h4>
+							<p>Card</p>
+							<a href="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery"
+								class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+							<a href="portfolio-details.html" class="details-link" title="More Details"><i
+									class="bx bx-link"></i></a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-card">
+						<img src="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+						<div class="portfolio-info">
+							<h4>Card 3</h4>
+							<p>Card</p>
+							<a href="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery"
+								class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+							<a href="portfolio-details.html" class="details-link" title="More Details"><i
+									class="bx bx-link"></i></a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+						<img src="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+						<div class="portfolio-info">
+							<h4>Web 3</h4>
+							<p>Web</p>
+							<a href="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery"
+								class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+							<a href="portfolio-details.html" class="details-link" title="More Details"><i
+									class="bx bx-link"></i></a>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- End Portfolio Section -->
+
+		<!-- ======= Pricing Section ======= -->
+		<section id="pricing" class="pricing">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Jadwan</h2>
+					<h3>Our Competing <span>Prices</span></h3>
+					<p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas
+						atque vitae autem.</p>
+				</div>
+
+				<div class="row">
+
+					<div class="col-lg-6 col-md-6">
+						<div class="box">
+							<h3>Free</h3>
+							<h4><sup>$</sup>0<span> / month</span></h4>
+							<ul>
+								<li>Aida dere</li>
+								<li>Nec feugiat nisl</li>
+								<li>Nulla at volutpat dola</li>
+								<li class="na">Pharetra massa</li>
+								<li class="na">Massa ultricies mi</li>
+							</ul>
+							<div class="btn-wrap">
+								<a href="#" class="btn-buy">Buy Now</a>
+							</div>
+						</div>
+					</div>
 
 
-    <!-- ======= jadwal Section ======= -->
-    <section id="jadwal" class="section-with-bg">
+					<div class="col-lg-6 col-md-6 mt-4 mt-lg-0">
+						<div class="box">
+							<h3>Developer</h3>
+							<h4><sup>$</sup>29<span> / month</span></h4>
+							<ul>
+								<li>Aida dere</li>
+								<li>Nec feugiat nisl</li>
+								<li>Nulla at volutpat dola</li>
+								<li>Pharetra massa</li>
+								<li>Massa ultricies mi</li>
+							</ul>
+							<div class="btn-wrap">
+								<a href="#" class="btn-buy">Buy Now</a>
+							</div>
+						</div>
+					</div>
 
-      <div class="container-fluid" data-aos="fade-up">
+				</div>
 
-        <div class="section-header">
-          <h2>Jadwal</h2>
-          <p>Event jadwal location info and gallery</p>
-        </div>
+			</div>
+		</section><!-- End Pricing Section -->
 
-        <?php
-        if($detail[0]->KONF_JADWAL_ACARA1_STATUS == "on"){
-        ?>
-        <div class="row no-gutters mb-4">
-          <div class="col-lg-6 jadwal-map">
-            <iframe src="https://maps.google.com/maps?q=<?php echo str_replace(" ","",$detail[0]->KONF_JADWAL_ACARA1_MAP); ?>&hl=in&z=16&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
+		<!-- ======= F.A.Q Section ======= -->
+		<section id="faq" class="faq">
+			<div class="container">
 
-          <div class="col-lg-6 jadwal-info">
-            <div class="row justify-content-center">
-              <div class="col-11 col-lg-8">
-                <h3><?php echo $detail[0]->KONF_JADWAL_ACARA1_JUDUL; ?><br><small class="text-muted"><?php echo tanggal($detail[0]->KONF_JADWAL_ACARA1_TANGGAL); ?>, <?php echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA1_JAM)) ?></small></h3>
-                <p><?php echo $detail[0]->KONF_JADWAL_ACARA1_ALAMAT; ?></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <?php
-        }
-        ?>
+				<div class="section-title">
+					<h2>F.A.Q</h2>
+					<h3>Frequently Asked <span>Questions</span></h3>
+				</div>
 
-        <?php
-        if($detail[0]->KONF_JADWAL_ACARA2_STATUS == "on"){
-        ?>
-        <div class="row no-gutters mt-4">
-          <div class="col-lg-6 jadwal-info">
-            <div class="row justify-content-center">
-              <div class="col-11 col-lg-8">
-                <h3><?php echo $detail[0]->KONF_JADWAL_ACARA2_JUDUL; ?><br><small class="text-muted"><?php echo tanggal($detail[0]->KONF_JADWAL_ACARA2_TANGGAL); ?>, <?php echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA2_JAM)) ?></small></h3>
-                <p><?php echo $detail[0]->KONF_JADWAL_ACARA2_ALAMAT; ?></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 jadwal-map">
-            <iframe src="https://maps.google.com/maps?q=<?php echo str_replace(" ","",$detail[0]->KONF_JADWAL_ACARA2_MAP); ?>&hl=in&z=16&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-        </div>
-        <?php
-        }
-        ?>
+				<ul class="faq-list">
 
-      </div>
+					<li>
+						<a data-toggle="collapse" class="" href="#faq1">Non consectetur a erat nam at lectus urna duis?
+							<i class="icofont-simple-up"></i></a>
+						<div id="faq1" class="collapse show" data-parent=".faq-list">
+							<p>
+								Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+								curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus
+								non.
+							</p>
+						</div>
+					</li>
 
-    </section><!-- End jadwal Section -->
+					<li>
+						<a data-toggle="collapse" href="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim
+							nunc faucibus a pellentesque? <i class="icofont-simple-up"></i></a>
+						<div id="faq2" class="collapse" data-parent=".faq-list">
+							<p>
+								Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
+								velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec
+								pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus
+								turpis massa tincidunt dui.
+							</p>
+						</div>
+					</li>
 
+					<li>
+						<a data-toggle="collapse" href="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing
+							elit pellentesque habitant morbi? <i class="icofont-simple-up"></i></a>
+						<div id="faq3" class="collapse" data-parent=".faq-list">
+							<p>
+								Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
+								pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum
+								tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna
+								molestie at elementum eu facilisis sed odio morbi quis
+							</p>
+						</div>
+					</li>
 
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery">
+					<li>
+						<a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam
+							eleifend mi in nulla? <i class="icofont-simple-up"></i></a>
+						<div id="faq4" class="collapse" data-parent=".faq-list">
+							<p>
+								Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
+								velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec
+								pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus
+								turpis massa tincidunt dui.
+							</p>
+						</div>
+					</li>
 
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Galeri</h2>
-        </div>
-      </div>
+					<li>
+						<a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam
+							aliquam sem et tortor consequat? <i class="icofont-simple-up"></i></a>
+						<div id="faq5" class="collapse" data-parent=".faq-list">
+							<p>
+								Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est
+								ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit
+								adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+							</p>
+						</div>
+					</li>
 
-      <div class="owl-carousel gallery-carousel" data-aos="fade-up" data-aos-delay="100">
-        <a href="<?php echo base_url(); ?>assets/theme/assets/img/gallery/1.jpg" class="venobox" data-gall="gallery-carousel"><img src="<?php echo base_url(); ?>assets/theme/assets/img/gallery/1.jpg" alt=""></a>
-        <a href="<?php echo base_url(); ?>assets/theme/assets/img/gallery/2.jpg" class="venobox" data-gall="gallery-carousel"><img src="<?php echo base_url(); ?>assets/theme/assets/img/gallery/2.jpg" alt=""></a>
-        <a href="<?php echo base_url(); ?>assets/theme/assets/img/gallery/3.jpg" class="venobox" data-gall="gallery-carousel"><img src="<?php echo base_url(); ?>assets/theme/assets/img/gallery/3.jpg" alt=""></a>
-        <a href="<?php echo base_url(); ?>assets/theme/assets/img/gallery/4.jpg" class="venobox" data-gall="gallery-carousel"><img src="<?php echo base_url(); ?>assets/theme/assets/img/gallery/4.jpg" alt=""></a>
-        <a href="<?php echo base_url(); ?>assets/theme/assets/img/gallery/5.jpg" class="venobox" data-gall="gallery-carousel"><img src="<?php echo base_url(); ?>assets/theme/assets/img/gallery/5.jpg" alt=""></a>
-        <a href="<?php echo base_url(); ?>assets/theme/assets/img/gallery/6.jpg" class="venobox" data-gall="gallery-carousel"><img src="<?php echo base_url(); ?>assets/theme/assets/img/gallery/6.jpg" alt=""></a>
-        <a href="<?php echo base_url(); ?>assets/theme/assets/img/gallery/7.jpg" class="venobox" data-gall="gallery-carousel"><img src="<?php echo base_url(); ?>assets/theme/assets/img/gallery/7.jpg" alt=""></a>
-        <a href="<?php echo base_url(); ?>assets/theme/assets/img/gallery/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="<?php echo base_url(); ?>assets/theme/assets/img/gallery/8.jpg" alt=""></a>
-      </div>
+					<li>
+						<a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare.
+							Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="icofont-simple-up"></i></a>
+						<div id="faq6" class="collapse" data-parent=".faq-list">
+							<p>
+								Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo
+								integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc
+								eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+								Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus.
+								Nibh tellus molestie nunc non blandit massa enim nec.
+							</p>
+						</div>
+					</li>
 
-    </section><!-- End Gallery Section -->
+				</ul>
 
-    <?php
-    if($detail[0]->KONF_INFORMASI_STATUS == "on"){
-    ?>
-    <!-- ======= Subscribe Section ======= -->
-    <section id="subscribe">
-      <div class="container" data-aos="zoom-in">
-        <div class="section-header">
-          <h2><?php echo $detail[0]->KONF_INFORMASI_JUDUL; ?></h2>
-          <p><?php echo $detail[0]->KONF_INFORMASI_ISI; ?></p>
-        </div>
+			</div>
+		</section><!-- End F.A.Q Section -->
 
-      </div>
-    </section><!-- End Subscribe Section -->
-<?php } ?>
+		
 
+		<!-- ======= Contact Section ======= -->
+		<section id="contact" class="contact">
+			<div class="container">
 
-    <!-- ======= rsvp Section ======= -->
-    <section id="rsvp" class="section-bg">
+				<div class="section-title">
+					<h2>RSVP</h2>
+					<h3>Mohon <span>Isi</span></h3>
+				</div>
 
-      <div class="container" data-aos="fade-up">
+					<div class="col-lg-12 mt-5 mt-lg-0">
 
-        <div class="section-header">
-          <h2>RSVP</h2>
-          <p>Mohon dijawab.</p>
-        </div>
-        <div class="form">
-          <form action="index.php/web/kirim" method="post" role="form" class="php-email-form">
-              <div class="form-group">
-                <input type="text" name="nama" class="form-control" id="name" placeholder="Nama Anda" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validate"></div>
-              </div>
-            <div class="form-group">
-              <select class="form-control" name="kehadiran">
-                <option value="hadir">Hadir</option>
-                <option value="tidak">Tidak Hadir</option>
-              </select>
-              <div class="validate"></div>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="pesan" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Pesan"></textarea>
-              <div class="validate"></div>
-            </div>
-            <div class="mb-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Kirim</button></div>
-          </form>
-        </div>
+						<form action="index.php/web/kirim" method="post" role="form" class="php-email-form">
+								<div class="form-group">
+									<input type="text" name="nama" class="form-control" id="name"
+										placeholder="Nama Anda" data-rule="minlen:4"
+										data-msg="Please enter at least 4 chars" />
+									<div class="validate"></div>
+								</div>
+								<div class="form-group">
+									<select class="form-control" name="kehadiran">
+										<option value="hadir">Hadir</option>
+										<option value="tidak">Tidak Hadir</option>
+									</select>
+								</div>
+							<div class="form-group">
+								<textarea class="form-control" name="pesan" rows="5" data-rule="required"
+									data-msg="Please write something for us" placeholder="Message"></textarea>
+								<div class="validate"></div>
+							</div>
+							<div class="mb-3">
+								<div class="loading">Loading</div>
+								<div class="error-message"></div>
+								<div class="sent-message">Your message has been sent. Thank you!</div>
+							</div>
+							<div class="text-center"><button type="submit">Kirim</button></div>
+						</form>
 
-      </div>
-    </section><!-- End rsvp Section -->
+					</div>
 
-  </main><!-- End #main -->
+				</div>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!--
-        All the links in the footer should remain intact.
-        You can delete the links only if you purchased the pro version.
-        Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX rsvp form: https://bootstrapmade.com/buy/?theme=TheEvent
-      -->
-        <a href="https://bootstrapmade.com/">Designed by BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
+			</div>
+		</section><!-- End Contact Section -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+	</main><!-- End #main -->
 
-  <!-- Vendor JS Files -->
-  <script src="<?php echo base_url(); ?>assets/theme/assets/vendor/jquery/jquery.min.js"></script>
-  <script src="<?php echo base_url(); ?>assets/theme/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?php echo base_url(); ?>assets/theme/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="<?php echo base_url(); ?>assets/theme/assets/vendor/php-email-form/validate.js"></script>
-  <script src="<?php echo base_url(); ?>assets/theme/assets/vendor/venobox/venobox.min.js"></script>
-  <script src="<?php echo base_url(); ?>assets/theme/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="<?php echo base_url(); ?>assets/theme/assets/vendor/superfish/superfish.min.js"></script>
-  <script src="<?php echo base_url(); ?>assets/theme/assets/vendor/hoverIntent/hoverIntent.js"></script>
-  <script src="<?php echo base_url(); ?>assets/theme/assets/vendor/aos/aos.js"></script>
+	<!-- ======= Footer ======= -->
+	<footer id="footer">
 
-  <!-- Template Main JS File -->
-  <script src="<?php echo base_url(); ?>assets/theme/assets/js/main.js"></script>
+		<div class="container d-md-flex py-4">
+
+			<div class="mr-md-auto text-center text-md-left">
+				<div class="copyright">
+					&copy; Copyright <strong><span>Tempo</span></strong>. All Rights Reserved
+				</div>
+				<div class="credits">
+					<!-- All the links in the footer should remain intact. -->
+					<!-- You can delete the links only if you purchased the pro version. -->
+					<!-- Licensing information: https://bootstrapmade.com/license/ -->
+					<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/ -->
+					Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+				</div>
+			</div>
+			<!-- <div class="social-links text-center text-md-right pt-3 pt-md-0">
+				<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+				<a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+				<a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+				<a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+				<a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+			</div> -->
+		</div>
+	</footer><!-- End Footer -->
+
+	<a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+
+	<!-- Vendor JS Files -->
+	<script src="<?php echo base_url(); ?>assets/theme/assets/vendor/jquery/jquery.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/theme/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/theme/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/theme/assets/vendor/php-email-form/validate.js"></script>
+	<script src="<?php echo base_url(); ?>assets/theme/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/theme/assets/vendor/venobox/venobox.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/theme/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+	<!-- Template Main JS File -->
+	<script src="<?php echo base_url(); ?>assets/theme/assets/js/main.js"></script>
 
 </body>
 

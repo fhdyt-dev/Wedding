@@ -27,7 +27,7 @@ CREATE TABLE `ALBUM_USER` (
   `KONF_LINK` varchar(50) NOT NULL DEFAULT '0',
   `ALBUM_USER_FOTO` varchar(100) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ALBUM_USER_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `ALBUM_USER` (
 
 LOCK TABLES `ALBUM_USER` WRITE;
 /*!40000 ALTER TABLE `ALBUM_USER` DISABLE KEYS */;
-INSERT INTO `ALBUM_USER` VALUES (1,'localhost','ebc31d486420ef43d1bf9fe3e748b3711ca76ac9.jpg'),(2,'localhost','f7a998df0829e873fc480fa4999b9932de93305c.png'),(3,'localhost','33e628a9d1fcea14c3acc367a5b300d638095935.jpg'),(4,'localhost','1ca99166926aa9954968e9e1544c75f8017f3dd5.jpg'),(5,'localhost','e2b6e93e8f10142d51587aecc6c748bceeecc665.jpg'),(6,'localhost','00e633980b44d571604ff4cf7c33a31c91c3883e.jpg'),(7,'localhost','36d0215f03388dd709334c202c7db8a62b598b48.jpg'),(8,'localhost','1bc75ca57c9c934c48b31eb01a64c73020a0ea44.jpg');
+INSERT INTO `ALBUM_USER` VALUES (1,'localhost','0f9d895e900233add7675b27cc76ed450dbcbfde.jpg'),(2,'localhost','06936020fcf494252bf33f72d5f05b740abd50d8.jpg'),(3,'localhost','7a178b2273a328d866dd4dc5cda21f195e49a9e7.jpg');
 /*!40000 ALTER TABLE `ALBUM_USER` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,7 +79,7 @@ CREATE TABLE `KONF_INFORMASI` (
   `KONF_INFORMASI_JUDUL` varchar(100) NOT NULL DEFAULT '0',
   `KONF_INFORMASI_ISI` text NOT NULL,
   PRIMARY KEY (`KONF_INFORMASI_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -88,7 +88,6 @@ CREATE TABLE `KONF_INFORMASI` (
 
 LOCK TABLES `KONF_INFORMASI` WRITE;
 /*!40000 ALTER TABLE `KONF_INFORMASI` DISABLE KEYS */;
-INSERT INTO `KONF_INFORMASI` VALUES (17,'localhost',NULL,'PEMBUKAAN','                                                                                                                                                                                                                                                                                        <b style=\"\"><font color=\"#ffffff\"><span style=\"margin: 0px; padding: 0px;\" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\">Lorem Ipsum</span><span style=\"\" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></font></b>                                                                                                                                                                                                                                                            ');
 /*!40000 ALTER TABLE `KONF_INFORMASI` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -116,7 +115,7 @@ CREATE TABLE `KONF_JADWAL` (
   `KONF_JADWAL_ACARA2_MAP` text NOT NULL,
   `KONF_JADWAL_INTRO` varchar(50) NOT NULL,
   PRIMARY KEY (`KONF_JADWAL_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -125,7 +124,7 @@ CREATE TABLE `KONF_JADWAL` (
 
 LOCK TABLES `KONF_JADWAL` WRITE;
 /*!40000 ALTER TABLE `KONF_JADWAL` DISABLE KEYS */;
-INSERT INTO `KONF_JADWAL` VALUES (28,'localhost','on','Akad Nikah','2020-12-01','08:00:00','Alamat 1Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...','0.487627,101.394762','on','Resepsi','2020-12-02','12:00:00','Alamat 2 Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...','0.474664,101.380175','acara2');
+INSERT INTO `KONF_JADWAL` VALUES (3,'localhost','on','Akad Nikah','2021-01-20','08:00:00','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit auctor dolor. Nulla viverra, nibh.','0.487741, 101.386172','on','Resepsi','2021-01-22','12:30:00','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.','0.481403, 101.364329','acara1');
 /*!40000 ALTER TABLE `KONF_JADWAL` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,7 +143,7 @@ CREATE TABLE `KONF_PEMBUKAAN` (
   `KONF_PEMBUKAAN_SAMPUL` varchar(50) NOT NULL,
   `KONF_PEMBUKAAN_GAMBAR` text NOT NULL,
   PRIMARY KEY (`KONF_PEMBUKAAN_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -153,7 +152,7 @@ CREATE TABLE `KONF_PEMBUKAAN` (
 
 LOCK TABLES `KONF_PEMBUKAAN` WRITE;
 /*!40000 ALTER TABLE `KONF_PEMBUKAAN` DISABLE KEYS */;
-INSERT INTO `KONF_PEMBUKAAN` VALUES (16,'localhost','Bismillah','                                                                                                                                                                                                                                                                                                            <span style=\"font-weight: bolder;\"><font color=\"#ffffff\"><span open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\" style=\"margin: 0px; padding: 0px;\">Lorem Ipsum</span><span open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></font></span>                                                                                                                                                                                                                                                                                                                    ','gambar','33e628a9d1fcea14c3acc367a5b300d638095935.jpg');
+INSERT INTO `KONF_PEMBUKAAN` VALUES (12,'localhost','Turut Mengundang','                                                                                                                                                                                                        <span style=\"font-family: \" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\"><font color=\"#000000\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</font></span>                                                                                                                                                                                                                          ','gambar','e4d1f79afce19fbe6e23b9328bba83dcb3ba8c47.jpg');
 /*!40000 ALTER TABLE `KONF_PEMBUKAAN` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -167,6 +166,7 @@ DROP TABLE IF EXISTS `KONF_PENGANTIN`;
 CREATE TABLE `KONF_PENGANTIN` (
   `KONF_PENGANTIN_INDEX` int NOT NULL AUTO_INCREMENT,
   `KONF_LINK` varchar(50) NOT NULL DEFAULT '0',
+  `KONF_PENGANTIN_SUB_TITLE` text NOT NULL,
   `KONF_PENGANTIN_PRIA_NAMA_LENGKAP` varchar(50) NOT NULL DEFAULT '0',
   `KONF_PENGANTIN_WANITA_NAMA_LENGKAP` varchar(50) NOT NULL DEFAULT '0',
   `KONF_PENGANTIN_PRIA_NAMA` varchar(50) NOT NULL DEFAULT '0',
@@ -176,7 +176,7 @@ CREATE TABLE `KONF_PENGANTIN` (
   `KONF_PENGANTIN_PRIA_FOTO` varchar(200) NOT NULL DEFAULT '0',
   `KONF_PENGANTIN_WANITA_FOTO` varchar(200) NOT NULL DEFAULT '0',
   PRIMARY KEY (`KONF_PENGANTIN_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -185,7 +185,7 @@ CREATE TABLE `KONF_PENGANTIN` (
 
 LOCK TABLES `KONF_PENGANTIN` WRITE;
 /*!40000 ALTER TABLE `KONF_PENGANTIN` DISABLE KEYS */;
-INSERT INTO `KONF_PENGANTIN` VALUES (26,'localhost','Nama Lengkap Pria','Nama Lengkap Wanita','Pria','Wanita','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type a','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type a','f7a998df0829e873fc480fa4999b9932de93305c.png','f7a998df0829e873fc480fa4999b9932de93305c.png');
+INSERT INTO `KONF_PENGANTIN` VALUES (8,'demo.get-married.site','','Pria Lengkap','Wanita Lengkap','Pria','Wanita','Putra Hamish Daud dan Raisa Andriana','Putri Usman Bin Yahya dan Kartika Putri','5e2548f8ce1c1db23df785ebb5f1861ab5a90992.jpg','81c34e12dd694ac1e2aaf5cec9a4f16f3f4bfcae.jpg'),(12,'localhost','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam.','Nama Lengkap Pria','Nama Lengkap Wanita','Pria','Wanita','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit auctor dolor. Nulla viverra, nibh quis ultrices malesuada, ligula ipsum v','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit.','06936020fcf494252bf33f72d5f05b740abd50d8.jpg','7a178b2273a328d866dd4dc5cda21f195e49a9e7.jpg');
 /*!40000 ALTER TABLE `KONF_PENGANTIN` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -202,7 +202,7 @@ CREATE TABLE `KONF_VIDEO` (
   `KONF_VIDEO_STATUS` varchar(50) DEFAULT NULL,
   `KONF_VIDEO_LINK` varchar(100) NOT NULL DEFAULT '0',
   PRIMARY KEY (`KONF_VIDEO_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -211,7 +211,6 @@ CREATE TABLE `KONF_VIDEO` (
 
 LOCK TABLES `KONF_VIDEO` WRITE;
 /*!40000 ALTER TABLE `KONF_VIDEO` DISABLE KEYS */;
-INSERT INTO `KONF_VIDEO` VALUES (4,'localhost','on','https://www.youtube.com/watch?v=tUWLIKzeOkc');
 /*!40000 ALTER TABLE `KONF_VIDEO` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -227,11 +226,13 @@ CREATE TABLE `KONF_WEB` (
   `KONF_LINK` varchar(50) NOT NULL DEFAULT '0',
   `KONF_WEB_JUDUL` varchar(50) NOT NULL DEFAULT '0',
   `KONF_WEB_WARNA` varchar(50) NOT NULL DEFAULT '0',
+  `KONF_WEB_WARNA_RGB` varchar(50) NOT NULL,
   `KONF_WEB_FONT` varchar(50) NOT NULL DEFAULT '0',
+  `KONF_WEB_FONT_JUDUL` varchar(50) NOT NULL DEFAULT '0',
   `KONF_WEB_FONT_INTRO` varchar(50) NOT NULL DEFAULT '0',
   `KONF_WEB_SAMPUL` varchar(200) NOT NULL DEFAULT 'not_found.jpg',
   PRIMARY KEY (`KONF_WEB_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -240,7 +241,7 @@ CREATE TABLE `KONF_WEB` (
 
 LOCK TABLES `KONF_WEB` WRITE;
 /*!40000 ALTER TABLE `KONF_WEB` DISABLE KEYS */;
-INSERT INTO `KONF_WEB` VALUES (14,'localhost','Pernikahan','#ef6c00','Montserrat','Aguafina Script','ebc31d486420ef43d1bf9fe3e748b3711ca76ac9.jpg');
+INSERT INTO `KONF_WEB` VALUES (35,'localhost','Pernikahan','#e91e63','233,30,99','Raleway','Allura','Monsieur La Doulaise','0f9d895e900233add7675b27cc76ed450dbcbfde.jpg');
 /*!40000 ALTER TABLE `KONF_WEB` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -256,10 +257,11 @@ CREATE TABLE `RSVP` (
   `LINK` varchar(50) NOT NULL DEFAULT '0',
   `RSVP_NAMA` varchar(50) NOT NULL DEFAULT '0',
   `RSVP_KEHADIRAN` varchar(50) NOT NULL DEFAULT '0',
-  `RSVP_PESAN` varchar(50) NOT NULL DEFAULT '0',
+  `RSVP_PESAN` text NOT NULL,
   `RSVP_STATUS` varchar(50) NOT NULL DEFAULT '0',
+  `RSVP_TANGGAL` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`RSVP_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -268,7 +270,7 @@ CREATE TABLE `RSVP` (
 
 LOCK TABLES `RSVP` WRITE;
 /*!40000 ALTER TABLE `RSVP` DISABLE KEYS */;
-INSERT INTO `RSVP` VALUES (1,'localhost','test','tidak','adfadf','0'),(2,'localhost','Fikri','hadir','Insyaallah hadir','0');
+INSERT INTO `RSVP` VALUES (1,'localhost','Fikri','hadir','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit.','hide','2021-01-28 08:51:09');
 /*!40000 ALTER TABLE `RSVP` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -288,7 +290,7 @@ CREATE TABLE `USER` (
   `USER_PASSWORD` text NOT NULL,
   `USER_STATUS` varchar(50) NOT NULL,
   PRIMARY KEY (`USER_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -297,7 +299,7 @@ CREATE TABLE `USER` (
 
 LOCK TABLES `USER` WRITE;
 /*!40000 ALTER TABLE `USER` DISABLE KEYS */;
-INSERT INTO `USER` VALUES (1,'localhost','fikri','fhidayat2206@gmail.com','fhdyt','$2y$10$SAtu.OV/wM7e.Wof7rdWkepK91aR6hbKmZbjLO2OqWsmy.WVptnNu',''),(2,'','fikri','fhidayat2206@gmail.com','demo','$2y$10$.cTmu4BynhQH54f2QWt7CuVm88/ESsYYoCSeTqDf3nDbKopmtyYoy','');
+INSERT INTO `USER` VALUES (1,'demo.get-married.site','fikri','fhidayat2206@gmail.com','fhdyt','$2y$10$SAtu.OV/wM7e.Wof7rdWkepK91aR6hbKmZbjLO2OqWsmy.WVptnNu',''),(3,'fikricicen.get-married.site','Cicen','fikridev2206@gmail.com','cicen','$2y$10$pOKi0f9qTupyF3iasBYCm.imOEFdntKmVQL.HL3amFrgJ2Te19vRa',''),(4,'localhost','localhost','localhost@gmail.com','localhost','$2y$10$jNrmIIyv0muLfdw47JzMHeA3fNi6jaddKrGEIpaG3m2sD8g7iF5yy','');
 /*!40000 ALTER TABLE `USER` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -335,4 +337,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-05 10:52:17
+-- Dump completed on 2021-01-28 16:51:31

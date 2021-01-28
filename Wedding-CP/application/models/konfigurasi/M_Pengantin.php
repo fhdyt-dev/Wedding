@@ -6,6 +6,7 @@ class M_Pengantin extends CI_Model
 		$this->db->query('DELETE FROM KONF_PENGANTIN WHERE KONF_LINK="'.$this->session->userdata('USER_LINK').'"');
 		$data = array(
 			'KONF_LINK' => $this->session->userdata('USER_LINK'),
+			'KONF_PENGANTIN_SUB_TITLE' => $this->input->post('sub_title'),
 			'KONF_PENGANTIN_PRIA_NAMA_LENGKAP' => $this->input->post('nama_lengkap_pria'),
 			'KONF_PENGANTIN_WANITA_NAMA_LENGKAP' => $this->input->post('nama_lengkap_wanita'),
 			'KONF_PENGANTIN_PRIA_NAMA' => $this->input->post('nama_pria'),
