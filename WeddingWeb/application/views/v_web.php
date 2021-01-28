@@ -80,25 +80,46 @@
 		text-decoration: none;
 	}
 
-	h1,
+	/* h1,
 	h2,
 	h3,
 	h4,
 	h5,
 	h6 {
 		font-family: "Nunito", sans-serif;
-	}
+	} */
 
 	/*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-	.back-to-top {
+	.musik {
 		position: fixed;
-		display: none;
+		/* display: none; */
 		right: 15px;
 		bottom: 15px;
 		z-index: 99999;
 		transition: 0.5s;
+	}
+	.back-to-top {
+		position: fixed;
+		display: none;
+		right: 15px;
+		bottom: 60px;
+		z-index: 99999;
+		transition: 0.5s;
+	}
+
+	.musik i {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 18px;
+		width: 40px;
+		height: 40px;
+		border-radius: 50px;
+		background: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
+		color: #fff;
+		transition: all 0.4s;
 	}
 
 	.back-to-top i {
@@ -114,9 +135,9 @@
 		transition: all 0.4s;
 	}
 
-	.back-to-top:hover {
+	/* .back-to-top:hover {
 		bottom: 19px;
-	}
+	} */
 
 	/*--------------------------------------------------------------
 # Header
@@ -134,7 +155,7 @@
 		line-height: 1;
 		font-weight: 600;
 		letter-spacing: 1px;
-		text-transform: uppercase;
+		font-family: "<?php echo $detail[0]->KONF_WEB_FONT_JUDUL ?>", sans-serif;
 	}
 
 	#header .logo a {
@@ -154,7 +175,7 @@
 
 	#header.header-scrolled .logo a,
 	#header.header-inner-pages .logo a {
-		color: #493c3e;
+		color: #263238;
 	}
 
 	@media (max-width: 992px) {
@@ -243,7 +264,7 @@
 		padding: 10px 20px;
 		font-size: 14px;
 		text-transform: none;
-		color: #493c3e;
+		color: #263238;
 	}
 
 	.nav-menu .drop-down ul a:hover,
@@ -282,7 +303,7 @@
 
 	.header-scrolled .nav-menu>ul>li>a,
 	.header-inner-pages .nav-menu>ul>li>a {
-		color: #493c3e;
+		color: #263238;
 	}
 
 	@media (max-width: 1366px) {
@@ -344,7 +365,7 @@
 	.mobile-nav a {
 		display: block;
 		position: relative;
-		color: #493c3e;
+		color: #263238;
 		padding: 10px 20px;
 		font-weight: 500;
 		outline: none;
@@ -469,7 +490,8 @@
 	#hero h2 {
 		color: #eee;
 		margin-bottom: 40px;
-		font-size: 24px;
+		font-size: 18px;
+		padding: 0 100px 0 100px;
 	}
 
 	#hero .btn-get-started {
@@ -503,7 +525,7 @@
 		}
 
 		#hero h1 {
-			font-size: 40px;
+			font-size: 50px;
 			line-height: 36px;
 		}
 
@@ -511,6 +533,7 @@
 			font-size: 15px;
 			line-height: 24px;
 			margin-bottom: 30px;
+			padding: 0 0 0 0;
 		}
 	}
 
@@ -528,8 +551,9 @@
 	}
 
 	.section-bg {
-		background-color: white;
+		background-color: #f5f5f5;
 	}
+
 
 	.section-title {
 		text-align: center;
@@ -734,7 +758,7 @@
 	}
 
 	.features .icon-box h3 a {
-		color: #493c3e;
+		color: #263238;
 		transition: ease-in-out 0.3s;
 	}
 
@@ -902,9 +926,10 @@
 		font-weight: 400;
 		padding: 15px;
 		margin-top: 15px;
-		font-size: 20px;
+		font-size: 30px;
 		font-weight: 600;
-		color: #493c3e;
+		color: #263238;
+		font-family: "<?php echo $detail[0]->KONF_WEB_FONT_JUDUL ?>", sans-serif;
 	}
 
 	.pricing .box h4 {
@@ -930,7 +955,7 @@
 	.pricing .box ul {
 		padding: 0;
 		list-style: none;
-		color: #493c3e;
+		color: #263238;
 		text-align: center;
 		line-height: 20px;
 		font-size: 14px;
@@ -1063,7 +1088,7 @@
 # Team
 --------------------------------------------------------------*/
 	.team {
-		background: #fff;
+		/* background: #fff; */
 		padding: 60px 0;
 	}
 
@@ -1095,7 +1120,7 @@
 
 	.team .member .social a {
 		transition: color 0.3s;
-		color: #493c3e;
+		color: #263238;
 		margin: 0 10px;
 		padding-top: 8px;
 		display: inline-block;
@@ -1118,15 +1143,15 @@
 		font-weight: 700;
 		margin-bottom: 5px;
 		font-size: 30px;
-		color: #493c3e;
+		color: #263238;
 		font-family: "<?php echo $detail[0]->KONF_WEB_FONT_JUDUL ?>", sans-serif;
 	}
 
 	.team .member .member-info span {
 		display: block;
-		font-size: 13px;
+		font-size: 18px;
 		font-weight: 400;
-		color: #aaaaaa;
+		color: #263238;
 	}
 
 	.team .member .member-info p {
@@ -1167,7 +1192,7 @@
 		font-size: 22px;
 		font-weight: 600;
 		margin-bottom: 5px;
-		color: #493c3e;
+		color: #263238;
 	}
 
 	.contact .info p {
@@ -1455,7 +1480,7 @@
 	}
 
 	.blog .entry .entry-title a {
-		color: #493c3e;
+		color: #263238;
 		transition: 0.3s;
 	}
 
@@ -1566,7 +1591,7 @@
 		top: 0;
 		bottom: 0;
 		width: 3px;
-		background-color: #493c3e;
+		background-color: #263238;
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
@@ -1702,7 +1727,7 @@
 
 	.blog .blog-comments .comment h5 .reply {
 		padding-left: 10px;
-		color: #493c3e;
+		color: #263238;
 	}
 
 	.blog .blog-comments .comment time {
@@ -1767,7 +1792,7 @@
 		padding: 10px 20px;
 		border: 0;
 		border-radius: 50px;
-		background-color: #493c3e;
+		background-color: #263238;
 	}
 
 	.blog .blog-comments .reply-form .btn-primary:hover {
@@ -1833,7 +1858,7 @@
 		font-weight: 700;
 		padding: 0 0 0 0;
 		margin: 0 0 15px 0;
-		color: #493c3e;
+		color: #263238;
 		position: relative;
 	}
 
@@ -2188,7 +2213,7 @@
         }
          ?>
 			</h2>
-			<a href="#about" class="btn-get-started scrollto"><?php echo $tanggal;?>, <?php echo $waktu;?></a>
+			<a href="#pricing" class="btn-get-started scrollto"><?php echo $tanggal;?>, <?php echo $waktu;?></a>
 		</div>
 	</section><!-- End Hero -->
 
@@ -2212,11 +2237,10 @@
 			</div>
 		</section><!-- End About Section -->
 		<!-- ======= Team Section ======= -->
-		<section id="team" class="team">
+		<section id="team" class="team section-bg">
 			<div class="container">
 
 				<div class="section-title">
-					<h2>Mempelai</h2>
 					<h3><span>Memperkenalkan</span></h3>
 					<p><?php echo $detail[0]->KONF_PENGANTIN_SUB_TITLE; ?></p>
 				</div>
@@ -2256,6 +2280,72 @@
 
 			</div>
 		</section><!-- End Team Section -->
+		<!-- ======= Pricing Section ======= -->
+		<section id="pricing" class="pricing">
+			<div class="container">
+
+				<div class="section-title">
+					<h3><span>Jadwal</span></h3>
+					<p>Kami mengharapkan kehadiran Anda semua.</p>
+				</div>
+
+				<div class="row">
+					<?php
+					if($detail[0]->KONF_JADWAL_ACARA1_STATUS == "on" && $detail[0]->KONF_JADWAL_ACARA2_STATUS == "on")
+					{
+						$col = "6";
+					}
+					else{
+						$col = "12";
+					}
+					?>
+				<?php
+				if($detail[0]->KONF_JADWAL_ACARA1_STATUS == "on"){
+				?>
+					<div class="col-lg-<?php echo $col;?> col-md-<?php echo $col; ?>">
+						<div class="box">
+							<h3><?php echo $detail[0]->KONF_JADWAL_ACARA1_JUDUL; ?></h3>
+							<p><?php echo $detail[0]->KONF_JADWAL_ACARA1_ALAMAT; ?></p>
+							<p class="text-muted"><?php echo tanggal($detail[0]->KONF_JADWAL_ACARA1_TANGGAL); ?>, <?php echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA1_JAM)) ?></p>
+							
+							<!-- <div class="btn-wrap">
+								<a href="#" class="btn-buy">Buy Now</a>
+							</div> -->
+							<div>
+							<iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?q=<?php echo str_replace(" ","",$detail[0]->KONF_JADWAL_ACARA2_MAP); ?>&hl=in&z=16&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+							</div>
+						</div>
+					</div>
+					<?php
+					}
+					?>
+					<?php
+					if($detail[0]->KONF_JADWAL_ACARA2_STATUS == "on"){
+					?>
+					<div class="col-lg-<?php echo $col;?> col-md-<?php echo $col; ?>">
+						<div class="box">
+							<h3><?php echo $detail[0]->KONF_JADWAL_ACARA2_JUDUL; ?></h3>
+							<p><?php echo $detail[0]->KONF_JADWAL_ACARA2_ALAMAT; ?></p>
+							<p class="text-muted"><?php echo tanggal($detail[0]->KONF_JADWAL_ACARA2_TANGGAL); ?>, <?php echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA2_JAM)) ?></p>
+							
+							<!-- <div class="btn-wrap">
+								<a href="#" class="btn-buy">Buy Now</a>
+							</div> -->
+							<div>
+							<iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?q=<?php echo str_replace(" ","",$detail[0]->KONF_JADWAL_ACARA2_MAP); ?>&hl=in&z=16&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+							</div>
+						</div>
+					</div>
+					<?php
+					}
+					?>
+
+				</div>
+
+			</div>
+		</section><!-- End Pricing Section -->
 
 		<!-- ======= Services Section ======= -->
 		<section id="services" class="services">
@@ -2434,12 +2524,8 @@
 					<div class="col-lg-4 col-md-6 portfolio-item filter-app">
 						<img src="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
 						<div class="portfolio-info">
-							<h4>App 1</h4>
-							<p>App</p>
 							<a href="<?php echo base_url(); ?>assets/theme/assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery"
 								class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-							<a href="portfolio-details.html" class="details-link" title="More Details"><i
-									class="bx bx-link"></i></a>
 						</div>
 					</div>
 
@@ -2544,58 +2630,7 @@
 			</div>
 		</section><!-- End Portfolio Section -->
 
-		<!-- ======= Pricing Section ======= -->
-		<section id="pricing" class="pricing">
-			<div class="container">
-
-				<div class="section-title">
-					<h2>Jadwan</h2>
-					<h3>Our Competing <span>Prices</span></h3>
-					<p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas
-						atque vitae autem.</p>
-				</div>
-
-				<div class="row">
-
-					<div class="col-lg-6 col-md-6">
-						<div class="box">
-							<h3>Free</h3>
-							<h4><sup>$</sup>0<span> / month</span></h4>
-							<ul>
-								<li>Aida dere</li>
-								<li>Nec feugiat nisl</li>
-								<li>Nulla at volutpat dola</li>
-								<li class="na">Pharetra massa</li>
-								<li class="na">Massa ultricies mi</li>
-							</ul>
-							<div class="btn-wrap">
-								<a href="#" class="btn-buy">Buy Now</a>
-							</div>
-						</div>
-					</div>
-
-
-					<div class="col-lg-6 col-md-6 mt-4 mt-lg-0">
-						<div class="box">
-							<h3>Developer</h3>
-							<h4><sup>$</sup>29<span> / month</span></h4>
-							<ul>
-								<li>Aida dere</li>
-								<li>Nec feugiat nisl</li>
-								<li>Nulla at volutpat dola</li>
-								<li>Pharetra massa</li>
-								<li>Massa ultricies mi</li>
-							</ul>
-							<div class="btn-wrap">
-								<a href="#" class="btn-buy">Buy Now</a>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-			</div>
-		</section><!-- End Pricing Section -->
+		
 
 		<!-- ======= F.A.Q Section ======= -->
 		<section id="faq" class="faq">
@@ -2740,7 +2775,10 @@
 
 	<!-- ======= Footer ======= -->
 	<footer id="footer">
-
+	<audio autoplay loop id="my_audio">
+	<source src="http://localhost/Wedding/Wedding-CP/uploads/mp3/playdate.ogg" type="audio/ogg">
+	<source src="http://localhost/Wedding/Wedding-CP/uploads/mp3/playdate.mp3" type="audio/mpeg">
+	</audio>
 		<div class="container d-md-flex py-4">
 
 			<div class="mr-md-auto text-center text-md-left">
@@ -2764,7 +2802,7 @@
 			</div> -->
 		</div>
 	</footer><!-- End Footer -->
-
+	<a class="musik"><i id="musik" class="ri-play-fill"></i></a>
 	<a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 
 	<!-- Vendor JS Files -->
@@ -2778,6 +2816,24 @@
 
 	<!-- Template Main JS File -->
 	<script src="<?php echo base_url(); ?>assets/theme/assets/js/main.js"></script>
+	<script>
+
+// $(window).one('scroll',function() {
+//     $(".musik").click()
+// });
+
+  $(".musik").on("click", function(){
+	  if (document.getElementById("my_audio").paused)
+	{
+		document.getElementById("my_audio").play();
+		$("i#musik").attr("class","ri-music-2-line ")
+	}
+	else{
+		document.getElementById("my_audio").pause();
+		$("i#musik").attr("class","ri-play-fill ")
+	}
+  })
+	</script>
 
 </body>
 
