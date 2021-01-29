@@ -19,6 +19,9 @@ class M_Web extends CI_Model
                                 LEFT JOIN KONF_VIDEO AS VIDEO
                                 ON
                                 WEB.KONF_LINK=VIDEO.KONF_LINK
+                                LEFT JOIN KONF_LIVE AS LIVE
+                                ON
+                                WEB.KONF_LINK=LIVE.KONF_LINK
                                 WHERE WEB.KONF_LINK="'.$_SERVER['HTTP_HOST'].'"
                                 LIMIT 1
                                 '

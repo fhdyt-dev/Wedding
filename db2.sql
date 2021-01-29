@@ -79,7 +79,7 @@ CREATE TABLE `KONF_INFORMASI` (
   `KONF_INFORMASI_JUDUL` varchar(100) NOT NULL DEFAULT '0',
   `KONF_INFORMASI_ISI` text NOT NULL,
   PRIMARY KEY (`KONF_INFORMASI_INDEX`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -88,6 +88,7 @@ CREATE TABLE `KONF_INFORMASI` (
 
 LOCK TABLES `KONF_INFORMASI` WRITE;
 /*!40000 ALTER TABLE `KONF_INFORMASI` DISABLE KEYS */;
+INSERT INTO `KONF_INFORMASI` VALUES (5,'localhost','on','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et.','                                                                                <span style=\"margin: 0px; padding: 0px; color: rgb(0, 0, 0);\" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\">Lorem Ipsum</span><span style=\"color: rgb(0, 0, 0);\" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>                                                                                                              ');
 /*!40000 ALTER TABLE `KONF_INFORMASI` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -126,6 +127,34 @@ LOCK TABLES `KONF_JADWAL` WRITE;
 /*!40000 ALTER TABLE `KONF_JADWAL` DISABLE KEYS */;
 INSERT INTO `KONF_JADWAL` VALUES (3,'localhost','on','Akad Nikah','2021-01-20','08:00:00','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit auctor dolor. Nulla viverra, nibh.','0.487741, 101.386172','on','Resepsi','2021-01-22','12:30:00','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.','0.481403, 101.364329','acara1');
 /*!40000 ALTER TABLE `KONF_JADWAL` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `KONF_LIVE`
+--
+
+DROP TABLE IF EXISTS `KONF_LIVE`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `KONF_LIVE` (
+  `KONF_LIVE_INDEX` int NOT NULL AUTO_INCREMENT,
+  `KONF_LINK` varchar(50) NOT NULL DEFAULT '0',
+  `KONF_LIVE_STATUS` varchar(50) DEFAULT NULL,
+  `KONF_LIVE_LINK` varchar(100) NOT NULL DEFAULT '0',
+  `KONF_LIVE_PLATFORM` varchar(100) NOT NULL DEFAULT '0',
+  `KONF_LIVE_KETERANGAN` text NOT NULL,
+  PRIMARY KEY (`KONF_LIVE_INDEX`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `KONF_LIVE`
+--
+
+LOCK TABLES `KONF_LIVE` WRITE;
+/*!40000 ALTER TABLE `KONF_LIVE` DISABLE KEYS */;
+INSERT INTO `KONF_LIVE` VALUES (14,'localhost','on','Lorem ipsum ','zoom','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit.');
+/*!40000 ALTER TABLE `KONF_LIVE` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -202,7 +231,7 @@ CREATE TABLE `KONF_VIDEO` (
   `KONF_VIDEO_STATUS` varchar(50) DEFAULT NULL,
   `KONF_VIDEO_LINK` varchar(100) NOT NULL DEFAULT '0',
   PRIMARY KEY (`KONF_VIDEO_INDEX`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -232,7 +261,7 @@ CREATE TABLE `KONF_WEB` (
   `KONF_WEB_FONT_INTRO` varchar(50) NOT NULL DEFAULT '0',
   `KONF_WEB_SAMPUL` varchar(200) NOT NULL DEFAULT 'not_found.jpg',
   PRIMARY KEY (`KONF_WEB_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -241,7 +270,7 @@ CREATE TABLE `KONF_WEB` (
 
 LOCK TABLES `KONF_WEB` WRITE;
 /*!40000 ALTER TABLE `KONF_WEB` DISABLE KEYS */;
-INSERT INTO `KONF_WEB` VALUES (35,'localhost','Pernikahan','#e91e63','233,30,99','Raleway','Allura','Monsieur La Doulaise','0f9d895e900233add7675b27cc76ed450dbcbfde.jpg');
+INSERT INTO `KONF_WEB` VALUES (36,'localhost','Pernikahan','#e91e63','233,30,99','Raleway','Kaushan Script','Monsieur La Doulaise','0f9d895e900233add7675b27cc76ed450dbcbfde.jpg');
 /*!40000 ALTER TABLE `KONF_WEB` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -337,4 +366,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-28 16:51:31
+-- Dump completed on 2021-01-29 16:31:03

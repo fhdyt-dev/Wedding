@@ -42,6 +42,7 @@
 	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/venobox/venobox.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
 
@@ -590,7 +591,6 @@
 		margin: auto auto 0 auto;
 		font-weight: 600;
 	}
-
 	@media (min-width: 1024px) {
 		.section-title p {
 			width: 50%;
@@ -646,6 +646,8 @@
 		-webkit-animation-delay: 0.8s;
 		animation-delay: 0.8s;
 		margin-top: 6px;
+		margin-left:auto;
+		margin-right:auto;
 		border: 2px solid <?php echo $detail[0]->KONF_WEB_WARNA ?>;
 	}
 
@@ -659,7 +661,7 @@
 # Services
 --------------------------------------------------------------*/
 	.services {
-		padding-bottom: 30px;
+		padding-bottom: 0px;
 	}
 
 	.services .icon-box {
@@ -736,17 +738,16 @@
 	}
 
 	.features .icon-box {
-		display: flex;
-		align-items: center;
 		padding: 20px;
 		transition: ease-in-out 0.3s;
 		box-shadow: 2px 0 35px 0 rgba(68, 88, 144, 0.12);
+		text-align: center;
 	}
 
 	.features .icon-box i {
 		font-size: 32px;
-		padding-right: 10px;
-		line-height: 1;
+		padding-bottom:20px;
+		
 	}
 
 	.features .icon-box h3 {
@@ -2147,6 +2148,13 @@
 		color: #fff;
 		text-decoration: none;
 	}
+
+	.logo_streaming {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom:25px;
+	}
 </style>
 
 <body>
@@ -2161,7 +2169,7 @@
 
 			<nav class="nav-menu d-none d-lg-block">
 				<ul>
-					<li class="active"><a href="index.html">Home</a></li>
+					<li class="active"><a href="<?php echo base_url();?>">Home</a></li>
 					<li><a href="#about">About</a></li>
 					<li><a href="#services">Services</a></li>
 					<li><a href="#portfolio">Portfolio</a></li>
@@ -2222,18 +2230,14 @@
 		<!-- ======= About Section ======= -->
 		<section id="about" class="about">
 			<div class="container">
-
 				<div class="section-title">
 					<h3><span><?php echo $detail[0]->KONF_PEMBUKAAN_JUDUL; ?></span></h3>
 				</div>
-
 				<div class="row content">
-
 					<div class="col-lg-12">
 						<p style="text-align:center"><?php echo $detail[0]->KONF_PEMBUKAAN_ISI; ?></p>
 					</div>
 				</div>
-
 			</div>
 		</section><!-- End About Section -->
 		<!-- ======= Team Section ======= -->
@@ -2307,13 +2311,11 @@
 							<h3><?php echo $detail[0]->KONF_JADWAL_ACARA1_JUDUL; ?></h3>
 							<p><?php echo $detail[0]->KONF_JADWAL_ACARA1_ALAMAT; ?></p>
 							<p class="text-muted"><?php echo tanggal($detail[0]->KONF_JADWAL_ACARA1_TANGGAL); ?>, <?php echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA1_JAM)) ?></p>
-							
-							<!-- <div class="btn-wrap">
-								<a href="#" class="btn-buy">Buy Now</a>
-							</div> -->
 							<div>
-							<iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?q=<?php echo str_replace(" ","",$detail[0]->KONF_JADWAL_ACARA2_MAP); ?>&hl=in&z=16&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
-
+							<iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?q=<?php echo str_replace(" ","",$detail[0]->KONF_JADWAL_ACARA1_MAP); ?>&hl=in&z=16&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+							</div>
+							<div class="btn-wrap">
+								<a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo str_replace(" ","",$detail[0]->KONF_JADWAL_ACARA1_MAP); ?>&dir_action=navigate" class="btn-buy" target="_blank">Buka Peta</a>
 							</div>
 						</div>
 					</div>
@@ -2328,13 +2330,11 @@
 							<h3><?php echo $detail[0]->KONF_JADWAL_ACARA2_JUDUL; ?></h3>
 							<p><?php echo $detail[0]->KONF_JADWAL_ACARA2_ALAMAT; ?></p>
 							<p class="text-muted"><?php echo tanggal($detail[0]->KONF_JADWAL_ACARA2_TANGGAL); ?>, <?php echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA2_JAM)) ?></p>
-							
-							<!-- <div class="btn-wrap">
-								<a href="#" class="btn-buy">Buy Now</a>
-							</div> -->
 							<div>
 							<iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?q=<?php echo str_replace(" ","",$detail[0]->KONF_JADWAL_ACARA2_MAP); ?>&hl=in&z=16&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
-
+							</div>
+							<div class="btn-wrap">
+								<a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo str_replace(" ","",$detail[0]->KONF_JADWAL_ACARA2_MAP); ?>&dir_action=navigate" class="btn-buy" target="_blank">Buka Peta</a>
 							</div>
 						</div>
 					</div>
@@ -2352,49 +2352,9 @@
 			<div class="container">
 
 				<div class="section-title">
-					<h2>Services</h2>
-					<h3>We do offer awesome <span>Services</span></h3>
-					<p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas
-						atque vitae autem.</p>
-				</div>
-
-				<div class="row">
-					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-						<div class="icon-box">
-							<div class="icon"><i class="bx bxl-dribbble"></i></div>
-							<h4 class="title"><a href="">Lorem Ipsum</a></h4>
-							<p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-								excepturi</p>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-						<div class="icon-box">
-							<div class="icon"><i class="bx bx-file"></i></div>
-							<h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-							<p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-								dolore</p>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-						<div class="icon-box">
-							<div class="icon"><i class="bx bx-tachometer"></i></div>
-							<h4 class="title"><a href="">Magni Dolores</a></h4>
-							<p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-								officia</p>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-						<div class="icon-box">
-							<div class="icon"><i class="bx bx-world"></i></div>
-							<h4 class="title"><a href="">Nemo Enim</a></h4>
-							<p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-								blanditiis</p>
-						</div>
-					</div>
-
+					<h2>Covid-19</h2>
+					<h3>Terapkan Protokol <span>Kesehatan</span></h3>
+					<p>Stop Penyebaran Covid-19 Dengan Menerapkan Protokol Kesehatan</p>
 				</div>
 
 			</div>
@@ -2407,95 +2367,59 @@
 				<div class="row">
 					<div class="col-lg-3 col-md-4 col-6 col-6">
 						<div class="icon-box">
-							<i class="ri-store-line" style="color: #ffbb2c;"></i>
-							<h3><a href="">Lorem Ipsum</a></h3>
+							<i class="fas fa-head-side-mask" style="color: #ffbb2c;"></i>
+							<h3><a href="">Memakai Masker</a></h3>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-4 col-6">
 						<div class="icon-box">
-							<i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-							<h3><a href="">Dolor Sitema</a></h3>
+							<i class="fas fa-handshake-slash" style="color: #5578ff;"></i>
+							<h3><a href="">Hindari Berjabat Tangan</a></h3>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-4 col-6 mt-4 mt-md-0">
 						<div class="icon-box">
-							<i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-							<h3><a href="">Sed perspiciatis</a></h3>
+							<i class="fas fa-people-arrows" style="color: #e80368;"></i>
+							<h3><a href="">Mejaga Jarak</a></h3>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-4 col-6 mt-4 mt-lg-0">
 						<div class="icon-box">
-							<i class="ri-paint-brush-line" style="color: #e361ff;"></i>
-							<h3><a href="">Magni Dolores</a></h3>
+							<i class="fas fa-hands-wash" style="color: #e361ff;"></i>
+							<h3><a href="">Mencuci Tangan</a></h3>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-6 mt-4">
-						<div class="icon-box">
-							<i class="ri-database-2-line" style="color: #47aeff;"></i>
-							<h3><a href="">Nemo Enim</a></h3>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-4 col-6 mt-4">
-						<div class="icon-box">
-							<i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-							<h3><a href="">Eiusmod Tempor</a></h3>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-4 col-6 mt-4">
-						<div class="icon-box">
-							<i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-							<h3><a href="">Midela Teren</a></h3>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-4 col-6 mt-4">
-						<div class="icon-box">
-							<i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-							<h3><a href="">Pira Neve</a></h3>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-4 col-6 mt-4">
-						<div class="icon-box">
-							<i class="ri-anchor-line" style="color: #b2904f;"></i>
-							<h3><a href="">Dirada Pack</a></h3>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-4 col-6 mt-4">
-						<div class="icon-box">
-							<i class="ri-disc-line" style="color: #b20969;"></i>
-							<h3><a href="">Moton Ideal</a></h3>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-4 col-6 mt-4">
-						<div class="icon-box">
-							<i class="ri-base-station-line" style="color: #ff5828;"></i>
-							<h3><a href="">Verdo Park</a></h3>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-4 col-6 mt-4">
-						<div class="icon-box">
-							<i class="ri-fingerprint-line" style="color: #29cc61;"></i>
-							<h3><a href="">Flavor Nivelanda</a></h3>
-						</div>
-					</div>
+					
+					
+					
+					
+					
+					
+					
 				</div>
 
 			</div>
 		</section><!-- End Features Section -->
 
+		<?php
+		if($detail[0]->KONF_INFORMASI_STATUS == "on"){
+		?>
 		<!-- ======= Cta Section ======= -->
-		<section id="cta" class="cta">
+		<section id="about" class="about section-bg">
 			<div class="container">
-
-				<div class="text-center">
-					<h3>Call To Action</h3>
-					<p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-						mollit anim id est laborum.</p>
-					<a class="cta-btn" href="#">Call To Action</a>
+				<div class="section-title">
+					<h2>Informasi</h2>
+					<h3><span><?php echo $detail[0]->KONF_INFORMASI_JUDUL; ?></span></h3>
+				</div>
+				<div class="row content">
+					<div class="col-lg-12">
+						<p style="text-align:center"><?php echo $detail[0]->KONF_INFORMASI_ISI; ?></p>
+					</div>
 				</div>
 
 			</div>
 		</section><!-- End Cta Section -->
+		<?php } ?>
 
 		<!-- ======= Portfolio Section ======= -->
 		<section id="portfolio" class="portfolio">
@@ -2630,14 +2554,32 @@
 			</div>
 		</section><!-- End Portfolio Section -->
 
-		
+		<?php
+		if($detail[0]->KONF_LIVE_STATUS == "on"){
+		?>
+		<!-- ======= Cta Section ======= -->
+		<section id="about" class="about section-bg">
+			<div class="container">
+				<div class="section-title">
+					<h3>Live <span>Streaming</span></h3>
+				</div>
+				<img class="logo_streaming" height="70" src="http://localhost/Wedding/Wedding-CP/uploads/live/<?php echo $detail[0]->KONF_LIVE_PLATFORM; ?>.png">
+				<div class="row content">
+					<div class="col-lg-12">
+						<p style="text-align:center;padding-bottom:20px;"><?php echo $detail[0]->KONF_LIVE_KETERANGAN; ?></p>
+					</div>
+					<a href="<?php echo $detail[0]->KONF_LIVE_LINK; ?>" target="_blank" class="btn-learn-more">Buka Live Streaming</a>
+				</div>
+
+			</div>
+		</section><!-- End Cta Section -->
+		<?php } ?>
 
 		<!-- ======= F.A.Q Section ======= -->
 		<section id="faq" class="faq">
 			<div class="container">
 
 				<div class="section-title">
-					<h2>F.A.Q</h2>
 					<h3>Frequently Asked <span>Questions</span></h3>
 				</div>
 
@@ -2775,10 +2717,10 @@
 
 	<!-- ======= Footer ======= -->
 	<footer id="footer">
-	<audio autoplay loop id="my_audio">
+	<!-- <audio autoplay loop id="my_audio">
 	<source src="http://localhost/Wedding/Wedding-CP/uploads/mp3/playdate.ogg" type="audio/ogg">
 	<source src="http://localhost/Wedding/Wedding-CP/uploads/mp3/playdate.mp3" type="audio/mpeg">
-	</audio>
+	</audio> -->
 		<div class="container d-md-flex py-4">
 
 			<div class="mr-md-auto text-center text-md-left">
@@ -2816,12 +2758,23 @@
 
 	<!-- Template Main JS File -->
 	<script src="<?php echo base_url(); ?>assets/theme/assets/js/main.js"></script>
+	<iframe src="http://localhost/Wedding/Wedding-CP/uploads/mp3/silent.mp3" allow="autoplay" id="audio"
+                style="display: none"></iframe>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js"
+                integrity="sha512-L6Z/YtIPQ7eU3BProP34WGU5yIRk7tNHk7vaC2dB1Vy1atz6wl9mCkTPPZ2Rn1qPr+vY2mZ9odZLdGYuaBk7dQ=="
+                crossorigin="anonymous"></script>
+        <script>
+            let autoplay = true;
+            let soundID;
+            var sound = new Howl({
+                src: ['http://localhost/Wedding/Wedding-CP/uploads/mp3/playdate.mp3'],
+                autoplay: autoplay,
+                loop: true,
+            });
+
+            soundID = sound.play();
+        </script>
 	<script>
-
-// $(window).one('scroll',function() {
-//     $(".musik").click()
-// });
-
   $(".musik").on("click", function(){
 	  if (document.getElementById("my_audio").paused)
 	{

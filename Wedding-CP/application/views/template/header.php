@@ -191,6 +191,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <p>Pesan (RSVP)</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="<?php echo base_url(); ?>konfigurasi/live" class="nav-link">
+                  <i class="fas fa-broadcast-tower nav-icon"></i>
+                  <p>Live Streaming</p>
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
