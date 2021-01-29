@@ -115,8 +115,9 @@ CREATE TABLE `KONF_JADWAL` (
   `KONF_JADWAL_ACARA2_ALAMAT` text NOT NULL,
   `KONF_JADWAL_ACARA2_MAP` text NOT NULL,
   `KONF_JADWAL_INTRO` varchar(50) NOT NULL,
+  `KONF_JADWAL_COVID19` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`KONF_JADWAL_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -125,7 +126,7 @@ CREATE TABLE `KONF_JADWAL` (
 
 LOCK TABLES `KONF_JADWAL` WRITE;
 /*!40000 ALTER TABLE `KONF_JADWAL` DISABLE KEYS */;
-INSERT INTO `KONF_JADWAL` VALUES (3,'localhost','on','Akad Nikah','2021-01-20','08:00:00','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit auctor dolor. Nulla viverra, nibh.','0.487741, 101.386172','on','Resepsi','2021-01-22','12:30:00','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.','0.481403, 101.364329','acara1');
+INSERT INTO `KONF_JADWAL` VALUES (11,'localhost','on','Akad Nikah','2021-01-01','16:47:00','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et.','','on','','2021-01-02','20:47:00','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et.','','acara1','on');
 /*!40000 ALTER TABLE `KONF_JADWAL` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -366,4 +367,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-29 16:31:03
+-- Dump completed on 2021-01-29 16:51:40

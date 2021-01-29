@@ -42,6 +42,7 @@
   $acara2_alamat = $tersimpan[0]->KONF_JADWAL_ACARA2_ALAMAT;
   $kordinat_acara2 = $tersimpan[0]->KONF_JADWAL_ACARA2_MAP;
   $acaraintro = $tersimpan[0]->KONF_JADWAL_INTRO;
+  $covid19 = $tersimpan[0]->KONF_JADWAL_COVID19;
 }
 else{
   $acara1_status = "";
@@ -58,6 +59,7 @@ else{
   $acara2_alamat = "";
   $kordinat_acara2 = "";
   $acaraintro = "";
+  $covid19 = "";
 }
  ?>
   <!-- Content Wrapper. Contains page content -->
@@ -128,7 +130,18 @@ else{
               </div>
               <!-- /.card-body -->
             </div>
+            <div class="form-group">
+                  <div class="form-group clearfix">
+                    <label for="exampleInputEmail1">Protokol Kesehatan COVID-19</label>
+                    <div class="icheck-primary">
+                      <input type="checkbox" id="covid19" name="covid19" <?php if($covid19 == "covid19"){echo "checked";} else{echo "";} ?> value="on">
+                      <label for="covid19">
+                      </label>
+                    </div>
+                  </div>
+                </div>
           </div>
+          
           <div class="col-md-6">
             <div class="card card-default color-palette-box">
               <div class="card-header">
@@ -174,7 +187,9 @@ else{
                 </div>
               </div>
               <!-- /.card-body -->
+              
             </div>
+            
           </div>
         </div>
         <button type="submit" class="btn btn-secondary">Simpan</button>

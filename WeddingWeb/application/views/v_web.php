@@ -2346,24 +2346,17 @@
 
 			</div>
 		</section><!-- End Pricing Section -->
-
-		<!-- ======= Services Section ======= -->
-		<section id="services" class="services">
+		<?php
+		if($detail[0]->KONF_JADWAL_COVID19 == "on"){
+		?>
+		<!-- ======= Features Section ======= -->
+		<section id="features" class="features">
 			<div class="container">
-
-				<div class="section-title">
+					<div class="section-title">
 					<h2>Covid-19</h2>
 					<h3>Terapkan Protokol <span>Kesehatan</span></h3>
 					<p>Stop Penyebaran Covid-19 Dengan Menerapkan Protokol Kesehatan</p>
 				</div>
-
-			</div>
-		</section><!-- End Services Section -->
-
-		<!-- ======= Features Section ======= -->
-		<section id="features" class="features">
-			<div class="container">
-
 				<div class="row">
 					<div class="col-lg-3 col-md-4 col-6 col-6">
 						<div class="icon-box">
@@ -2389,18 +2382,11 @@
 							<h3><a href="">Mencuci Tangan</a></h3>
 						</div>
 					</div>
-					
-					
-					
-					
-					
-					
-					
+					<img class="logo_streaming" style="margin-top:20px" height="70" src="<?php echo base_url(); ?>/assets/kemenkes.png">
 				</div>
-
 			</div>
 		</section><!-- End Features Section -->
-
+			<?php } ?>
 		<?php
 		if($detail[0]->KONF_INFORMASI_STATUS == "on"){
 		?>

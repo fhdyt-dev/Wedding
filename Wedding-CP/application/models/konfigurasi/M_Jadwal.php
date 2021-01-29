@@ -20,6 +20,7 @@ class M_Jadwal extends CI_Model
 			'KONF_JADWAL_ACARA2_ALAMAT' => $this->input->post('alamat_acara2'),
 			'KONF_JADWAL_ACARA2_MAP' => $this->input->post('kordinat_acara2'),
 			'KONF_JADWAL_INTRO' => $this->input->post('r2'),
+			'KONF_JADWAL_COVID19' => $this->input->post('covid19'),
 		);
 
 	$result=$this->db->insert('KONF_JADWAL',$data);
