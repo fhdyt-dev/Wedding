@@ -63,5 +63,11 @@ class Upload extends CI_Controller {
 			$data=$this->M_Upload->m_hapus($id);
 			echo json_encode($data);
 	}
+	public function galeri()
+	{
+			$id = $this->uri->segment('3');
+			$data=$this->M_Upload->m_galeri($id);
+			echo json_encode($data);
+	}
 
 }

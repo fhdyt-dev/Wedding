@@ -53,30 +53,6 @@ else{
                 </div>
                 <!-- /.form-group -->
               </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Sampul</label>
-                  <div class="icheck-primary">
-                    <input type="radio" name="r2" id="radioDanger1" <?php if($sampul == "tema"){echo "checked";} else{echo "";} ?> value="tema">
-                    <label for="radioDanger1">Warna Tema
-                    </label>
-                  </div>
-                  <div class="icheck-primary">
-                    <input type="radio" name="r2" id="radioDanger2" <?php if($sampul == "gambar"){echo "checked";} else{echo "";} ?> value="gambar">
-                    <label for="radioDanger2">Gambar
-                    </label>
-                  </div>
-                </div>
-                <!-- /.form-group -->
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Gambar Sampul</label>
-                  <input type="hidden" name="gamba_sampul" class="gamba_sampul" value="<?php echo $gamba_sampul; ?>">
-                  <button type="button" nama_input="gamba_sampul" class="btn btn-primary btn-block btn_upload mb-2">Pilih Gambar</button>
-                  <img height="50" src="<?php echo base_url(); ?>uploads/cover/<?php echo $gamba_sampul; ?>" class="img-fluid gamba_sampul" alt="foto tidak ada">
-                </div>
-                <!-- /.form-group -->
               </div>
               <!-- /.col -->
               <!-- /.col -->

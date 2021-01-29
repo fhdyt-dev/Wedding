@@ -132,10 +132,10 @@ else{
             </div>
             <div class="form-group">
                   <div class="form-group clearfix">
-                    <label for="exampleInputEmail1">Protokol Kesehatan COVID-19</label>
                     <div class="icheck-primary">
                       <input type="checkbox" id="covid19" name="covid19" <?php if($covid19 == "covid19"){echo "checked";} else{echo "";} ?> value="on">
                       <label for="covid19">
+                      Protokol Kesehatan COVID-19
                       </label>
                     </div>
                   </div>

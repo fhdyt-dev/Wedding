@@ -32,7 +32,51 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="<?php echo base_url(); ?>assets/theme/plugins/summernote/summernote-bs4.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/theme/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/theme/plugins/inputmask/jquery.inputmask.min.js"></script>
+  <style media="screen">
+					.masonry-container {
+					-webkit-column-count: 3;
+					-moz-column-count: 3;
+					column-count: 3;
 
+					-webkit-column-gap: 15px;
+					-moz-column-gap: 15px;
+					column-gap: 15px;
+					}
+
+					.masonry-item {
+					display: inline-block;
+					width: 100%;
+					}
+
+					.masonry-item img {
+					display:block;
+					width: 100%;
+					}
+
+					/* Just for decoration: */
+					.masonry-item span {
+					font-family: sans-serif;
+					display:block;
+					padding:10px;
+					}
+
+					.masonry-item {
+					margin-bottom: 15px;
+					border:1px solid #ccc;
+					border-radius: 5px;
+					}
+					@media (max-width: 768px) {
+						.masonry-container {
+					-webkit-column-count: 2;
+					-moz-column-count: 2;
+					column-count: 2;
+
+					-webkit-column-gap: 15px;
+					-moz-column-gap: 15px;
+					column-gap: 15px;
+					}
+					}
+					</style>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -125,6 +169,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           $this->uri->segment(2) == "jadwal" ||
           $this->uri->segment(2) == "informasi" ||
           $this->uri->segment(2) == "prewed" ||
+          $this->uri->segment(2) == "live" ||
           $this->uri->segment(2) == "pesan"
           )
           {
@@ -180,19 +225,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url(); ?>konfigurasi/prewed" class="nav-link">
+                <a href="<?php echo base_url(); ?>konfigurasi/prewed" class="nav-link <?php if($this->uri->segment(2)=="prewed"){echo "active";} ?>">
                   <i class="fas fa-camera-retro nav-icon"></i>
                   <p>Galeri Prewed</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url(); ?>konfigurasi/pesan" class="nav-link">
+                <a href="<?php echo base_url(); ?>konfigurasi/pesan" class="nav-link <?php if($this->uri->segment(2)=="pesan"){echo "active";} ?>">
                   <i class="fas fa-comments nav-icon"></i>
                   <p>Pesan (RSVP)</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url(); ?>konfigurasi/live" class="nav-link">
+                <a href="<?php echo base_url(); ?>konfigurasi/live" class="nav-link <?php if($this->uri->segment(2)=="live"){echo "active";} ?>">
                   <i class="fas fa-broadcast-tower nav-icon"></i>
                   <p>Live Streaming</p>
                 </a>

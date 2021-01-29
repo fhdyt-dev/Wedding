@@ -26,8 +26,9 @@ CREATE TABLE `ALBUM_USER` (
   `ALBUM_USER_INDEX` int NOT NULL AUTO_INCREMENT,
   `KONF_LINK` varchar(50) NOT NULL DEFAULT '0',
   `ALBUM_USER_FOTO` varchar(100) NOT NULL DEFAULT '0',
+  `ALBUM_USER_GALERI_STATUS` enum('show','hide') NOT NULL DEFAULT 'hide',
   PRIMARY KEY (`ALBUM_USER_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +37,7 @@ CREATE TABLE `ALBUM_USER` (
 
 LOCK TABLES `ALBUM_USER` WRITE;
 /*!40000 ALTER TABLE `ALBUM_USER` DISABLE KEYS */;
-INSERT INTO `ALBUM_USER` VALUES (1,'localhost','0f9d895e900233add7675b27cc76ed450dbcbfde.jpg'),(2,'localhost','06936020fcf494252bf33f72d5f05b740abd50d8.jpg'),(3,'localhost','7a178b2273a328d866dd4dc5cda21f195e49a9e7.jpg');
+INSERT INTO `ALBUM_USER` VALUES (4,'localhost','b17b1bea4b866240d6b1f344c72274b1bb7e498c.jpg','show'),(5,'localhost','5b8f03213296650339c984f90582989928860df1.jpg','show'),(6,'localhost','2733ed20b1177d8c0b9cfc3bd67db96066bbea28.jpg','show'),(7,'localhost','a0f29175c9efeb89f178c220bf7a38c7850905a8.jpg','show'),(8,'localhost','f3fda20221ea3d5b6564517c664d21f5a80180a2.jpg','show'),(9,'localhost','c674c12981acc865c8b91448c508db60b6a47608.jpg','show'),(10,'localhost','4f622d977b5f07317aed45f9cadc0c04eef941ba.jpg','show'),(11,'localhost','c969af41f305af2cccaacbe4dc18ce44b3ab4d6c.jpg','show'),(12,'localhost','2b3243f5e4810233517fd67d032c59f04265ceb2.jpg','show');
 /*!40000 ALTER TABLE `ALBUM_USER` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,7 +118,7 @@ CREATE TABLE `KONF_JADWAL` (
   `KONF_JADWAL_INTRO` varchar(50) NOT NULL,
   `KONF_JADWAL_COVID19` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`KONF_JADWAL_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -126,7 +127,7 @@ CREATE TABLE `KONF_JADWAL` (
 
 LOCK TABLES `KONF_JADWAL` WRITE;
 /*!40000 ALTER TABLE `KONF_JADWAL` DISABLE KEYS */;
-INSERT INTO `KONF_JADWAL` VALUES (11,'localhost','on','Akad Nikah','2021-01-01','16:47:00','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et.','','on','','2021-01-02','20:47:00','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et.','','acara1','on');
+INSERT INTO `KONF_JADWAL` VALUES (14,'localhost','on','Akad Nikah','2021-01-01','16:47:00','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et. akad','','on','Resepsi','2021-01-02','20:47:00','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et.','','acara1',NULL);
 /*!40000 ALTER TABLE `KONF_JADWAL` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -145,7 +146,7 @@ CREATE TABLE `KONF_LIVE` (
   `KONF_LIVE_PLATFORM` varchar(100) NOT NULL DEFAULT '0',
   `KONF_LIVE_KETERANGAN` text NOT NULL,
   PRIMARY KEY (`KONF_LIVE_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -154,7 +155,7 @@ CREATE TABLE `KONF_LIVE` (
 
 LOCK TABLES `KONF_LIVE` WRITE;
 /*!40000 ALTER TABLE `KONF_LIVE` DISABLE KEYS */;
-INSERT INTO `KONF_LIVE` VALUES (14,'localhost','on','Lorem ipsum ','zoom','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit.');
+INSERT INTO `KONF_LIVE` VALUES (15,'localhost','on','https://www.youtube.com/watch?v=5yx6BWlEVcY&ab_channel=ChillhopMusic','yt','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit.');
 /*!40000 ALTER TABLE `KONF_LIVE` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -206,7 +207,7 @@ CREATE TABLE `KONF_PENGANTIN` (
   `KONF_PENGANTIN_PRIA_FOTO` varchar(200) NOT NULL DEFAULT '0',
   `KONF_PENGANTIN_WANITA_FOTO` varchar(200) NOT NULL DEFAULT '0',
   PRIMARY KEY (`KONF_PENGANTIN_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -215,7 +216,7 @@ CREATE TABLE `KONF_PENGANTIN` (
 
 LOCK TABLES `KONF_PENGANTIN` WRITE;
 /*!40000 ALTER TABLE `KONF_PENGANTIN` DISABLE KEYS */;
-INSERT INTO `KONF_PENGANTIN` VALUES (8,'demo.get-married.site','','Pria Lengkap','Wanita Lengkap','Pria','Wanita','Putra Hamish Daud dan Raisa Andriana','Putri Usman Bin Yahya dan Kartika Putri','5e2548f8ce1c1db23df785ebb5f1861ab5a90992.jpg','81c34e12dd694ac1e2aaf5cec9a4f16f3f4bfcae.jpg'),(12,'localhost','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam.','Nama Lengkap Pria','Nama Lengkap Wanita','Pria','Wanita','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit auctor dolor. Nulla viverra, nibh quis ultrices malesuada, ligula ipsum v','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit.','06936020fcf494252bf33f72d5f05b740abd50d8.jpg','7a178b2273a328d866dd4dc5cda21f195e49a9e7.jpg');
+INSERT INTO `KONF_PENGANTIN` VALUES (8,'demo.get-married.site','','Pria Lengkap','Wanita Lengkap','Pria','Wanita','Putra Hamish Daud dan Raisa Andriana','Putri Usman Bin Yahya dan Kartika Putri','5e2548f8ce1c1db23df785ebb5f1861ab5a90992.jpg','81c34e12dd694ac1e2aaf5cec9a4f16f3f4bfcae.jpg'),(14,'localhost','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam.','Nama Lengkap Pria','Nama Lengkap Wanita','Pria','Wanita','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit auctor dolor. Nulla viverra, nibh quis ultrices malesuada, ligula ipsum v','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit.','2733ed20b1177d8c0b9cfc3bd67db96066bbea28.jpg','5b8f03213296650339c984f90582989928860df1.jpg');
 /*!40000 ALTER TABLE `KONF_PENGANTIN` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -232,7 +233,7 @@ CREATE TABLE `KONF_VIDEO` (
   `KONF_VIDEO_STATUS` varchar(50) DEFAULT NULL,
   `KONF_VIDEO_LINK` varchar(100) NOT NULL DEFAULT '0',
   PRIMARY KEY (`KONF_VIDEO_INDEX`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -241,6 +242,7 @@ CREATE TABLE `KONF_VIDEO` (
 
 LOCK TABLES `KONF_VIDEO` WRITE;
 /*!40000 ALTER TABLE `KONF_VIDEO` DISABLE KEYS */;
+INSERT INTO `KONF_VIDEO` VALUES (3,'localhost','on','https://www.youtube.com/watch?v=P7QTno-m1bU&list=RDP7QTno-m1bU&start_radio=1&ab_channel=akamaruryan');
 /*!40000 ALTER TABLE `KONF_VIDEO` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -262,7 +264,7 @@ CREATE TABLE `KONF_WEB` (
   `KONF_WEB_FONT_INTRO` varchar(50) NOT NULL DEFAULT '0',
   `KONF_WEB_SAMPUL` varchar(200) NOT NULL DEFAULT 'not_found.jpg',
   PRIMARY KEY (`KONF_WEB_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -271,7 +273,7 @@ CREATE TABLE `KONF_WEB` (
 
 LOCK TABLES `KONF_WEB` WRITE;
 /*!40000 ALTER TABLE `KONF_WEB` DISABLE KEYS */;
-INSERT INTO `KONF_WEB` VALUES (36,'localhost','Pernikahan','#e91e63','233,30,99','Raleway','Kaushan Script','Monsieur La Doulaise','0f9d895e900233add7675b27cc76ed450dbcbfde.jpg');
+INSERT INTO `KONF_WEB` VALUES (41,'localhost','Pernikahan','#e91e63','233,30,99','Raleway','Kaushan Script','Monsieur La Doulaise','2b3243f5e4810233517fd67d032c59f04265ceb2.jpg');
 /*!40000 ALTER TABLE `KONF_WEB` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -288,10 +290,10 @@ CREATE TABLE `RSVP` (
   `RSVP_NAMA` varchar(50) NOT NULL DEFAULT '0',
   `RSVP_KEHADIRAN` varchar(50) NOT NULL DEFAULT '0',
   `RSVP_PESAN` text NOT NULL,
-  `RSVP_STATUS` varchar(50) NOT NULL DEFAULT '0',
+  `RSVP_STATUS` enum('show','hide') NOT NULL DEFAULT 'show',
   `RSVP_TANGGAL` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`RSVP_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -300,7 +302,7 @@ CREATE TABLE `RSVP` (
 
 LOCK TABLES `RSVP` WRITE;
 /*!40000 ALTER TABLE `RSVP` DISABLE KEYS */;
-INSERT INTO `RSVP` VALUES (1,'localhost','Fikri','hadir','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit.','hide','2021-01-28 08:51:09');
+INSERT INTO `RSVP` VALUES (1,'localhost','Fikri','hadir','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit.','show','2021-01-29 15:04:05'),(2,'localhost','Lorem ipsum dolor sit amet, consectetur adipiscing','hadir','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit auctor dolor. Nulla viverra, nibh quis ultrices malesuada, ligula ipsum vulputate diam, aliquam egestas nibh ante vel dui. Sed in tellus interdum eros vulputate placerat sed non enim. Pellentesque eget.','show','2021-01-29 15:05:23');
 /*!40000 ALTER TABLE `RSVP` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -367,4 +369,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-29 16:51:40
+-- Dump completed on 2021-01-29 22:40:31

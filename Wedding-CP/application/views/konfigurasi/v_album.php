@@ -82,10 +82,20 @@
       {
         var no = 1
         for (i = 0; i < data.length; i++) {
-          $("tbody#zone_data").append("<tr>" +
+          if(data[i].ALBUM_USER_GALERI_STATUS == "show")
+          {
+            var tr = "table-success"
+            var status = "<figcaption class='blockquote-footer'>Foto ini telah ditampilkan di Galeri Prewed Web anda.</figcaption>"
+          }
+          else {
+            var tr =""
+            var status = ""
+          }
+          $("tbody#zone_data").append("<tr class='"+tr+"'>" +
           "<td>" + no++ +". </td>" +
-          "<td><img height='100' src='<?php echo base_url() ?>uploads/cover/" + data[i].ALBUM_USER_FOTO + "' alt=''></td>" +
-          "<td><a class='btn btn-danger btn-sm' onclick='hapus(\"" + data[i].ALBUM_USER_INDEX + "\")'><i class='fas fa-trash'></i></a></td>"+
+          "<td><img height='100' src='<?php echo base_url() ?>uploads/cover/" + data[i].ALBUM_USER_FOTO + "' alt=''>"+status+"</td>" +
+          "<td><a class='btn btn-danger btn-sm' onclick='hapus(\"" + data[i].ALBUM_USER_INDEX + "\")'><i class='fas fa-trash'></i></a>"+
+          " <a class='btn btn-primary btn-sm' onclick='galeri(\"" + data[i].ALBUM_USER_INDEX + "\")'><i class='fas fa-check'></i></a></td>"+
           "</tr>");
         }
       }
@@ -120,6 +130,31 @@ function hapus(id){
 		$.ajax({
  		type  : 'ajax',
  		url   : '<?php echo base_url() ?>index.php/upload/hapus/'+id,
+ 		async : false,
+ 		dataType : 'json',
+ 		success : function(data)
+ 		{
+ 			if (data.length === 0)
+ 			{
+ 			}
+ 			else
+ 			{
+        foto_list();
+ 			}
+ 		},
+     error: function(x, e) {
+       alert("Gagal Menghapus")
+     } //end error
+ 	});
+	}
+}
+
+function galeri(id){
+	if(confirm("Tampilkan gambar pada Galeri Web ?"))
+	{
+		$.ajax({
+ 		type  : 'ajax',
+ 		url   : '<?php echo base_url() ?>index.php/upload/galeri/'+id,
  		async : false,
  		dataType : 'json',
  		success : function(data)

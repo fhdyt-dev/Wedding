@@ -21,7 +21,8 @@
         </div>
         <hr>
         <div class="row">
-          <div class="col-md-12 image_list">
+          <!-- <div class="col-md-12 image_list"> -->
+          <div class="col-md-12 image_list masonry-container">
             <!-- <img src="<?php echo base_url() ?>uploads/cover/ebc31d486420ef43d1bf9fe3e748b3711ca76ac9.jpg" width="200" height="121" class="img-thumbnail" alt="...">
             <img src="<?php echo base_url() ?>uploads/cover/f7a998df0829e873fc480fa4999b9932de93305c.png" width="200" height="121" class="img-thumbnail" alt="...">
             <img src="<?php echo base_url() ?>uploads/cover/not_found.jpg" width="200" height="121" class="img-thumbnail" alt="..."> -->
@@ -105,7 +106,8 @@ function list()
 			{
 				console.log(data)
         $.each(data, function(i) {
-        var result =  '<a class="pilih_gambar" gambar="'+data[i].ALBUM_USER_FOTO+'"><img src="<?php echo base_url() ?>uploads/cover/'+data[i].ALBUM_USER_FOTO+'" width="200" height="121" class="img-thumbnail mr-2 mb-2" alt="..."></a>'
+        //var result =  '<a class="pilih_gambar" gambar="'+data[i].ALBUM_USER_FOTO+'"><img src="<?php echo base_url() ?>uploads/cover/'+data[i].ALBUM_USER_FOTO+'" width="200" height="121" class="img-thumbnail mr-2 mb-2" alt="..."></a>'
+        var result ='<div class="masonry-item"><a class="pilih_gambar" gambar="'+data[i].ALBUM_USER_FOTO+'"><img src="<?php echo base_url() ?>uploads/cover/'+data[i].ALBUM_USER_FOTO+'" class="img-thumbnail mr-2 mb-2" alt="..."/></a></div>'
 		    $('.image_list').append(result);
       })
     }

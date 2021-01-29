@@ -29,6 +29,16 @@ class M_Web extends CI_Model
 		return $hasil;
 	}
 
+  public function galeri_list(){
+		$hasil=$this->db->query('SELECT * FROM ALBUM_USER WHERE KONF_LINK="'.$_SERVER['HTTP_HOST'].'" AND ALBUM_USER_GALERI_STATUS="show"')->result();
+		return $hasil;
+  }
+
+  public function pesan_list(){
+		$hasil=$this->db->query('SELECT * FROM RSVP WHERE LINK="'.$_SERVER['HTTP_HOST'].'" AND RSVP_STATUS="show"')->result();
+		return $hasil;
+  }
+  
   public function font_list(){
 		$hasil=$this->db->query('SELECT * FROM FONT ORDER BY FONT_NAMA ASC')->result();
 		return $hasil;
@@ -41,7 +51,6 @@ class M_Web extends CI_Model
 			'RSVP_NAMA' => $this->input->post('nama'),
 			'RSVP_KEHADIRAN' => $this->input->post('kehadiran'),
 			'RSVP_PESAN' => $this->input->post('pesan'),
-			'RSVP_STATUS' => "hide",
 		);
 
 	$result=$this->db->insert('RSVP',$data);

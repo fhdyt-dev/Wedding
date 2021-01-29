@@ -32,5 +32,31 @@ class M_Upload extends CI_Model
 		return $hasil;
 	}
 
+	public function m_galeri($id)
+  	{
+		$query = $this->db->query('SELECT * FROM ALBUM_USER WHERE ALBUM_USER_INDEX="'.$id.'" AND ALBUM_USER_GALERI_STATUS="show"');
+		$data_gallery = $query->num_rows();
+		if($data_gallery == 0)
+		{
+			$data = array(
+					'ALBUM_USER_GALERI_STATUS' => "show",
+			);
+			
+			$this->db->where('ALBUM_USER_INDEX', $id);
+			$result = $this->db->update('ALBUM_USER', $data);
+			return $result;
+		}
+		else{
+			$data = array(
+				'ALBUM_USER_GALERI_STATUS' => "hide",
+			);
+			
+			$this->db->where('ALBUM_USER_INDEX', $id);
+			$result = $this->db->update('ALBUM_USER', $data);
+			return $result;
+			}
+	
+	}
+
 }
 ?>
