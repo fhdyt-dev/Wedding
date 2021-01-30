@@ -33,4 +33,3 @@ class M_Jadwal extends CI_Model
 	}
 
 }
-?>

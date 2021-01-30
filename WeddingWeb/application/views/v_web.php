@@ -18,7 +18,7 @@
 	<meta property="twitter:image" content="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
 	<meta name="twitter:card" content="summary_large_image">
 
-	<meta data-rh="true" name="description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami"/>
+	<meta data-rh="true" name="description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami" />
 
 
 	<!-- Favicons -->
@@ -26,17 +26,14 @@
 	<link href="<?php echo base_url(); ?>assets/theme/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 	<!-- Google Fonts -->
-	<link
-		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 	<?php
-		foreach($font as $row)
-		{
-			?>
-			<link href="https://fonts.googleapis.com/css?family=<?php echo $row->FONT_KODE; ?>:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+	foreach ($font as $row) {
+	?>
+		<link href="https://fonts.googleapis.com/css?family=<?php echo $row->FONT_KODE; ?>:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 	<?php
-		}
-	 ?>
+	}
+	?>
 	<!-- Vendor CSS Files -->
 	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
@@ -101,6 +98,7 @@
 		z-index: 99999;
 		transition: 0.5s;
 	}
+
 	.back-to-top {
 		position: fixed;
 		display: none;
@@ -472,7 +470,7 @@
 		padding: 10px 30px;
 		margin-bottom: 30px;
 		border-radius: 50px;
-		
+
 	}
 
 	#hero h1 {
@@ -573,7 +571,7 @@
 		display: inline-block;
 		text-transform: uppercase;
 		border-radius: 50px;
-		
+
 	}
 
 	.section-title h3 {
@@ -591,6 +589,7 @@
 		margin: auto auto 0 auto;
 		font-weight: 600;
 	}
+
 	@media (min-width: 1024px) {
 		.section-title p {
 			width: 50%;
@@ -633,7 +632,7 @@
 	}
 
 	.about .content .btn-learn-more {
-		font-family: "Nunito", sans-serif;
+		font-family: "<?php echo $detail[0]->KONF_WEB_FONT ?>", sans-serif;
 		font-weight: 600;
 		font-size: 14px;
 		letter-spacing: 1px;
@@ -646,8 +645,8 @@
 		-webkit-animation-delay: 0.8s;
 		animation-delay: 0.8s;
 		margin-top: 6px;
-		margin-left:auto;
-		margin-right:auto;
+		margin-left: auto;
+		margin-right: auto;
 		border: 2px solid <?php echo $detail[0]->KONF_WEB_WARNA ?>;
 	}
 
@@ -746,8 +745,8 @@
 
 	.features .icon-box i {
 		font-size: 32px;
-		padding-bottom:20px;
-		
+		padding-bottom: 20px;
+
 	}
 
 	.features .icon-box h3 {
@@ -2126,7 +2125,11 @@
 	#footer .credits {
 		padding-top: 5px;
 		font-size: 13px;
-		color: #444444;
+		color: #F6F4F4;
+	}
+
+	#footer .credits a {
+		color: #F6F4F4;
 	}
 
 	#footer .social-links a {
@@ -2154,7 +2157,7 @@
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
-		margin-bottom:25px;
+		margin-bottom: 25px;
 	}
 </style>
 
@@ -2170,30 +2173,12 @@
 
 			<nav class="nav-menu d-none d-lg-block">
 				<ul>
-					<li class="active"><a href="<?php echo base_url();?>">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#services">Services</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#team">Team</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li class="drop-down"><a href="">Drop Down</a>
-						<ul>
-							<li><a href="#">Drop Down 1</a></li>
-							<li class="drop-down"><a href="#">Deep Drop Down</a>
-								<ul>
-									<li><a href="#">Deep Drop Down 1</a></li>
-									<li><a href="#">Deep Drop Down 2</a></li>
-									<li><a href="#">Deep Drop Down 3</a></li>
-									<li><a href="#">Deep Drop Down 4</a></li>
-									<li><a href="#">Deep Drop Down 5</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Drop Down 2</a></li>
-							<li><a href="#">Drop Down 3</a></li>
-							<li><a href="#">Drop Down 4</a></li>
-						</ul>
-					</li>
-					<li><a href="#contact">Contact</a></li>
+					<li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
+					<li><a href="#about">Informasi</a></li>
+					<li><a href="#team">Mempelai</a></li>
+					<li><a href="#pricing">Jadwal</a></li>
+					<li><a href="#portfolio">Galeri</a></li>
+					<li><a href="#contact">Pesan</a></li>
 
 				</ul>
 			</nav><!-- .nav-menu -->
@@ -2204,25 +2189,29 @@
 	<!-- ======= Hero Section ======= -->
 	<section id="hero">
 		<div class="hero-container">
+			<?php if (empty($link)) {
+				echo "";
+			} else {
+				echo "<h3>Kepada <strong>" . $link[0]->UNDANGAN_KEPADA . "</strong></h3>";
+			}
+
+			?>
 			<!-- <h3>Welcome to <strong>Tempo</strong></h3> -->
 			<h1><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?><br><small>&</small><br><?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?></h1>
 			<h2>
 				<?php
-        if($detail[0]->KONF_JADWAL_INTRO == "acara1")
-        {
-          $tanggal = tanggal($detail[0]->KONF_JADWAL_ACARA1_TANGGAL);
-          $waktu = date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA1_JAM));
-          echo $detail[0]->KONF_JADWAL_ACARA1_ALAMAT;
-        }
-        else if($detail[0]->KONF_JADWAL_INTRO == "acara2")
-        {
-          $tanggal = tanggal($detail[0]->KONF_JADWAL_ACARA2_TANGGAL);
-          $waktu = date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA2_JAM));
-          echo $detail[0]->KONF_JADWAL_ACARA2_ALAMAT;
-        }
-         ?>
+				if ($detail[0]->KONF_JADWAL_INTRO == "acara1") {
+					$tanggal = tanggal($detail[0]->KONF_JADWAL_ACARA1_TANGGAL);
+					$waktu = date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA1_JAM));
+					echo $detail[0]->KONF_JADWAL_ACARA1_ALAMAT;
+				} else if ($detail[0]->KONF_JADWAL_INTRO == "acara2") {
+					$tanggal = tanggal($detail[0]->KONF_JADWAL_ACARA2_TANGGAL);
+					$waktu = date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA2_JAM));
+					echo $detail[0]->KONF_JADWAL_ACARA2_ALAMAT;
+				}
+				?>
 			</h2>
-			<a href="#pricing" class="btn-get-started scrollto"><?php echo $tanggal;?>, <?php echo $waktu;?></a>
+			<a href="#pricing" class="btn-get-started scrollto"><?php echo $tanggal; ?>, <?php echo $waktu; ?></a>
 		</div>
 	</section><!-- End Hero -->
 
@@ -2230,331 +2219,328 @@
 
 		<!-- ======= About Section ======= -->
 		<section id="about" class="about">
-			<div class="container">
-				<div class="section-title">
-					<h3><span><?php echo $detail[0]->KONF_PEMBUKAAN_JUDUL; ?></span></h3>
-				</div>
-				<div class="row content">
-					<div class="col-lg-12">
-						<p style="text-align:center"><?php echo $detail[0]->KONF_PEMBUKAAN_ISI; ?></p>
-					</div>
-				</div>
-			</div>
-		</section><!-- End About Section -->
-		<!-- ======= Team Section ======= -->
-		<section id="team" class="team section-bg">
-			<div class="container">
-
-				<div class="section-title">
-					<h3><span>Memperkenalkan</span></h3>
-					<p><?php echo $detail[0]->KONF_PENGANTIN_SUB_TITLE; ?></p>
-				</div>
-
-				<div class="row">
-
-					<div class="col-lg-6 col-md-6 d-flex align-items-stretch">
-						<div class="member">
-							<div class="member-img">
-								<img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_PRIA_FOTO ?>" class="img-fluid" alt="">
-								
-							</div>
-							<div class="member-info">
-								<h2><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA_LENGKAP; ?></h2>
-								<span><?php echo $detail[0]->KONF_PENGANTIN_PRIA_KETERANGAN; ?></span>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-6 col-md-6 d-flex align-items-stretch">
-						<div class="member">
-							<div class="member-img">
-								<img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_WANITA_FOTO ?>" class="img-fluid" alt="">
-								
-							</div>
-							<div class="member-info">
-								<h2><?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA_LENGKAP; ?></h2>
-								<span><?php echo $detail[0]->KONF_PENGANTIN_WANITA_KETERANGAN; ?></span>
-							</div>
-						</div>
-					</div>
-
-					
-				
-
-				</div>
-
-			</div>
-		</section><!-- End Team Section -->
-		<!-- ======= Pricing Section ======= -->
-		<section id="pricing" class="pricing">
-			<div class="container">
-
-				<div class="section-title">
-					<h3><span>Jadwal</span></h3>
-					<p>Kami mengharapkan kehadiran Anda semua.</p>
-				</div>
-
-				<div class="row">
-					<?php
-					if($detail[0]->KONF_JADWAL_ACARA1_STATUS == "on" && $detail[0]->KONF_JADWAL_ACARA2_STATUS == "on")
-					{
-						$col = "6";
-					}
-					else{
-						$col = "12";
-					}
-					?>
-				<?php
-				if($detail[0]->KONF_JADWAL_ACARA1_STATUS == "on"){
-				?>
-					<div class="col-lg-<?php echo $col;?> col-md-<?php echo $col; ?>">
-						<div class="box">
-							<h3><?php echo $detail[0]->KONF_JADWAL_ACARA1_JUDUL; ?></h3>
-							<p><?php echo $detail[0]->KONF_JADWAL_ACARA1_ALAMAT; ?></p>
-							<p class="text-muted"><?php echo tanggal($detail[0]->KONF_JADWAL_ACARA1_TANGGAL); ?>, <?php echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA1_JAM)) ?></p>
-							<div>
-							<iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?q=<?php echo str_replace(" ","",$detail[0]->KONF_JADWAL_ACARA1_MAP); ?>&hl=in&z=16&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
-							</div>
-							<div class="btn-wrap">
-								<a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo str_replace(" ","",$detail[0]->KONF_JADWAL_ACARA1_MAP); ?>&dir_action=navigate" class="btn-buy" target="_blank">Buka Peta</a>
-							</div>
-						</div>
-					</div>
-					<?php
-					}
-					?>
-					<?php
-					if($detail[0]->KONF_JADWAL_ACARA2_STATUS == "on"){
-					?>
-					<div class="col-lg-<?php echo $col;?> col-md-<?php echo $col; ?>">
-						<div class="box">
-							<h3><?php echo $detail[0]->KONF_JADWAL_ACARA2_JUDUL; ?></h3>
-							<p><?php echo $detail[0]->KONF_JADWAL_ACARA2_ALAMAT; ?></p>
-							<p class="text-muted"><?php echo tanggal($detail[0]->KONF_JADWAL_ACARA2_TANGGAL); ?>, <?php echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA2_JAM)) ?></p>
-							<div>
-							<iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?q=<?php echo str_replace(" ","",$detail[0]->KONF_JADWAL_ACARA2_MAP); ?>&hl=in&z=16&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
-							</div>
-							<div class="btn-wrap">
-								<a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo str_replace(" ","",$detail[0]->KONF_JADWAL_ACARA2_MAP); ?>&dir_action=navigate" class="btn-buy" target="_blank">Buka Peta</a>
-							</div>
-						</div>
-					</div>
-					<?php
-					}
-					?>
-
-				</div>
-
-			</div>
-		</section><!-- End Pricing Section -->
-		<?php
-		if($detail[0]->KONF_JADWAL_COVID19 == "on"){
-		?>
-		<!-- ======= Features Section ======= -->
-		<section id="features" class="features">
-			<div class="container">
+			<section id="about" class="about">
+				<div class="container">
 					<div class="section-title">
-					<h2>Covid-19</h2>
-					<h3>Terapkan Protokol <span>Kesehatan</span></h3>
-					<p>Stop Penyebaran Covid-19 Dengan Menerapkan Protokol Kesehatan</p>
+						<h3><span><?php echo $detail[0]->KONF_PEMBUKAAN_JUDUL; ?></span></h3>
+					</div>
+					<div class="row content">
+						<div class="col-lg-12">
+							<p style="text-align:center"><?php echo $detail[0]->KONF_PEMBUKAAN_ISI; ?></p>
+						</div>
+					</div>
+
 				</div>
-				<div class="row">
-					<div class="col-lg-3 col-md-4 col-6 col-6">
-						<div class="icon-box">
-							<i class="fas fa-head-side-mask" style="color: #ffbb2c;"></i>
-							<h3><a href="">Memakai Masker</a></h3>
-						</div>
+			</section><!-- End Cta Section -->
+			<!-- ======= Team Section ======= -->
+			<section id="team" class="team section-bg">
+				<div class="container">
+
+					<div class="section-title">
+						<h3><span>Memperkenalkan</span></h3>
+						<p><?php echo $detail[0]->KONF_PENGANTIN_SUB_TITLE; ?></p>
 					</div>
-					<div class="col-lg-3 col-md-4 col-6">
-						<div class="icon-box">
-							<i class="fas fa-handshake-slash" style="color: #5578ff;"></i>
-							<h3><a href="">Hindari Berjabat Tangan</a></h3>
+
+					<div class="row">
+
+						<div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+							<div class="member">
+								<div class="member-img">
+									<img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_PRIA_FOTO ?>" class="img-fluid" alt="">
+
+								</div>
+								<div class="member-info">
+									<h2><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA_LENGKAP; ?></h2>
+									<span><?php echo $detail[0]->KONF_PENGANTIN_PRIA_KETERANGAN; ?></span>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="col-lg-3 col-md-4 col-6 mt-4 mt-md-0">
-						<div class="icon-box">
-							<i class="fas fa-people-arrows" style="color: #e80368;"></i>
-							<h3><a href="">Mejaga Jarak</a></h3>
+
+						<div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+							<div class="member">
+								<div class="member-img">
+									<img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_WANITA_FOTO ?>" class="img-fluid" alt="">
+
+								</div>
+								<div class="member-info">
+									<h2><?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA_LENGKAP; ?></h2>
+									<span><?php echo $detail[0]->KONF_PENGANTIN_WANITA_KETERANGAN; ?></span>
+								</div>
+							</div>
 						</div>
+
+
+
+
 					</div>
-					<div class="col-lg-3 col-md-4 col-6 mt-4 mt-lg-0">
-						<div class="icon-box">
-							<i class="fas fa-hands-wash" style="color: #e361ff;"></i>
-							<h3><a href="">Mencuci Tangan</a></h3>
-						</div>
-					</div>
-					<img class="logo_streaming" style="margin-top:20px" height="70" src="<?php echo base_url(); ?>/assets/kemenkes.png">
+
 				</div>
-			</div>
-		</section><!-- End Features Section -->
+			</section><!-- End Team Section -->
+			<!-- ======= Pricing Section ======= -->
+			<section id="pricing" class="pricing">
+				<div class="container">
+
+					<div class="section-title">
+						<h3><span>Jadwal</span></h3>
+						<p>Kami mengharapkan kehadiran anda pada acara yang kami selenggarakan.</p>
+					</div>
+
+					<div class="row">
+						<?php
+						if ($detail[0]->KONF_JADWAL_ACARA1_STATUS == "on" && $detail[0]->KONF_JADWAL_ACARA2_STATUS == "on") {
+							$col = "6";
+						} else {
+							$col = "12";
+						}
+						?>
+						<?php
+						if ($detail[0]->KONF_JADWAL_ACARA1_STATUS == "on") {
+						?>
+							<div class="col-lg-<?php echo $col; ?> col-md-<?php echo $col; ?>">
+								<div class="box">
+									<h3><?php echo $detail[0]->KONF_JADWAL_ACARA1_JUDUL; ?></h3>
+									<p><?php echo $detail[0]->KONF_JADWAL_ACARA1_ALAMAT; ?></p>
+									<p class="text-muted"><?php echo tanggal($detail[0]->KONF_JADWAL_ACARA1_TANGGAL); ?>, <?php echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA1_JAM)) ?></p>
+									<div>
+										<iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?q=<?php echo str_replace(" ", "", $detail[0]->KONF_JADWAL_ACARA1_MAP); ?>&hl=in&z=16&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+									</div>
+									<div class="btn-wrap">
+										<a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo str_replace(" ", "", $detail[0]->KONF_JADWAL_ACARA1_MAP); ?>&dir_action=navigate" class="btn-buy" target="_blank">Buka Peta</a>
+									</div>
+								</div>
+							</div>
+						<?php
+						}
+						?>
+						<?php
+						if ($detail[0]->KONF_JADWAL_ACARA2_STATUS == "on") {
+						?>
+							<div class="col-lg-<?php echo $col; ?> col-md-<?php echo $col; ?>">
+								<div class="box">
+									<h3><?php echo $detail[0]->KONF_JADWAL_ACARA2_JUDUL; ?></h3>
+									<p><?php echo $detail[0]->KONF_JADWAL_ACARA2_ALAMAT; ?></p>
+									<p class="text-muted"><?php echo tanggal($detail[0]->KONF_JADWAL_ACARA2_TANGGAL); ?>, <?php echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA2_JAM)) ?></p>
+									<div>
+										<iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?q=<?php echo str_replace(" ", "", $detail[0]->KONF_JADWAL_ACARA2_MAP); ?>&hl=in&z=16&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+									</div>
+									<div class="btn-wrap">
+										<a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo str_replace(" ", "", $detail[0]->KONF_JADWAL_ACARA2_MAP); ?>&dir_action=navigate" class="btn-buy" target="_blank">Buka Peta</a>
+									</div>
+								</div>
+							</div>
+						<?php
+						}
+						?>
+
+					</div>
+
+				</div>
+			</section><!-- End Pricing Section -->
+			<?php
+			if ($detail[0]->KONF_JADWAL_COVID19 == "on") {
+			?>
+				<!-- ======= Features Section ======= -->
+				<section id="features" class="features">
+					<div class="container">
+						<div class="section-title">
+							<h2>Covid-19</h2>
+							<h3>Terapkan Protokol <span>Kesehatan</span></h3>
+							<p>Stop Penyebaran Covid-19 Dengan Menerapkan Protokol Kesehatan</p>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-3 col-md-4 col-6 col-6">
+								<div class="icon-box">
+									<i class="fas fa-head-side-mask" style="color: #ffbb2c;"></i>
+									<h3><a href="">Memakai Masker</a></h3>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-4 col-6">
+								<div class="icon-box">
+									<i class="fas fa-handshake-slash" style="color: #5578ff;"></i>
+									<h3><a href="">Hindari Berjabat Tangan</a></h3>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-4 col-6 mt-4 mt-md-0">
+								<div class="icon-box">
+									<i class="fas fa-people-arrows" style="color: #e80368;"></i>
+									<h3><a href="">Mejaga Jarak</a></h3>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-4 col-6 mt-4 mt-lg-0">
+								<div class="icon-box">
+									<i class="fas fa-hands-wash" style="color: #e361ff;"></i>
+									<h3><a href="">Mencuci Tangan</a></h3>
+								</div>
+							</div>
+							<img class="logo_streaming" style="margin-top:20px" height="50" src="<?php echo base_url(); ?>/assets/kemenkes.png">
+						</div>
+					</div>
+				</section><!-- End Features Section -->
 			<?php } ?>
-		<?php
-		if($detail[0]->KONF_INFORMASI_STATUS == "on"){
-		?>
-		<!-- ======= Cta Section ======= -->
-		<section id="about" class="about section-bg">
-			<div class="container">
-				<div class="section-title">
-					<h2>Informasi</h2>
-					<h3><span><?php echo $detail[0]->KONF_INFORMASI_JUDUL; ?></span></h3>
-				</div>
-				<div class="row content">
-					<div class="col-lg-12">
-						<p style="text-align:center"><?php echo $detail[0]->KONF_INFORMASI_ISI; ?></p>
+			<?php
+			if ($detail[0]->KONF_INFORMASI_STATUS == "on") {
+			?>
+				<!-- ======= Cta Section ======= -->
+				<section id="about" class="about section-bg">
+					<div class="container">
+						<div class="section-title">
+							<h2>Informasi</h2>
+							<h3><span><?php echo $detail[0]->KONF_INFORMASI_JUDUL; ?></span></h3>
+						</div>
+						<div class="row content">
+							<div class="col-lg-12">
+								<p style="text-align:center"><?php echo $detail[0]->KONF_INFORMASI_ISI; ?></p>
+							</div>
+						</div>
+
 					</div>
-				</div>
+				</section><!-- End Cta Section -->
+			<?php } ?>
 
-			</div>
-		</section><!-- End Cta Section -->
-		<?php } ?>
-
-		<!-- ======= Portfolio Section ======= -->
-		<section id="portfolio" class="portfolio">
-			<div class="container">
-				<div class="section-title">
-					<h2>prewedding</h2>
-					<h3>Galeri <span>Prewedding</span></h3>
-					<p></p>
-				</div>
-				<style media="screen">
-					.masonry-container {
-					-webkit-column-count: 3;
-					-moz-column-count: 3;
-					column-count: 3;
-
-					-webkit-column-gap: 15px;
-					-moz-column-gap: 15px;
-					column-gap: 15px;
-					}
-
-					.masonry-item {
-					display: inline-block;
-					width: 100%;
-					}
-
-					.masonry-item img {
-					display:block;
-					width: 100%;
-					}
-
-					/* Just for decoration: */
-					.masonry-item span {
-					font-family: sans-serif;
-					display:block;
-					padding:10px;
-					}
-
-					.masonry-item {
-					margin-bottom: 15px;
-					border:1px solid #ccc;
-					border-radius: 5px;
-					}
-					@media (max-width: 768px) {
+			<!-- ======= Portfolio Section ======= -->
+			<section id="portfolio" class="portfolio">
+				<div class="container">
+					<div class="section-title">
+						<h2>Kenangan Kami</h2>
+						<h3>Galeri <span>Prewedding</span></h3>
+						<p></p>
+					</div>
+					<style media="screen">
 						.masonry-container {
-					-webkit-column-count: 2;
-					-moz-column-count: 2;
-					column-count: 2;
+							-webkit-column-count: 3;
+							-moz-column-count: 3;
+							column-count: 3;
 
-					-webkit-column-gap: 15px;
-					-moz-column-gap: 15px;
-					column-gap: 15px;
-					}
-					}
+							-webkit-column-gap: 15px;
+							-moz-column-gap: 15px;
+							column-gap: 15px;
+						}
+
+						.masonry-item {
+							display: inline-block;
+							width: 100%;
+						}
+
+						.masonry-item img {
+							display: block;
+							width: 100%;
+						}
+
+						/* Just for decoration: */
+						.masonry-item span {
+							font-family: sans-serif;
+							display: block;
+							padding: 10px;
+						}
+
+						.masonry-item {
+							margin-bottom: 15px;
+							border: 1px solid #ccc;
+							border-radius: 5px;
+						}
+
+						@media (max-width: 768px) {
+							.masonry-container {
+								-webkit-column-count: 2;
+								-moz-column-count: 2;
+								column-count: 2;
+
+								-webkit-column-gap: 15px;
+								-moz-column-gap: 15px;
+								column-gap: 15px;
+							}
+						}
 					</style>
-				<div class="row content">
-				<div class="masonry-container">
-					<?php 
-					foreach($galeri as $row) {
+					<div class="row content">
+						<div class="masonry-container">
+							<?php
+							foreach ($galeri as $row) {
+							?>
+								<div class="masonry-item">
+									<a href=""><img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $row->ALBUM_USER_FOTO; ?>" /></a>
+								</div>
+							<?php } ?>
+						</div>
+					</div>
+
+
+					<?php if ($detail[0]->KONF_VIDEO_STATUS == "on") {
 					?>
-					<div class="masonry-item">
-						<a href=""><img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $row->ALBUM_USER_FOTO; ?>" /></a>
+						<div class="section-title">
+							<h3>Video<span></span></h3>
+							<p></p>
+						</div>
+						<div class="row content">
+							<style>
+								iframe {
+									margin: 0 auto;
+									background-color: #777;
+								}
+
+								iframe {
+									display: block;
+									border-style: none;
+								}
+							</style>
+							<iframe width="560" height="315" src="<?php
+																	parse_str(parse_url($detail[0]->KONF_VIDEO_LINK, PHP_URL_QUERY), $my_array_of_vars);
+																	echo "https://www.youtube.com/embed/" . $my_array_of_vars['v'] . "";
+																	?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					<?php
+					} else {
+					}
+					?>
+				</div>
+			</section><!-- End Portfolio Section -->
+
+			<?php
+			if ($detail[0]->KONF_LIVE_STATUS == "on") {
+			?>
+				<!-- ======= Cta Section ======= -->
+				<section id="about" class="about section-bg">
+					<div class="container">
+						<div class="section-title">
+							<h3>Live <span>Streaming</span></h3>
+						</div>
+						<img class="logo_streaming" height="70" src="http://localhost/Wedding/Wedding-CP/uploads/live/<?php echo $detail[0]->KONF_LIVE_PLATFORM; ?>.png">
+						<div class="row content">
+							<div class="col-lg-12">
+								<p style="text-align:center;padding-bottom:20px;"><?php echo $detail[0]->KONF_LIVE_KETERANGAN; ?></p>
+							</div>
+							<a href="<?php echo $detail[0]->KONF_LIVE_LINK; ?>" target="_blank" class="btn-learn-more">Buka Live Streaming</a>
+						</div>
+
 					</div>
-					<?php } ?>
-				</div>
-				</div>
+				</section><!-- End Cta Section -->
+			<?php } ?>
 
-				
-				<?php if($detail[0]->KONF_VIDEO_STATUS == "on"){
-	  ?>
-	  <div class="section-title">
-					<h3>Video <span>Prewedding</span></h3>
-					<p></p>
-				</div>
-				<div class="row content">
-					<style>
-						iframe {
-    margin: 0 auto;
-    background-color: #777;
-}
 
-iframe {
-    display: block;
-    border-style:none;
-}
-					</style>
-				<iframe width="560" height="315" src="<?php 
-				parse_str( parse_url( $detail[0]->KONF_VIDEO_LINK, PHP_URL_QUERY ), $my_array_of_vars );
-				echo "https://www.youtube.com/embed/".$my_array_of_vars['v']."";
-				?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-      <?php
-      }
-      else{
+			<!-- ======= Contact Section ======= -->
+			<section id="contact" class="contact">
+				<div class="container">
 
-      }
-      ?>
-			</div>
-		</section><!-- End Portfolio Section -->
-
-		<?php
-		if($detail[0]->KONF_LIVE_STATUS == "on"){
-		?>
-		<!-- ======= Cta Section ======= -->
-		<section id="about" class="about section-bg">
-			<div class="container">
-				<div class="section-title">
-					<h3>Live <span>Streaming</span></h3>
-				</div>
-				<img class="logo_streaming" height="70" src="http://localhost/Wedding/Wedding-CP/uploads/live/<?php echo $detail[0]->KONF_LIVE_PLATFORM; ?>.png">
-				<div class="row content">
-					<div class="col-lg-12">
-						<p style="text-align:center;padding-bottom:20px;"><?php echo $detail[0]->KONF_LIVE_KETERANGAN; ?></p>
+					<div class="section-title">
+						<h2>RSVP</h2>
+						<h3>Pesan <span>Anda</span></h3>
 					</div>
-					<a href="<?php echo $detail[0]->KONF_LIVE_LINK; ?>" target="_blank" class="btn-learn-more">Buka Live Streaming</a>
-				</div>
-
-			</div>
-		</section><!-- End Cta Section -->
-		<?php } ?>
-		
-
-		<!-- ======= Contact Section ======= -->
-		<section id="contact" class="contact">
-			<div class="container">
-
-				<div class="section-title">
-					<h2>RSVP</h2>
-					<h3>Pesan <span>Anda</span></h3>
-				</div>
 
 					<div class="col-lg-12 mt-5 mt-lg-0">
 
 						<form action="index.php/web/kirim" method="post" role="form" class="php-email-form">
-								<div class="form-group">
-									<input type="text" name="nama" class="form-control" id="name"
-										placeholder="Nama Anda" data-rule="minlen:4"
-										data-msg="Please enter at least 4 chars" />
-									<div class="validate"></div>
-								</div>
-								<div class="form-group">
-									<select class="form-control" name="kehadiran">
-										<option value="hadir">Hadir</option>
-										<option value="tidak">Tidak Hadir</option>
-									</select>
-								</div>
 							<div class="form-group">
-								<textarea class="form-control" name="pesan" rows="5" data-rule="required"
-									data-msg="Please write something for us" placeholder="Message"></textarea>
+								<input type="text" name="nama" class="form-control" id="name" placeholder="Nama Anda" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+								<div class="validate"></div>
+							</div>
+							<div class="form-group">
+								<select class="form-control" name="kehadiran">
+									<option value="hadir">Hadir</option>
+									<option value="tidak">Tidak Hadir</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" name="pesan" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Ucapan dan Doa"></textarea>
 								<div class="validate"></div>
 							</div>
 							<div class="mb-3">
@@ -2569,40 +2555,40 @@ iframe {
 
 				</div>
 
-			</div>
-		</section><!-- End Contact Section -->
-
-		<!-- ======= F.A.Q Section ======= -->
-		<section id="faq" class="faq section-bg">
-			<div class="container">
-
-				<div class="section-title">
-					<h3>Pesan <span>Masuk</span></h3>
 				</div>
+			</section><!-- End Contact Section -->
 
-				<ul class="faq-list">
-					<?php 
-					foreach($pesan as $row) {
-					?>
-					<li>
-						<a data-toggle="collapse" class="" href="#faq<?php echo $row->RSVP_INDEX; ?>"><?php echo $row->RSVP_NAMA; ?>
-						</a>
-						<div id="faq<?php echo $row->RSVP_INDEX; ?>" class="collapse show" data-parent=".faq-list">
-							<p>"<?php echo $row->RSVP_PESAN; ?>"</p>
-						</div>
-					</li>
-					<?php } ?>
+			<!-- ======= F.A.Q Section ======= -->
+			<section id="faq" class="faq section-bg">
+				<div class="container">
 
-				</ul>
+					<div class="section-title">
+						<h3>Pesan <span>Masuk</span></h3>
+					</div>
 
-			</div>
-		</section><!-- End F.A.Q Section -->
+					<ul class="faq-list">
+						<?php
+						foreach ($pesan as $row) {
+						?>
+							<li>
+								<a data-toggle="collapse" class="" href="#faq<?php echo $row->RSVP_INDEX; ?>"><?php echo $row->RSVP_NAMA; ?>
+								</a>
+								<div id="faq<?php echo $row->RSVP_INDEX; ?>" class="collapse show" data-parent=".faq-list">
+									<p>"<?php echo $row->RSVP_PESAN; ?>"</p>
+								</div>
+							</li>
+						<?php } ?>
+
+					</ul>
+
+				</div>
+			</section><!-- End F.A.Q Section -->
 
 	</main><!-- End #main -->
 
 	<!-- ======= Footer ======= -->
 	<footer id="footer">
-	<!-- <audio autoplay loop id="my_audio">
+		<!-- <audio autoplay loop id="my_audio">
 	<source src="http://localhost/Wedding/Wedding-CP/uploads/mp3/playdate.ogg" type="audio/ogg">
 	<source src="http://localhost/Wedding/Wedding-CP/uploads/mp3/playdate.mp3" type="audio/mpeg">
 	</audio> -->
@@ -2610,7 +2596,7 @@ iframe {
 
 			<div class="mr-md-auto text-center text-md-left">
 				<div class="copyright">
-					&copy; Copyright <strong><span>Tempo</span></strong>. All Rights Reserved
+					&copy; Copyright <strong><span>segeranikah.id</span></strong>. All Rights Reserved
 				</div>
 				<div class="credits">
 					<!-- All the links in the footer should remain intact. -->
@@ -2620,16 +2606,23 @@ iframe {
 					Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
 				</div>
 			</div>
-			<!-- <div class="social-links text-center text-md-right pt-3 pt-md-0">
-				<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+			<div class="social-links text-center text-md-right pt-3 pt-md-0">
+				<a href="#" class="twitter"><i class="bx bx-globe"></i></a>
 				<a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
 				<a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-				<a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-				<a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-			</div> -->
+				<!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+				<a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
+			</div>
 		</div>
 	</footer><!-- End Footer -->
-	<a class="musik"><i id="musik" class="ri-play-fill"></i></a>
+	<?php if ($detail[0]->KONF_MUSIK_STATUS == "on") {
+		$nama_musik = $detail[0]->KONF_MUSIK;
+		echo '<a class="musik"><i id="musik" class="ri-music-2-line "></i></a>';
+	} else {
+		$nama_musik = "silent.mp3";
+	}
+	?>
+
 	<a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 
 	<!-- Vendor JS Files -->
@@ -2644,34 +2637,28 @@ iframe {
 
 	<!-- Template Main JS File -->
 	<script src="<?php echo base_url(); ?>assets/theme/assets/js/main.js"></script>
-	<iframe src="http://localhost/Wedding/Wedding-CP/uploads/mp3/silent.mp3" allow="autoplay" id="audio"
-                style="display: none"></iframe>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js"
-                integrity="sha512-L6Z/YtIPQ7eU3BProP34WGU5yIRk7tNHk7vaC2dB1Vy1atz6wl9mCkTPPZ2Rn1qPr+vY2mZ9odZLdGYuaBk7dQ=="
-                crossorigin="anonymous"></script>
-        <script>
-            let autoplay = true;
-            let soundID;
-            var sound = new Howl({
-                src: ['http://localhost/Wedding/Wedding-CP/uploads/mp3/playdate.mp3'],
-                autoplay: autoplay,
-                loop: true,
-            });
-
-            soundID = sound.play();
-        </script>
+	<iframe src="http://localhost/Wedding/Wedding-CP/uploads/mp3/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js" integrity="sha512-L6Z/YtIPQ7eU3BProP34WGU5yIRk7tNHk7vaC2dB1Vy1atz6wl9mCkTPPZ2Rn1qPr+vY2mZ9odZLdGYuaBk7dQ==" crossorigin="anonymous"></script>
 	<script>
-  $(".musik").on("click", function(){
-	  if (sound.paused)
-	{
-		sound.play();
-		$("i#musik").attr("class","ri-music-2-line ")
-	}
-	else{
-		sound.pause();
-		$("i#musik").attr("class","ri-play-fill ")
-	}
-  })
+		let autoplay = true;
+		let soundID;
+		var sound = new Howl({
+			src: ['http://localhost/Wedding/Wedding-CP/uploads/mp3/<?php echo $nama_musik; ?>'],
+			autoplay: autoplay,
+			loop: true,
+		});
+
+		soundID = sound.play();
+
+		$(".musik").on("click", function() {
+			if (!sound.playing()) {
+				sound.play();
+				$("i#musik").attr("class", "ri-music-2-line ")
+			} else {
+				sound.pause();
+				$("i#musik").attr("class", "ri-play-fill ")
+			}
+		})
 	</script>
 
 </body>

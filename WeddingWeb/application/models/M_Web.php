@@ -1,8 +1,10 @@
 <?php
 class M_Web extends CI_Model
 {
-  public function detail(){
-		$hasil=$this->db->query('SELECT * FROM
+  public function detail()
+  {
+    $hasil = $this->db->query(
+      'SELECT * FROM
                                 KONF_WEB AS WEB
                                 LEFT JOIN KONF_PENGANTIN AS PENGANTIN
                                 ON
@@ -22,39 +24,49 @@ class M_Web extends CI_Model
                                 LEFT JOIN KONF_LIVE AS LIVE
                                 ON
                                 WEB.KONF_LINK=LIVE.KONF_LINK
-                                WHERE WEB.KONF_LINK="'.$_SERVER['HTTP_HOST'].'"
+                                LEFT JOIN KONF_MUSIK AS MUSIK
+                                ON
+                                WEB.KONF_LINK=MUSIK.KONF_LINK
+                                WHERE WEB.KONF_LINK="' . $_SERVER['HTTP_HOST'] . '"
                                 LIMIT 1
                                 '
-                            )->result();
-		return $hasil;
-	}
-
-  public function galeri_list(){
-		$hasil=$this->db->query('SELECT * FROM ALBUM_USER WHERE KONF_LINK="'.$_SERVER['HTTP_HOST'].'" AND ALBUM_USER_GALERI_STATUS="show"')->result();
-		return $hasil;
+    )->result();
+    return $hasil;
   }
 
-  public function pesan_list(){
-		$hasil=$this->db->query('SELECT * FROM RSVP WHERE LINK="'.$_SERVER['HTTP_HOST'].'" AND RSVP_STATUS="show"')->result();
-		return $hasil;
+  public function galeri_list()
+  {
+    $hasil = $this->db->query('SELECT * FROM ALBUM_USER WHERE KONF_LINK="' . $_SERVER['HTTP_HOST'] . '" AND ALBUM_USER_GALERI_STATUS="show"')->result();
+    return $hasil;
   }
-  
-  public function font_list(){
-		$hasil=$this->db->query('SELECT * FROM FONT ORDER BY FONT_NAMA ASC')->result();
-		return $hasil;
-	}
+
+  public function pesan_list()
+  {
+    $hasil = $this->db->query('SELECT * FROM RSVP WHERE LINK="' . $_SERVER['HTTP_HOST'] . '" AND RSVP_STATUS="show"')->result();
+    return $hasil;
+  }
+  public function link($link)
+  {
+    $hasil = $this->db->query('SELECT * FROM UNDANGAN WHERE LINK="' . $_SERVER['HTTP_HOST'] . '" AND UNDANGAN_LINK="' . $link . '"')->result();
+    return $hasil;
+  }
+
+  public function font_list()
+  {
+    $hasil = $this->db->query('SELECT * FROM FONT ORDER BY FONT_NAMA ASC')->result();
+    return $hasil;
+  }
 
   public function m_simpan()
-	{
-		$data = array(
-			'LINK' => $_SERVER['HTTP_HOST'],
-			'RSVP_NAMA' => $this->input->post('nama'),
-			'RSVP_KEHADIRAN' => $this->input->post('kehadiran'),
-			'RSVP_PESAN' => $this->input->post('pesan'),
-		);
+  {
+    $data = array(
+      'LINK' => $_SERVER['HTTP_HOST'],
+      'RSVP_NAMA' => $this->input->post('nama'),
+      'RSVP_KEHADIRAN' => $this->input->post('kehadiran'),
+      'RSVP_PESAN' => $this->input->post('pesan'),
+    );
 
-	$result=$this->db->insert('RSVP',$data);
-	echo "Pesan Anda Terkirim";
-	}
+    $result = $this->db->insert('RSVP', $data);
+    echo "Pesan Anda Terkirim";
+  }
 }
-?>

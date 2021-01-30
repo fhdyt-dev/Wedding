@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Login extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -20,11 +21,9 @@ class Login extends CI_Controller {
 	 */
 	public function index()
 	{
-		if(!empty($this->session->userdata('is_login')))
-		{
+		if (!empty($this->session->userdata('is_login'))) {
 			redirect('dashboard');
-		}
-		else{
+		} else {
 			$this->load->view('login');
 		}
 	}
@@ -34,13 +33,10 @@ class Login extends CI_Controller {
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 		$this->load->model('LoginModel');
-		if($this->LoginModel->login_user($username,$password))
-		{
+		if ($this->LoginModel->login_user($username, $password)) {
 			redirect('dashboard');
-		}
-		else
-		{
-			$this->session->set_flashdata('error_login','Username & Password salah');
+		} else {
+			$this->session->set_flashdata('error_login', 'Username & Password salah');
 			redirect('login');
 		}
 	}
@@ -49,6 +45,5 @@ class Login extends CI_Controller {
 	{
 		$this->session->unset_userdata('is_login');
 		redirect('login');
-
 	}
 }

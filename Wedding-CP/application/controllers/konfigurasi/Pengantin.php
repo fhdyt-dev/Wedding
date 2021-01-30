@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Pengantin extends CI_Controller {
+class Pengantin extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -19,21 +20,21 @@ class Pengantin extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	function __construct()
- 	{
- 		parent::__construct();
- 		$this->load->model('konfigurasi/M_Pengantin');
+	{
+		parent::__construct();
+		$this->load->model('konfigurasi/M_Pengantin');
 
- 		$this->load->model('LoginModel');
- 		$this->LoginModel->cek_login();
- 	}
+		$this->load->model('LoginModel');
+		$this->LoginModel->cek_login();
+	}
 
 	public function index()
 	{
 		// $this->load->model('M_Library');
 		// $data['warna']=$this->M_Library->warna_list();
 		// $data['font']=$this->M_Library->font_list();
-		$data['tersimpan']=$this->M_Pengantin->tersimpan();
-		
+		$data['tersimpan'] = $this->M_Pengantin->tersimpan();
+
 		$this->load->view('template/header');
 		$this->load->view('konfigurasi/v_pengantin', $data);
 		$this->load->view('template/footer');
@@ -41,7 +42,6 @@ class Pengantin extends CI_Controller {
 
 	public function simpan()
 	{
-		$data=$this->M_Pengantin->m_simpan();
+		$data = $this->M_Pengantin->m_simpan();
 	}
-
 }

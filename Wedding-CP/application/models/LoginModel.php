@@ -36,4 +36,3 @@ class LoginModel extends CI_Model
   }
 
 }
-?>

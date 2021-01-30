@@ -20,4 +20,3 @@ class M_Video extends CI_Model
 	}
 
 }
-?>

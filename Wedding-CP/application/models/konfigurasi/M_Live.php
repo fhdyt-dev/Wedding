@@ -22,4 +22,3 @@ class M_Live extends CI_Model
 	}
 
 }
-?>

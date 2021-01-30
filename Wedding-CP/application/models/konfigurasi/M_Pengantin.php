@@ -27,4 +27,3 @@ class M_Pengantin extends CI_Model
 	}
 
 }
-?>

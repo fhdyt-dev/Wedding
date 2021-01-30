@@ -26,4 +26,3 @@ class M_Tema extends CI_Model
 	}
 
 }
-?>

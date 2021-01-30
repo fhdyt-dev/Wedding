@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Register extends CI_Controller {
+class Register extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -26,12 +27,9 @@ class Register extends CI_Controller {
 	public function proses()
 	{
 		$this->load->model('RegisterModel');
-		if($this->RegisterModel->register_user())
-		{
+		if ($this->RegisterModel->register_user()) {
 			redirect('login');
-		}
-		else
-		{
+		} else {
 			echo "Gagal";
 		}
 	}

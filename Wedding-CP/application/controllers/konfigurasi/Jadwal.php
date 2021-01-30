@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Jadwal extends CI_Controller {
+class Jadwal extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -19,18 +20,18 @@ class Jadwal extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	function __construct()
- 	{
- 		parent::__construct();
- 		$this->load->model('konfigurasi/M_Jadwal');
+	{
+		parent::__construct();
+		$this->load->model('konfigurasi/M_Jadwal');
 
- 		$this->load->model('LoginModel');
- 		$this->LoginModel->cek_login();
- 	}
+		$this->load->model('LoginModel');
+		$this->LoginModel->cek_login();
+	}
 
 	public function index()
 	{
 
-		$data['tersimpan']=$this->M_Jadwal->tersimpan();
+		$data['tersimpan'] = $this->M_Jadwal->tersimpan();
 
 		$this->load->view('template/header');
 		$this->load->view('konfigurasi/v_jadwal', $data);
@@ -39,7 +40,6 @@ class Jadwal extends CI_Controller {
 
 	public function simpan()
 	{
-		$data=$this->M_Jadwal->m_simpan(); 
+		$data = $this->M_Jadwal->m_simpan();
 	}
-
 }

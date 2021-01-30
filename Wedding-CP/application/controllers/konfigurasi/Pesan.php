@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Pesan extends CI_Controller {
+class Pesan extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -19,13 +20,13 @@ class Pesan extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	function __construct()
- 	{
- 		parent::__construct();
- 		$this->load->model('konfigurasi/M_Pesan');
+	{
+		parent::__construct();
+		$this->load->model('konfigurasi/M_Pesan');
 
- 		$this->load->model('LoginModel');
- 		$this->LoginModel->cek_login();
- 	}
+		$this->load->model('LoginModel');
+		$this->LoginModel->cek_login();
+	}
 
 	public function index()
 	{
@@ -36,13 +37,19 @@ class Pesan extends CI_Controller {
 
 	public function simpan()
 	{
-		$data=$this->M_Pesan->m_simpan();
+		$data = $this->M_Pesan->m_simpan();
 	}
 
 	public function list()
 	{
-			$data=$this->M_Pesan->m_list();
-			echo json_encode($data);
+		$data = $this->M_Pesan->m_list();
+		echo json_encode($data);
 	}
 
+	public function status()
+	{
+		$id = $this->uri->segment('4');
+		$data = $this->M_Pesan->m_status($id);
+		echo json_encode($data);
+	}
 }

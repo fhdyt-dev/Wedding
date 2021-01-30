@@ -21,4 +21,3 @@ class M_Informasi extends CI_Model
 	}
 
 }
-?>

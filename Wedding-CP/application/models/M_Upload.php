@@ -59,4 +59,3 @@ class M_Upload extends CI_Model
 	}
 
 }
-?>
