@@ -37,7 +37,7 @@ CREATE TABLE `ALBUM_USER` (
 
 LOCK TABLES `ALBUM_USER` WRITE;
 /*!40000 ALTER TABLE `ALBUM_USER` DISABLE KEYS */;
-INSERT INTO `ALBUM_USER` VALUES (4,'localhost','b17b1bea4b866240d6b1f344c72274b1bb7e498c.jpg','show'),(5,'localhost','5b8f03213296650339c984f90582989928860df1.jpg','show'),(6,'localhost','2733ed20b1177d8c0b9cfc3bd67db96066bbea28.jpg','show'),(7,'localhost','a0f29175c9efeb89f178c220bf7a38c7850905a8.jpg','show'),(8,'localhost','f3fda20221ea3d5b6564517c664d21f5a80180a2.jpg','show'),(9,'localhost','c674c12981acc865c8b91448c508db60b6a47608.jpg','show'),(10,'localhost','4f622d977b5f07317aed45f9cadc0c04eef941ba.jpg','show'),(11,'localhost','c969af41f305af2cccaacbe4dc18ce44b3ab4d6c.jpg','show'),(12,'localhost','2b3243f5e4810233517fd67d032c59f04265ceb2.jpg','show'),(22,'localhost','55864a8384168433d61b4a22b4e262b974ceb612.jpg','hide'),(23,'localhost','abf918394fbcb3f15a8e4f2848cebdc1c39fd38f.png','hide'),(24,'localhost','54a55a63bc3f62d3f758b5edfa0a55435781ea1e.jpg','hide'),(25,'localhost','localhost_3d4851a8b364dd37b94d670d0a2443c134d67546.jpg','show');
+INSERT INTO `ALBUM_USER` VALUES (4,'localhost','b17b1bea4b866240d6b1f344c72274b1bb7e498c.jpg','show'),(5,'localhost','5b8f03213296650339c984f90582989928860df1.jpg','show'),(6,'localhost','2733ed20b1177d8c0b9cfc3bd67db96066bbea28.jpg','show'),(7,'localhost','a0f29175c9efeb89f178c220bf7a38c7850905a8.jpg','show'),(8,'localhost','f3fda20221ea3d5b6564517c664d21f5a80180a2.jpg','show'),(9,'localhost','c674c12981acc865c8b91448c508db60b6a47608.jpg','show'),(10,'localhost','4f622d977b5f07317aed45f9cadc0c04eef941ba.jpg','show'),(11,'localhost','c969af41f305af2cccaacbe4dc18ce44b3ab4d6c.jpg','show'),(12,'localhost','2b3243f5e4810233517fd67d032c59f04265ceb2.jpg','show'),(22,'localhost','55864a8384168433d61b4a22b4e262b974ceb612.jpg','hide'),(23,'localhost','abf918394fbcb3f15a8e4f2848cebdc1c39fd38f.png','hide'),(24,'localhost','54a55a63bc3f62d3f758b5edfa0a55435781ea1e.jpg','hide'),(25,'localhost','localhost_3d4851a8b364dd37b94d670d0a2443c134d67546.jpg','hide');
 /*!40000 ALTER TABLE `ALBUM_USER` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,7 +62,7 @@ CREATE TABLE `FONT` (
 
 LOCK TABLES `FONT` WRITE;
 /*!40000 ALTER TABLE `FONT` DISABLE KEYS */;
-INSERT INTO `FONT` VALUES (1,'Open Sans','Open+Sans'),(2,'Pacifico','Pacifico'),(3,'Great Vibes','Great+Vibes'),(4,'Comic Neue','Comic+Neue'),(5,'Roboto','Roboto'),(6,'Lato','Lato'),(7,'Slabo 27px','Slabo+27px'),(8,'Source Sans Pro','Source+Sans+Pro'),(9,'Montserrat','Montserrat'),(10,'Raleway','Raleway'),(11,'Dancing Script','Dancing+Script'),(12,'Yellowtail','Yellowtail'),(13,'Kaushan Script','Kaushan+Script'),(14,'Sacramento','Sacramento'),(15,'Parisienne','Parisienne'),(16,'Charmonman','Charmonman'),(17,'Allura','Allura'),(18,'Pinyon Script','Pinyon+Script'),(19,'Leckerli One','Leckerli+One'),(20,'Mrs Saint Delafield','Mrs+Saint+Delafield'),(21,'Euphoria Script','Euphoria+Script'),(22,'Cedarville Cursive','Cedarville+Cursive'),(23,'Rouge Script','Rouge+Script'),(24,'Monsieur La Doulaise','Monsieur+La+Doulaise'),(25,'Aguafina Script','Aguafina+Script'),(26,'Condiment','Condiment'),(27,'Miss Fajardose','Miss+Fajardose'),(28,'Nunito','Nunito'),(29,'Hachi Maru Pop','Hachi+Maru+Pop'),(30,'Coda Caption','Coda+Caption'),(31,'Lobster','Lobster'),(32,'Dancing Script','Dancing+Script'),(33,'Indie Flower','Indie+Flower'),(34,'Righteous','Righteous'),(35,'Lobster Two','Lobster+Two'),(36,'Sacramento','Sacramento'),(37,'Pragati Narrow','Pragati+Narrow'),(38,'Cookie','Cookie'),(39,'Playball','Playball'),(40,'Bad Script','Bad+Script'),(41,'Fugaz One','Fugaz+One'),(42,'Sofia','Sofia'),(43,'Reem Kufi','Reem+Kufi');
+INSERT INTO `FONT` VALUES (1,'Open Sans','Open+Sans'),(2,'Pacifico','Pacifico'),(3,'Great Vibes','Great+Vibes'),(4,'Comic Neue','Comic+Neue'),(5,'Roboto','Roboto'),(6,'Lato','Lato'),(7,'Slabo 27px','Slabo+27px'),(8,'Source Sans Pro','Source+Sans+Pro'),(9,'Montserrat','Montserrat'),(10,'Raleway','Raleway'),(11,'Dancing Script','Dancing+Script'),(12,'Yellowtail','Yellowtail'),(13,'Kaushan Script','Kaushan+Script'),(14,'Sacramento','Sacramento'),(15,'Parisienne','Parisienne'),(16,'Charmonman','Charmonman'),(17,'Allura','Allura'),(18,'Pinyon Script','Pinyon+Script'),(19,'Leckerli One','Leckerli+One'),(20,'Mrs Saint Delafield','Mrs+Saint+Delafield'),(21,'Euphoria Script','Euphoria+Script'),(22,'Cedarville Cursive','Cedarville+Cursive'),(23,'Rouge Script','Rouge+Script'),(24,'Monsieur La Doulaise','Monsieur+La+Doulaise'),(25,'Aguafina Script','Aguafina+Script'),(26,'Condiment','Condiment'),(27,'Miss Fajardose','Miss+Fajardose'),(28,'Nunito','Nunito'),(29,'Hachi Maru Pop','Hachi+Maru+Pop'),(30,'Coda Caption','Coda+Caption'),(31,'Lobster','Lobster'),(33,'Indie Flower','Indie+Flower'),(34,'Righteous','Righteous'),(35,'Lobster Two','Lobster+Two'),(36,'Sacramento','Sacramento'),(37,'Pragati Narrow','Pragati+Narrow'),(38,'Cookie','Cookie'),(39,'Playball','Playball'),(40,'Bad Script','Bad+Script'),(41,'Fugaz One','Fugaz+One'),(42,'Sofia','Sofia'),(43,'Reem Kufi','Reem+Kufi');
 /*!40000 ALTER TABLE `FONT` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -80,7 +80,7 @@ CREATE TABLE `KONF_INFORMASI` (
   `KONF_INFORMASI_JUDUL` varchar(100) NOT NULL DEFAULT '0',
   `KONF_INFORMASI_ISI` text NOT NULL,
   PRIMARY KEY (`KONF_INFORMASI_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -89,7 +89,7 @@ CREATE TABLE `KONF_INFORMASI` (
 
 LOCK TABLES `KONF_INFORMASI` WRITE;
 /*!40000 ALTER TABLE `KONF_INFORMASI` DISABLE KEYS */;
-INSERT INTO `KONF_INFORMASI` VALUES (9,'localhost',NULL,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et.','                                                                                                                                                                <span style=\"margin: 0px; padding: 0px;\" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\">Lorem Ipsum</span><span style=\"\" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>                                                                                                                                                                                      ');
+INSERT INTO `KONF_INFORMASI` VALUES (10,'localhost','on','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et.','                                                                                                                                                                                    <span style=\"margin: 0px; padding: 0px;\" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\">Lorem Ipsum</span><span style=\"\" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" justify;\"=\"\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>                                                                                                                                                                                                        ');
 /*!40000 ALTER TABLE `KONF_INFORMASI` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -146,7 +146,7 @@ CREATE TABLE `KONF_LIVE` (
   `KONF_LIVE_PLATFORM` varchar(100) NOT NULL DEFAULT '0',
   `KONF_LIVE_KETERANGAN` text NOT NULL,
   PRIMARY KEY (`KONF_LIVE_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -155,7 +155,7 @@ CREATE TABLE `KONF_LIVE` (
 
 LOCK TABLES `KONF_LIVE` WRITE;
 /*!40000 ALTER TABLE `KONF_LIVE` DISABLE KEYS */;
-INSERT INTO `KONF_LIVE` VALUES (17,'localhost','on','https://www.youtube.com/watch?v=5yx6BWlEVcY&ab_channel=ChillhopMusic','yt','Mungkin yang belum dapat menghadiri acara pernikahan kami, dapat menyaksikan melalui Live streaming yang telah kami sediakan');
+INSERT INTO `KONF_LIVE` VALUES (18,'localhost','on','https://www.youtube.com/watch?v=5yx6BWlEVcY&ab_channel=ChillhopMusic','zoom','Mungkin yang belum dapat menghadiri acara pernikahan kami, dapat menyaksikan melalui Live streaming yang telah kami sediakan');
 /*!40000 ALTER TABLE `KONF_LIVE` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -289,7 +289,7 @@ CREATE TABLE `KONF_WEB` (
   `KONF_WEB_SAMPUL` varchar(200) NOT NULL DEFAULT 'not_found.jpg',
   `KONF_WEB_ORNAMEN` varchar(200) NOT NULL DEFAULT '11',
   PRIMARY KEY (`KONF_WEB_INDEX`)
-) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -298,7 +298,7 @@ CREATE TABLE `KONF_WEB` (
 
 LOCK TABLES `KONF_WEB` WRITE;
 /*!40000 ALTER TABLE `KONF_WEB` DISABLE KEYS */;
-INSERT INTO `KONF_WEB` VALUES (76,'localhost','Undangan','#2196f3','33,150,243','Nunito','Sofia','Great Vibes','2b3243f5e4810233517fd67d032c59f04265ceb2.jpg','19');
+INSERT INTO `KONF_WEB` VALUES (78,'localhost','Undangan','#2196f3','33,150,243','Nunito','Sofia','Mrs Saint Delafield','2b3243f5e4810233517fd67d032c59f04265ceb2.jpg','3');
 /*!40000 ALTER TABLE `KONF_WEB` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -363,7 +363,7 @@ CREATE TABLE `RSVP` (
   `RSVP_NAMA` varchar(50) NOT NULL DEFAULT '0',
   `RSVP_KEHADIRAN` varchar(50) NOT NULL DEFAULT '0',
   `RSVP_PESAN` text NOT NULL,
-  `RSVP_STATUS` enum('show','hide') NOT NULL DEFAULT 'show',
+  `RSVP_STATUS` enum('show','hide') NOT NULL DEFAULT 'hide',
   `RSVP_TANGGAL` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`RSVP_INDEX`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -468,4 +468,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-31 18:31:08
+-- Dump completed on 2021-01-31 21:28:35

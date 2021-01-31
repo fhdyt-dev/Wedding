@@ -39,7 +39,7 @@
 	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/venobox/venobox.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/aos/aos.css" />
 	<!-- Template Main CSS File -->
 	<!-- <link href="<?php echo base_url(); ?>assets/theme/assets/css/style.css" rel="stylesheet"> -->
 
@@ -2206,21 +2206,27 @@
 			}
 
 			?>
-			<h1><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?><br><small>&</small><br><?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?></h1>
-			<h2>
-				<?php
-				if ($detail[0]->KONF_JADWAL_INTRO == "acara1") {
-					$tanggal = tanggal($detail[0]->KONF_JADWAL_ACARA1_TANGGAL);
-					$waktu = date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA1_JAM));
-					echo $detail[0]->KONF_JADWAL_ACARA1_ALAMAT;
-				} else if ($detail[0]->KONF_JADWAL_INTRO == "acara2") {
-					$tanggal = tanggal($detail[0]->KONF_JADWAL_ACARA2_TANGGAL);
-					$waktu = date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA2_JAM));
-					echo $detail[0]->KONF_JADWAL_ACARA2_ALAMAT;
-				}
-				?>
-			</h2>
-			<a href="#pricing" class="btn-get-started scrollto"><?php echo $tanggal; ?>, <?php echo $waktu; ?></a>
+			<div class="aos-item" data-aos="zoom-in" data-aos-duration="1000">
+				<h1><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?><br><small>&</small><br><?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?></h1>
+			</div>
+			<div class="aos-item" data-aos="fade-up" data-aos-duration="1000">
+				<h2>
+					<?php
+					if ($detail[0]->KONF_JADWAL_INTRO == "acara1") {
+						$tanggal = tanggal($detail[0]->KONF_JADWAL_ACARA1_TANGGAL);
+						$waktu = date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA1_JAM));
+						echo $detail[0]->KONF_JADWAL_ACARA1_ALAMAT;
+					} else if ($detail[0]->KONF_JADWAL_INTRO == "acara2") {
+						$tanggal = tanggal($detail[0]->KONF_JADWAL_ACARA2_TANGGAL);
+						$waktu = date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA2_JAM));
+						echo $detail[0]->KONF_JADWAL_ACARA2_ALAMAT;
+					}
+					?>
+				</h2>
+			</div>
+			<div class="aos-item" data-aos="zoom-in" data-aos-duration="1000">
+				<a href="#pricing" class="btn-get-started scrollto"><?php echo $tanggal; ?>, <?php echo $waktu; ?></a>
+			</div>
 		</div>
 	</section><!-- End Hero -->
 
@@ -2231,15 +2237,20 @@
 			<section id="about" class="about">
 				<div class="container">
 					<div class="section-title">
-						<div class="ornamen colored"></div>
-						<h3><span><?php echo $detail[0]->KONF_PEMBUKAAN_JUDUL; ?></span></h3>
-					</div>
-					<div class="row content">
-						<div class="col-lg-12">
-							<p style="text-align:center"><?php echo $detail[0]->KONF_PEMBUKAAN_ISI; ?></p>
+						<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
+							<div class="ornamen colored"></div>
+						</div>
+						<div class="aos-item" data-aos="fade-up" data-aos-duration="1000">
+							<h3><span><?php echo $detail[0]->KONF_PEMBUKAAN_JUDUL; ?></span></h3>
 						</div>
 					</div>
-
+					<div class="aos-item" data-aos="zoom-in" data-aos-duration="1000">
+						<div class="row content">
+							<div class="col-lg-12">
+								<p style="text-align:center"><?php echo $detail[0]->KONF_PEMBUKAAN_ISI; ?></p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section><!-- End Cta Section -->
 			<!-- ======= Team Section ======= -->
@@ -2247,35 +2258,43 @@
 				<div class="container">
 
 					<div class="section-title">
-						<div class="ornamen colored"></div>
-						<h3><span>Memperkenalkan</span></h3>
-						<p><?php echo $detail[0]->KONF_PENGANTIN_SUB_TITLE; ?></p>
+						<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
+							<div class="ornamen colored"></div>
+						</div>
+						<div class="aos-item" data-aos="fade-up" data-aos-duration="1000">
+							<h3><span>Memperkenalkan</span></h3>
+							<p><?php echo $detail[0]->KONF_PENGANTIN_SUB_TITLE; ?></p>
+						</div>
 					</div>
 
 					<div class="row">
 
 						<div class="col-lg-6 col-md-6 d-flex align-items-stretch">
-							<div class="member">
-								<div class="member-img">
-									<img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_PRIA_FOTO ?>" class="img-fluid" alt="">
+							<div class="aos-item" data-aos="flip-down" data-aos-duration="1000">
+								<div class="member">
+									<div class="member-img">
+										<img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_PRIA_FOTO ?>" class="img-fluid" alt="">
 
-								</div>
-								<div class="member-info">
-									<h2><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA_LENGKAP; ?></h2>
-									<span><?php echo $detail[0]->KONF_PENGANTIN_PRIA_KETERANGAN; ?></span>
+									</div>
+									<div class="member-info">
+										<h2><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA_LENGKAP; ?></h2>
+										<span><?php echo $detail[0]->KONF_PENGANTIN_PRIA_KETERANGAN; ?></span>
+									</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="col-lg-6 col-md-6 d-flex align-items-stretch">
-							<div class="member">
-								<div class="member-img">
-									<img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_WANITA_FOTO ?>" class="img-fluid" alt="">
+							<div class="aos-item" data-aos="flip-down" data-aos-duration="1000">
+								<div class="member">
+									<div class="member-img">
+										<img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_WANITA_FOTO ?>" class="img-fluid" alt="">
 
-								</div>
-								<div class="member-info">
-									<h2><?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA_LENGKAP; ?></h2>
-									<span><?php echo $detail[0]->KONF_PENGANTIN_WANITA_KETERANGAN; ?></span>
+									</div>
+									<div class="member-info">
+										<h2><?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA_LENGKAP; ?></h2>
+										<span><?php echo $detail[0]->KONF_PENGANTIN_WANITA_KETERANGAN; ?></span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -2292,58 +2311,62 @@
 				<div class="container">
 
 					<div class="section-title">
-						<div class="ornamen colored"></div>
-						<h3><span>Jadwal</span></h3>
-						<p>Kami mengharapkan kehadiran anda pada acara yang kami selenggarakan.</p>
+						<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
+							<div class="ornamen colored"></div>
+						</div>
+						<div class="aos-item" data-aos="fade-up" data-aos-duration="1000">
+							<h3><span>Jadwal</span></h3>
+							<p>Kami mengharapkan kehadiran anda pada acara yang kami selenggarakan.</p>
+						</div>
 					</div>
-
-					<div class="row">
-						<?php
-						if ($detail[0]->KONF_JADWAL_ACARA1_STATUS == "on" && $detail[0]->KONF_JADWAL_ACARA2_STATUS == "on") {
-							$col = "6";
-						} else {
-							$col = "12";
-						}
-						?>
-						<?php
-						if ($detail[0]->KONF_JADWAL_ACARA1_STATUS == "on") {
-						?>
-							<div class="col-lg-<?php echo $col; ?> col-md-<?php echo $col; ?>">
-								<div class="box">
-									<h3><?php echo $detail[0]->KONF_JADWAL_ACARA1_JUDUL; ?></h3>
-									<p><?php echo $detail[0]->KONF_JADWAL_ACARA1_ALAMAT; ?></p>
-									<p class="text-muted"><?php echo tanggal($detail[0]->KONF_JADWAL_ACARA1_TANGGAL); ?>, <?php echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA1_JAM)) ?></p>
-									<div>
-										<iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?q=<?php echo str_replace(" ", "", $detail[0]->KONF_JADWAL_ACARA1_MAP); ?>&hl=in&z=16&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
-									</div>
-									<div class="btn-wrap">
-										<a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo str_replace(" ", "", $detail[0]->KONF_JADWAL_ACARA1_MAP); ?>&dir_action=navigate" class="btn-buy" target="_blank">Buka Peta</a>
-									</div>
-								</div>
-							</div>
-						<?php
-						}
-						?>
-						<?php
-						if ($detail[0]->KONF_JADWAL_ACARA2_STATUS == "on") {
-						?>
-							<div class="col-lg-<?php echo $col; ?> col-md-<?php echo $col; ?>">
-								<div class="box">
-									<h3><?php echo $detail[0]->KONF_JADWAL_ACARA2_JUDUL; ?></h3>
-									<p><?php echo $detail[0]->KONF_JADWAL_ACARA2_ALAMAT; ?></p>
-									<p class="text-muted"><?php echo tanggal($detail[0]->KONF_JADWAL_ACARA2_TANGGAL); ?>, <?php echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA2_JAM)) ?></p>
-									<div>
-										<iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?q=<?php echo str_replace(" ", "", $detail[0]->KONF_JADWAL_ACARA2_MAP); ?>&hl=in&z=16&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
-									</div>
-									<div class="btn-wrap">
-										<a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo str_replace(" ", "", $detail[0]->KONF_JADWAL_ACARA2_MAP); ?>&dir_action=navigate" class="btn-buy" target="_blank">Buka Peta</a>
+					<div class="aos-item" data-aos="zoom-in" data-aos-duration="1000">
+						<div class="row">
+							<?php
+							if ($detail[0]->KONF_JADWAL_ACARA1_STATUS == "on" && $detail[0]->KONF_JADWAL_ACARA2_STATUS == "on") {
+								$col = "6";
+							} else {
+								$col = "12";
+							}
+							?>
+							<?php
+							if ($detail[0]->KONF_JADWAL_ACARA1_STATUS == "on") {
+							?>
+								<div class="col-lg-<?php echo $col; ?> col-md-<?php echo $col; ?>">
+									<div class="box">
+										<h3><?php echo $detail[0]->KONF_JADWAL_ACARA1_JUDUL; ?></h3>
+										<p><?php echo $detail[0]->KONF_JADWAL_ACARA1_ALAMAT; ?></p>
+										<p class="text-muted"><?php echo tanggal($detail[0]->KONF_JADWAL_ACARA1_TANGGAL); ?>, <?php echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA1_JAM)) ?></p>
+										<div>
+											<iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?q=<?php echo str_replace(" ", "", $detail[0]->KONF_JADWAL_ACARA1_MAP); ?>&hl=in&z=16&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+										<div class="btn-wrap">
+											<a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo str_replace(" ", "", $detail[0]->KONF_JADWAL_ACARA1_MAP); ?>&dir_action=navigate" class="btn-buy" target="_blank">Buka Peta</a>
+										</div>
 									</div>
 								</div>
-							</div>
-						<?php
-						}
-						?>
-
+							<?php
+							}
+							?>
+							<?php
+							if ($detail[0]->KONF_JADWAL_ACARA2_STATUS == "on") {
+							?>
+								<div class="col-lg-<?php echo $col; ?> col-md-<?php echo $col; ?>">
+									<div class="box">
+										<h3><?php echo $detail[0]->KONF_JADWAL_ACARA2_JUDUL; ?></h3>
+										<p><?php echo $detail[0]->KONF_JADWAL_ACARA2_ALAMAT; ?></p>
+										<p class="text-muted"><?php echo tanggal($detail[0]->KONF_JADWAL_ACARA2_TANGGAL); ?>, <?php echo date('g:i A', strtotime($detail[0]->KONF_JADWAL_ACARA2_JAM)) ?></p>
+										<div>
+											<iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?q=<?php echo str_replace(" ", "", $detail[0]->KONF_JADWAL_ACARA2_MAP); ?>&hl=in&z=16&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+										<div class="btn-wrap">
+											<a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo str_replace(" ", "", $detail[0]->KONF_JADWAL_ACARA2_MAP); ?>&dir_action=navigate" class="btn-buy" target="_blank">Buka Peta</a>
+										</div>
+									</div>
+								</div>
+							<?php
+							}
+							?>
+						</div>
 					</div>
 
 				</div>
@@ -2355,39 +2378,44 @@
 				<section id="features" class="features">
 					<div class="container">
 						<div class="section-title">
-							<h2>Covid-19</h2>
-							<h3>Protokol <span>Kesehatan</span></h3>
-							<p>Stop Penyebaran Covid-19 Dengan Menerapkan Protokol Kesehatan.</p>
-						</div>
-
-						<div class="row">
-							<div class="col-lg-3 col-md-4 col-6 col-6">
-								<div class="icon-box">
-									<i class="fas fa-head-side-mask" style="color: #ffbb2c;"></i>
-									<h3><a href="">Memakai Masker</a></h3>
-								</div>
+							<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
+								<h2>Covid-19</h2>
 							</div>
-							<div class="col-lg-3 col-md-4 col-6">
-								<div class="icon-box">
-									<i class="fas fa-handshake-slash" style="color: #5578ff;"></i>
-									<h3><a href="">Hindari Berjabat Tangan</a></h3>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-4 col-6 mt-4 mt-md-0">
-								<div class="icon-box">
-									<i class="fas fa-people-arrows" style="color: #e80368;"></i>
-									<h3><a href="">Mejaga Jarak</a></h3>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-4 col-6 mt-4 mt-lg-0">
-								<div class="icon-box">
-									<i class="fas fa-hands-wash" style="color: #e361ff;"></i>
-									<h3><a href="">Mencuci Tangan</a></h3>
-								</div>
+							<div class="aos-item" data-aos="fade-up" data-aos-duration="1000">
+								<h3>Protokol <span>Kesehatan</span></h3>
+								<p>Stop Penyebaran Covid-19 Dengan Menerapkan Protokol Kesehatan.</p>
 							</div>
 						</div>
-						<div class="row">
-							<img class="logo_streaming" style="margin-top:20px" height="50" src="<?php echo base_url(); ?>/assets/kemenkes.png">
+						<div class="aos-item" data-aos="zoom-in" data-aos-duration="1000">
+							<div class="row">
+								<div class="col-lg-3 col-md-4 col-6 col-6">
+									<div class="icon-box">
+										<i class="fas fa-head-side-mask" style="color: #ffbb2c;"></i>
+										<h3><a href="">Memakai Masker</a></h3>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-4 col-6">
+									<div class="icon-box">
+										<i class="fas fa-handshake-slash" style="color: #5578ff;"></i>
+										<h3><a href="">Hindari Berjabat Tangan</a></h3>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-4 col-6 mt-4 mt-md-0">
+									<div class="icon-box">
+										<i class="fas fa-people-arrows" style="color: #e80368;"></i>
+										<h3><a href="">Mejaga Jarak</a></h3>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-4 col-6 mt-4 mt-lg-0">
+									<div class="icon-box">
+										<i class="fas fa-hands-wash" style="color: #e361ff;"></i>
+										<h3><a href="">Mencuci Tangan</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<img class="logo_streaming" style="margin-top:20px" height="50" src="<?php echo base_url(); ?>/assets/kemenkes.png">
+							</div>
 						</div>
 					</div>
 				</section><!-- End Features Section -->
@@ -2399,13 +2427,19 @@
 				<section id="about" class="about section-bg">
 					<div class="container">
 						<div class="section-title">
-							<div class="ornamen colored"></div>
-							<h2><span>Informasi</span></h2>
-							<h3><span><?php echo $detail[0]->KONF_INFORMASI_JUDUL; ?></span></h3>
+							<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
+								<div class="ornamen colored"></div>
+							</div>
+							<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
+								<h2><span>Informasi</span></h2>
+								<h3><span><?php echo $detail[0]->KONF_INFORMASI_JUDUL; ?></span></h3>
+							</div>
 						</div>
-						<div class="row content">
-							<div class="col-lg-12">
-								<p style="text-align:center"><?php echo $detail[0]->KONF_INFORMASI_ISI; ?></p>
+						<div class="aos-item" data-aos="zoom-in" data-aos-duration="1000">
+							<div class="row content">
+								<div class="col-lg-12">
+									<p style="text-align:center"><?php echo $detail[0]->KONF_INFORMASI_ISI; ?></p>
+								</div>
 							</div>
 						</div>
 
@@ -2417,9 +2451,12 @@
 			<section id="portfolio" class="portfolio">
 				<div class="container">
 					<div class="section-title">
-						<div class="ornamen colored"></div>
-						<h3><span>Galeri Prewedding</span></h3>
-						<p></p>
+						<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
+							<div class="ornamen colored"></div>
+						</div>
+						<div class="aos-item" data-aos="fade-up" data-aos-duration="1000">
+							<h3><span>Galeri Prewedding</span></h3>
+						</div>
 					</div>
 					<style media="screen">
 						.masonry-container {
@@ -2472,37 +2509,44 @@
 							<?php
 							foreach ($galeri as $row) {
 							?>
-								<div class="masonry-item">
-									<a href=""><img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $row->ALBUM_USER_FOTO; ?>" /></a>
+								<div class="aos-item" data-aos="flip-up" data-aos-duration="1000">
+									<div class="masonry-item">
+										<a href=""><img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $row->ALBUM_USER_FOTO; ?>" /></a>
+									</div>
 								</div>
 							<?php } ?>
 						</div>
 					</div>
 
-
 					<?php if ($detail[0]->KONF_VIDEO_STATUS == "on") {
 					?>
 						<div class="section-title">
-							<div class="ornamen colored"></div>
-							<h3><span>Video</span></h3>
-							<p></p>
+							<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
+								<div class="ornamen colored"></div>
+							</div>
+							<div class="aos-item" data-aos="fade-up" data-aos-duration="1000">
+								<h3><span>Video</span></h3>
+								<p></p>
+							</div>
 						</div>
-						<div class="row content">
-							<style>
-								iframe {
-									margin: 0 auto;
-									background-color: #777;
-								}
+						<div class="aos-item" data-aos="flip-down" data-aos-duration="1000">
+							<div class="row content">
+								<style>
+									iframe {
+										margin: 0 auto;
+										background-color: #777;
+									}
 
-								iframe {
-									display: block;
-									border-style: none;
-								}
-							</style>
-							<iframe width="560" height="315" src="<?php
-																	parse_str(parse_url($detail[0]->KONF_VIDEO_LINK, PHP_URL_QUERY), $my_array_of_vars);
-																	echo "https://www.youtube.com/embed/" . $my_array_of_vars['v'] . "";
-																	?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									iframe {
+										display: block;
+										border-style: none;
+									}
+								</style>
+								<iframe width="560" height="315" src="<?php
+																		parse_str(parse_url($detail[0]->KONF_VIDEO_LINK, PHP_URL_QUERY), $my_array_of_vars);
+																		echo "https://www.youtube.com/embed/" . $my_array_of_vars['v'] . "";
+																		?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
 						</div>
 					<?php
 					} else {
@@ -2518,17 +2562,22 @@
 				<section id="about" class="about section-bg">
 					<div class="container">
 						<div class="section-title">
-							<div class="ornamen colored"></div>
-							<h3><span>Live Streaming</span></h3>
-						</div>
-						<img class="logo_streaming" height="70" src="http://localhost/Wedding/Wedding-CP/uploads/live/<?php echo $detail[0]->KONF_LIVE_PLATFORM; ?>.png">
-						<div class="row content">
-							<div class="col-lg-12">
-								<p style="text-align:center;padding-bottom:20px; font-size:18px;"><?php echo $detail[0]->KONF_LIVE_KETERANGAN; ?></p>
+							<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
+								<div class="ornamen colored"></div>
 							</div>
-							<a href="<?php echo $detail[0]->KONF_LIVE_LINK; ?>" target="_blank" class="btn-learn-more">Buka Live Streaming</a>
+							<div class="aos-item" data-aos="fade-up" data-aos-duration="1000">
+								<h3><span>Live Streaming</span></h3>
+							</div>
 						</div>
-
+						<div class="aos-item" data-aos="zoom-in" data-aos-duration="1000">
+							<img class="logo_streaming" height="70" src="http://localhost/Wedding/Wedding-CP/uploads/live/<?php echo $detail[0]->KONF_LIVE_PLATFORM; ?>.png">
+							<div class="row content">
+								<div class="col-lg-12">
+									<p style="text-align:center;padding-bottom:20px; font-size:18px;"><?php echo $detail[0]->KONF_LIVE_KETERANGAN; ?></p>
+								</div>
+								<a href="<?php echo $detail[0]->KONF_LIVE_LINK; ?>" target="_blank" class="btn-learn-more">Buka Live Streaming</a>
+							</div>
+						</div>
 					</div>
 				</section><!-- End Cta Section -->
 			<?php } ?>
@@ -2539,35 +2588,39 @@
 				<div class="container">
 
 					<div class="section-title">
-						<div class="ornamen colored"></div>
-						<h3><span>Pesan Anda</span></h3>
+						<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
+							<div class="ornamen colored"></div>
+						</div>
+						<div class="aos-item" data-aos="fade-up" data-aos-duration="1000">
+							<h3><span>Pesan Anda</span></h3>
+						</div>
 					</div>
+					<div class="aos-item" data-aos="zoom-in" data-aos-duration="1000">
+						<div class="col-lg-12 mt-5 mt-lg-0">
 
-					<div class="col-lg-12 mt-5 mt-lg-0">
-
-						<form action="index.php/web/kirim" method="post" role="form" class="php-email-form">
-							<div class="form-group">
-								<input type="text" name="nama" class="form-control" id="name" placeholder="Nama Anda" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-								<div class="validate"></div>
-							</div>
-							<div class="form-group">
-								<select class="form-control" name="kehadiran">
-									<option value="hadir">Hadir</option>
-									<option value="tidak">Tidak Hadir</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<textarea class="form-control" name="pesan" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Ucapan dan Doa"></textarea>
-								<div class="validate"></div>
-							</div>
-							<div class="mb-3">
-								<div class="loading">Loading</div>
-								<div class="error-message"></div>
-								<div class="sent-message">Your message has been sent. Thank you!</div>
-							</div>
-							<div class="text-center"><button type="submit">Kirim</button></div>
-						</form>
-
+							<form action="index.php/web/kirim" method="post" role="form" class="php-email-form">
+								<div class="form-group">
+									<input type="text" name="nama" class="form-control" id="name" placeholder="Nama Anda" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+									<div class="validate"></div>
+								</div>
+								<div class="form-group">
+									<select class="form-control" name="kehadiran">
+										<option value="hadir">Hadir</option>
+										<option value="tidak">Tidak Hadir</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<textarea class="form-control" name="pesan" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Ucapan dan Doa"></textarea>
+									<div class="validate"></div>
+								</div>
+								<div class="mb-3">
+									<div class="loading">Loading</div>
+									<div class="error-message"></div>
+									<div class="sent-message">Your message has been sent. Thank you!</div>
+								</div>
+								<div class="text-center"><button type="submit">Kirim</button></div>
+							</form>
+						</div>
 					</div>
 
 				</div>
@@ -2580,8 +2633,12 @@
 				<div class="container">
 
 					<div class="section-title">
-						<div class="ornamen colored"></div>
-						<h3><span>Pesan Masuk</span></h3>
+						<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
+							<div class="ornamen colored"></div>
+						</div>
+						<div class="aos-item" data-aos="zoom-in" data-aos-duration="1000">
+							<h3><span>Pesan Masuk</span></h3>
+						</div>
 					</div>
 
 					<ul class="faq-list">
@@ -2589,15 +2646,18 @@
 						foreach ($pesan as $row) {
 						?>
 							<li>
-								<a data-toggle="collapse" class="" href="#faq<?php echo $row->RSVP_INDEX; ?>"><?php echo $row->RSVP_NAMA; ?>
-								</a>
-								<div id="faq<?php echo $row->RSVP_INDEX; ?>" class="collapse show" data-parent=".faq-list">
-									<p>"<?php echo $row->RSVP_PESAN; ?>"</p>
+								<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
+									<a data-toggle="collapse" class="" href="#faq<?php echo $row->RSVP_INDEX; ?>"><?php echo $row->RSVP_NAMA; ?>
+									</a>
+									<div id="faq<?php echo $row->RSVP_INDEX; ?>" class="collapse show" data-parent=".faq-list">
+										<p>"<?php echo $row->RSVP_PESAN; ?>"</p>
+									</div>
 								</div>
 							</li>
 						<?php } ?>
 
 					</ul>
+
 
 				</div>
 			</section><!-- End F.A.Q Section -->
@@ -2652,6 +2712,7 @@
 	<script src="<?php echo base_url(); ?>assets/theme/assets/vendor/venobox/venobox.min.js"></script>
 	<script src="<?php echo base_url(); ?>assets/theme/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 	<script src="<?php echo base_url(); ?>assets/mosaicflow/jquery.mosaicflow.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/aos/aos.js"></script>
 
 	<!-- Template Main JS File -->
 	<script src="<?php echo base_url(); ?>assets/theme/assets/js/main.js"></script>
@@ -2677,6 +2738,10 @@
 				$("i#musik").attr("class", "ri-play-fill ")
 			}
 		})
+
+		AOS.init({
+			easing: 'ease-in-out-sine'
+		});
 	</script>
 
 </body>
