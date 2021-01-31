@@ -33,6 +33,7 @@ class Tema extends CI_Controller
 		$this->load->model('M_Library');
 		$data['warna'] = $this->M_Library->warna_list();
 		$data['font'] = $this->M_Library->font_list();
+		$data['ornamen'] = $this->M_Library->ornamen_list();
 
 		$data['tersimpan'] = $this->M_Tema->tersimpan();
 

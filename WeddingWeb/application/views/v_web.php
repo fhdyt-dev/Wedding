@@ -2166,8 +2166,8 @@
 	.colored {
 		background-color: <?php echo $detail[0]->KONF_WEB_WARNA; ?>;
 		/* defines the background color of the image */
-		mask: url(http://localhost/Wedding/Wedding-CP/uploads/ornamen/3.png) no-repeat center / contain;
-		-webkit-mask: url(http://localhost/Wedding/Wedding-CP/uploads/ornamen/3.png) no-repeat center / contain;
+		mask: url(http://localhost/Wedding/Wedding-CP/uploads/ornamen/<?php echo $detail[0]->KONF_WEB_ORNAMEN; ?>.png) no-repeat center / contain;
+		-webkit-mask: url(http://localhost/Wedding/Wedding-CP/uploads/ornamen/<?php echo $detail[0]->KONF_WEB_ORNAMEN; ?>.png) no-repeat center / contain;
 	}
 </style>
 
@@ -2202,11 +2202,10 @@
 			<?php if (empty($link)) {
 				echo "";
 			} else {
-				echo "<h3>Kepada <strong>" . $link[0]->UNDANGAN_KEPADA . "</strong></h3>";
+				echo "<h3>Kepada : <strong>" . $link[0]->UNDANGAN_KEPADA . "</strong></h3>";
 			}
 
 			?>
-			<!-- <h3>Welcome to <strong>Tempo</strong></h3> -->
 			<h1><?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?><br><small>&</small><br><?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?></h1>
 			<h2>
 				<?php
@@ -2233,7 +2232,7 @@
 				<div class="container">
 					<div class="section-title">
 						<div class="ornamen colored"></div>
-						<h3><?php echo $detail[0]->KONF_PEMBUKAAN_JUDUL; ?></h3>
+						<h3><span><?php echo $detail[0]->KONF_PEMBUKAAN_JUDUL; ?></span></h3>
 					</div>
 					<div class="row content">
 						<div class="col-lg-12">
@@ -2249,7 +2248,7 @@
 
 					<div class="section-title">
 						<div class="ornamen colored"></div>
-						<h3>Memperkenalkan</h3>
+						<h3><span>Memperkenalkan</span></h3>
 						<p><?php echo $detail[0]->KONF_PENGANTIN_SUB_TITLE; ?></p>
 					</div>
 
@@ -2294,7 +2293,7 @@
 
 					<div class="section-title">
 						<div class="ornamen colored"></div>
-						<h3>Jadwal</h3>
+						<h3><span>Jadwal</span></h3>
 						<p>Kami mengharapkan kehadiran anda pada acara yang kami selenggarakan.</p>
 					</div>
 
@@ -2357,8 +2356,8 @@
 					<div class="container">
 						<div class="section-title">
 							<h2>Covid-19</h2>
-							<h3>Terapkan Protokol <span>Kesehatan</span></h3>
-							<p>Stop Penyebaran Covid-19 Dengan Menerapkan Protokol Kesehatan</p>
+							<h3>Protokol <span>Kesehatan</span></h3>
+							<p>Stop Penyebaran Covid-19 Dengan Menerapkan Protokol Kesehatan.</p>
 						</div>
 
 						<div class="row">
@@ -2386,6 +2385,8 @@
 									<h3><a href="">Mencuci Tangan</a></h3>
 								</div>
 							</div>
+						</div>
+						<div class="row">
 							<img class="logo_streaming" style="margin-top:20px" height="50" src="<?php echo base_url(); ?>/assets/kemenkes.png">
 						</div>
 					</div>
@@ -2399,7 +2400,7 @@
 					<div class="container">
 						<div class="section-title">
 							<div class="ornamen colored"></div>
-							<h2>Informasi</h2>
+							<h2><span>Informasi</span></h2>
 							<h3><span><?php echo $detail[0]->KONF_INFORMASI_JUDUL; ?></span></h3>
 						</div>
 						<div class="row content">
@@ -2417,7 +2418,7 @@
 				<div class="container">
 					<div class="section-title">
 						<div class="ornamen colored"></div>
-						<h3>Galeri <span>Prewedding</span></h3>
+						<h3><span>Galeri Prewedding</span></h3>
 						<p></p>
 					</div>
 					<style media="screen">
@@ -2482,7 +2483,8 @@
 					<?php if ($detail[0]->KONF_VIDEO_STATUS == "on") {
 					?>
 						<div class="section-title">
-							<h3>Video<span></span></h3>
+							<div class="ornamen colored"></div>
+							<h3><span>Video</span></h3>
 							<p></p>
 						</div>
 						<div class="row content">
@@ -2516,7 +2518,8 @@
 				<section id="about" class="about section-bg">
 					<div class="container">
 						<div class="section-title">
-							<h3>Live <span>Streaming</span></h3>
+							<div class="ornamen colored"></div>
+							<h3><span>Live Streaming</span></h3>
 						</div>
 						<img class="logo_streaming" height="70" src="http://localhost/Wedding/Wedding-CP/uploads/live/<?php echo $detail[0]->KONF_LIVE_PLATFORM; ?>.png">
 						<div class="row content">
@@ -2537,7 +2540,7 @@
 
 					<div class="section-title">
 						<div class="ornamen colored"></div>
-						<h3>Pesan <span>Anda</span></h3>
+						<h3><span>Pesan Anda</span></h3>
 					</div>
 
 					<div class="col-lg-12 mt-5 mt-lg-0">
@@ -2578,7 +2581,7 @@
 
 					<div class="section-title">
 						<div class="ornamen colored"></div>
-						<h3>Pesan <span>Masuk</span></h3>
+						<h3><span>Pesan Masuk</span></h3>
 					</div>
 
 					<ul class="faq-list">

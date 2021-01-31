@@ -16,4 +16,9 @@ class M_Library extends CI_Model
 		$hasil = $this->db->query('SELECT * FROM MUSIK ORDER BY MUSIK_NAMA ASC')->result();
 		return $hasil;
 	}
+	public function ornamen_list()
+	{
+		$hasil = $this->db->query('SELECT * FROM ORNAMEN ORDER BY ORNAMEN_INDEX ASC')->result();
+		return $hasil;
+	}
 }

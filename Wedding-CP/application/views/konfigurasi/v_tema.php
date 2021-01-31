@@ -11,6 +11,7 @@
   $web_font_intro = $tersimpan[0]->KONF_WEB_FONT_INTRO;
   $web_sampul = $tersimpan[0]->KONF_WEB_SAMPUL;
   $web_judul = $tersimpan[0]->KONF_WEB_JUDUL;
+  $web_ornamen = $tersimpan[0]->KONF_WEB_ORNAMEN;
 } else {
   $web_warna = '';
   $web_font = '';
@@ -18,9 +19,9 @@
   $web_font_intro = '';
   $web_sampul = '';
   $web_judul = '';
+  $web_ornamen = '';
 }
 ?>
-
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -78,6 +79,39 @@
                                                                                                                                         ?>>
                             <label for="<?php echo $key->WARNA_KODE ?>">
                               <p style="font-size:25px"><i class="fas fa-square" style="color:<?php echo $key->WARNA_KODE ?>"></i></p>
+                            </label>
+                          </div>
+                        <?php
+                        } ?>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- /.form-group -->
+              </div>
+              <div class="col-md-12">
+                <div class="card card-secondary">
+                  <div class="card-header">
+                    <h3 class="card-title">Ornamen</h3>
+                  </div>
+                  <div class="card-body">
+
+                    <div class="form-group">
+                      <div class="form-group clearfix">
+                        <?php foreach ($ornamen as $key) {
+                        ?>
+                          <div class="icheck-primary d-inline mr-4 mb-5">
+                            <input type="radio" id="ornamen_<?php echo $key->ORNAMEN_INDEX ?>" name="ornamen" value="<?php echo $key->ORNAMEN_INDEX ?>" <?php
+                                                                                                                                                        if ($web_ornamen == $key->ORNAMEN_INDEX) {
+                                                                                                                                                          echo "checked";
+                                                                                                                                                        } else {
+                                                                                                                                                          echo "";
+                                                                                                                                                        }
+
+                                                                                                                                                        ?>>
+                            <label for="ornamen_<?php echo $key->ORNAMEN_INDEX ?>">
+                              <img height="40" src="<?php echo base_url(); ?>uploads/ornamen/<?php echo $key->ORNAMEN_INDEX ?>.png"></img>
                             </label>
                           </div>
                         <?php
