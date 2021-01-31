@@ -44,7 +44,7 @@
 
   $(".copy").on("click", function() {
     var elem = $(".link_undangan").val()
-    alert("Berhasil disalin")
+    Swal.fire('Berhasil', 'Link berhasil disalin', 'success')
     copyToClipboard(elem)
   })
 </script>

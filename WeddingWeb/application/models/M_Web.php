@@ -51,12 +51,6 @@ class M_Web extends CI_Model
     return $hasil;
   }
 
-  public function font_list()
-  {
-    $hasil = $this->db->query('SELECT * FROM FONT ORDER BY FONT_NAMA ASC')->result();
-    return $hasil;
-  }
-
   public function m_simpan()
   {
     $data = array(

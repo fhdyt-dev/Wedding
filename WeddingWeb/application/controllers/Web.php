@@ -24,7 +24,6 @@ class Web extends CI_Controller
 		$this->load->model('M_Web');
 		$data['link'] =	$this->M_Web->link($this->uri->segment('1'));
 		$data['detail'] = $this->M_Web->detail();
-		$data['font'] = $this->M_Web->font_list();
 		$data['galeri'] = $this->M_Web->galeri_list();
 		$data['pesan'] = $this->M_Web->pesan_list();
 		if (empty($data['detail'])) {

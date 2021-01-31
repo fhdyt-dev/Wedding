@@ -27,13 +27,10 @@
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-	<?php
-	foreach ($font as $row) {
-	?>
-		<link href="https://fonts.googleapis.com/css?family=<?php echo $row->FONT_KODE; ?>:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
-	<?php
-	}
-	?>
+	<link href="https://fonts.googleapis.com/css?family=<?php echo str_replace(" ", "+", $detail[0]->KONF_WEB_FONT); ?>:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=<?php echo str_replace(" ", "+", $detail[0]->KONF_WEB_FONT_JUDUL); ?>:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=<?php echo str_replace(" ", "+", $detail[0]->KONF_WEB_FONT_INTRO); ?>:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
 	<!-- Vendor CSS Files -->
 	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>assets/theme/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
@@ -494,10 +491,9 @@
 	}
 
 	#hero .btn-get-started {
-		font-family: "Poppins", sans-serif;
-		text-transform: uppercase;
+		font-family: "<?php echo $detail[0]->KONF_WEB_FONT_JUDUL ?>", sans-serif;
+		/* text-transform: uppercase; */
 		font-weight: 400;
-		font-size: 13px;
 		letter-spacing: 1px;
 		display: inline-block;
 		padding: 8px 30px 9px 30px;
@@ -571,6 +567,7 @@
 		display: inline-block;
 		text-transform: uppercase;
 		border-radius: 50px;
+		margin-top: 20px;
 
 	}
 
@@ -629,6 +626,7 @@
 
 	.about .content p:last-child {
 		margin-bottom: 0;
+		font-size: 18px;
 	}
 
 	.about .content .btn-learn-more {
@@ -2159,6 +2157,18 @@
 		margin-right: auto;
 		margin-bottom: 25px;
 	}
+
+	.ornamen {
+		height: 50px;
+		margin-top: 4px;
+	}
+
+	.colored {
+		background-color: <?php echo $detail[0]->KONF_WEB_WARNA; ?>;
+		/* defines the background color of the image */
+		mask: url(http://localhost/Wedding/Wedding-CP/uploads/ornamen/3.png) no-repeat center / contain;
+		-webkit-mask: url(http://localhost/Wedding/Wedding-CP/uploads/ornamen/3.png) no-repeat center / contain;
+	}
 </style>
 
 <body>
@@ -2222,7 +2232,8 @@
 			<section id="about" class="about">
 				<div class="container">
 					<div class="section-title">
-						<h3><span><?php echo $detail[0]->KONF_PEMBUKAAN_JUDUL; ?></span></h3>
+						<div class="ornamen colored"></div>
+						<h3><?php echo $detail[0]->KONF_PEMBUKAAN_JUDUL; ?></h3>
 					</div>
 					<div class="row content">
 						<div class="col-lg-12">
@@ -2237,7 +2248,8 @@
 				<div class="container">
 
 					<div class="section-title">
-						<h3><span>Memperkenalkan</span></h3>
+						<div class="ornamen colored"></div>
+						<h3>Memperkenalkan</h3>
 						<p><?php echo $detail[0]->KONF_PENGANTIN_SUB_TITLE; ?></p>
 					</div>
 
@@ -2281,7 +2293,8 @@
 				<div class="container">
 
 					<div class="section-title">
-						<h3><span>Jadwal</span></h3>
+						<div class="ornamen colored"></div>
+						<h3>Jadwal</h3>
 						<p>Kami mengharapkan kehadiran anda pada acara yang kami selenggarakan.</p>
 					</div>
 
@@ -2385,6 +2398,7 @@
 				<section id="about" class="about section-bg">
 					<div class="container">
 						<div class="section-title">
+							<div class="ornamen colored"></div>
 							<h2>Informasi</h2>
 							<h3><span><?php echo $detail[0]->KONF_INFORMASI_JUDUL; ?></span></h3>
 						</div>
@@ -2402,7 +2416,7 @@
 			<section id="portfolio" class="portfolio">
 				<div class="container">
 					<div class="section-title">
-						<h2>Kenangan Kami</h2>
+						<div class="ornamen colored"></div>
 						<h3>Galeri <span>Prewedding</span></h3>
 						<p></p>
 					</div>
@@ -2507,7 +2521,7 @@
 						<img class="logo_streaming" height="70" src="http://localhost/Wedding/Wedding-CP/uploads/live/<?php echo $detail[0]->KONF_LIVE_PLATFORM; ?>.png">
 						<div class="row content">
 							<div class="col-lg-12">
-								<p style="text-align:center;padding-bottom:20px;"><?php echo $detail[0]->KONF_LIVE_KETERANGAN; ?></p>
+								<p style="text-align:center;padding-bottom:20px; font-size:18px;"><?php echo $detail[0]->KONF_LIVE_KETERANGAN; ?></p>
 							</div>
 							<a href="<?php echo $detail[0]->KONF_LIVE_LINK; ?>" target="_blank" class="btn-learn-more">Buka Live Streaming</a>
 						</div>
@@ -2522,7 +2536,7 @@
 				<div class="container">
 
 					<div class="section-title">
-						<h2>RSVP</h2>
+						<div class="ornamen colored"></div>
 						<h3>Pesan <span>Anda</span></h3>
 					</div>
 
@@ -2563,6 +2577,7 @@
 				<div class="container">
 
 					<div class="section-title">
+						<div class="ornamen colored"></div>
 						<h3>Pesan <span>Masuk</span></h3>
 					</div>
 

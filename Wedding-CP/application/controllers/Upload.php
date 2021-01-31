@@ -37,7 +37,7 @@ class Upload extends CI_Controller
 		$config['name']					= random_string('sha1', 40);
 		$config['upload_path']          = './uploads/cover';
 		$config['allowed_types']        = 'gif|jpg|png';
-		$config['file_name']            = $config['name'] . "." . pathinfo($_FILES["userfile"]["name"], PATHINFO_EXTENSION);
+		$config['file_name']            = $this->session->userdata('USER_LINK') . "_" . $config['name'] . "." . pathinfo($_FILES["userfile"]["name"], PATHINFO_EXTENSION);
 		$config['max_size']             = 1024;
 
 		$this->load->library('upload', $config);

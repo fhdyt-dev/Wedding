@@ -97,22 +97,21 @@
                   <div class="card-body">
                     <div class="form-group">
                       <div class="form-group clearfix">
-                        <?php foreach ($font as $key) {
-                        ?>
-                          <div class="icheck-primary mr-4 mb-2">
-                            <input type="radio" id="<?php echo $key->FONT_KODE ?>_intro" name="font_intro" value="<?php echo $key->FONT_NAMA ?>" <?php
-                                                                                                                                                  if ($key->FONT_NAMA == $web_font_intro) {
-                                                                                                                                                    echo "checked";
-                                                                                                                                                  } else {
-                                                                                                                                                    echo "";
-                                                                                                                                                  }
-                                                                                                                                                  ?>>
-                            <label for="<?php echo $key->FONT_KODE ?>_intro">
-                              <p style="font-family: '<?php echo $key->FONT_NAMA ?>';font-size:25px"><?php echo $key->FONT_NAMA ?></p>
-                            </label>
-                          </div>
-                        <?php
-                        } ?>
+                        <select class="form-control" name="font_intro">
+                          <?php foreach ($font as $key) {
+                          ?>
+                            <optgroup style="font-family:<?php echo $key->FONT_NAMA ?>;font-size:25px">
+                              <option <?php
+                                      if ($key->FONT_NAMA == $web_font_intro) {
+                                        echo "selected";
+                                      } else {
+                                        echo "";
+                                      }
+                                      ?>><?php echo $key->FONT_NAMA ?></option>
+                            </optgroup>
+                          <?php
+                          } ?>
+                        </select>
                       </div>
                     </div>
                   </div>
@@ -128,22 +127,21 @@
                   <div class="card-body">
                     <div class="form-group">
                       <div class="form-group clearfix">
-                        <?php foreach ($font as $key) {
-                        ?>
-                          <div class="icheck-primary mr-4 mb-2">
-                            <input type="radio" id="<?php echo $key->FONT_KODE ?>_judul" name="font_judul" value="<?php echo $key->FONT_NAMA ?>" <?php
-                                                                                                                                                  if ($key->FONT_NAMA == $web_font_judul) {
-                                                                                                                                                    echo "checked";
-                                                                                                                                                  } else {
-                                                                                                                                                    echo "";
-                                                                                                                                                  }
-                                                                                                                                                  ?>>
-                            <label for="<?php echo $key->FONT_KODE ?>_judul">
-                              <p style="font-family: '<?php echo $key->FONT_NAMA ?>';font-size:25px"><?php echo $key->FONT_NAMA ?></p>
-                            </label>
-                          </div>
-                        <?php
-                        } ?>
+                        <select class="form-control" name="font_judul">
+                          <?php foreach ($font as $key) {
+                          ?>
+                            <optgroup style="font-family:<?php echo $key->FONT_NAMA ?>;font-size:25px">
+                              <option <?php
+                                      if ($key->FONT_NAMA == $web_font_judul) {
+                                        echo "selected";
+                                      } else {
+                                        echo "";
+                                      }
+                                      ?>><?php echo $key->FONT_NAMA ?></option>
+                            </optgroup>
+                          <?php
+                          } ?>
+                        </select>
                       </div>
                     </div>
                   </div>
@@ -159,22 +157,21 @@
                   <div class="card-body">
                     <div class="form-group">
                       <div class="form-group clearfix">
-                        <?php foreach ($font as $key) {
-                        ?>
-                          <div class="icheck-primary mr-4 mb-2">
-                            <input type="radio" id="<?php echo $key->FONT_KODE ?>" name="font" value="<?php echo $key->FONT_NAMA ?>" <?php
-                                                                                                                                      if ($key->FONT_NAMA == $web_font) {
-                                                                                                                                        echo "checked";
-                                                                                                                                      } else {
-                                                                                                                                        echo "";
-                                                                                                                                      }
-                                                                                                                                      ?>>
-                            <label for="<?php echo $key->FONT_KODE ?>">
-                              <p style="font-family: '<?php echo $key->FONT_NAMA ?>';font-size:25px"><?php echo $key->FONT_NAMA ?></p>
-                            </label>
-                          </div>
-                        <?php
-                        } ?>
+                        <select class="form-control" name="font">
+                          <?php foreach ($font as $key) {
+                          ?>
+                            <optgroup style="font-family:<?php echo $key->FONT_NAMA ?>;font-size:25px">
+                              <option <?php
+                                      if ($key->FONT_NAMA == $web_font) {
+                                        echo "selected";
+                                      } else {
+                                        echo "";
+                                      }
+                                      ?>><?php echo $key->FONT_NAMA ?></option>
+                            </optgroup>
+                          <?php
+                          } ?>
+                        </select>
                       </div>
                     </div>
                   </div>

@@ -89,22 +89,56 @@
     });
   }
 
+  // function status(id) {
+  //   if (confirm("Ganti status pesan ?")) {
+  //     $.ajax({
+  //       type: 'ajax',
+  //       url: '<?php echo base_url() ?>index.php/konfigurasi/pesan/status/' + id,
+  //       async: false,
+  //       dataType: 'json',
+  //       success: function(data) {
+  //         if (data.length === 0) {} else {
+  //           pesan_list();
+  //         }
+  //       },
+  //       error: function(x, e) {
+  //         alert("Gagal Menghapus")
+  //       } //end error
+  //     });
+  //   }
+  // }
+
   function status(id) {
-    if (confirm("Ganti status pesan ?")) {
-      $.ajax({
-        type: 'ajax',
-        url: '<?php echo base_url() ?>index.php/konfigurasi/pesan/status/' + id,
-        async: false,
-        dataType: 'json',
-        success: function(data) {
-          if (data.length === 0) {} else {
-            pesan_list();
-          }
-        },
-        error: function(x, e) {
-          alert("Gagal Menghapus")
-        } //end error
-      });
-    }
+    Swal.fire({
+      title: 'Ganti status pesan ?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: `Ganti`,
+      denyButtonText: `Batal`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        $.ajax({
+          type: 'ajax',
+          url: '<?php echo base_url() ?>index.php/konfigurasi/pesan/status/' + id,
+          async: false,
+          dataType: 'json',
+          success: function(data) {
+            if (data.length === 0) {} else {
+              pesan_list();
+              Swal.fire('Berhasil', 'Status berhasil diganti', 'success')
+            }
+          },
+          error: function(x, e) {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Proses Gagal'
+            })
+          } //end error
+        });
+
+      }
+    })
   }
 </script>

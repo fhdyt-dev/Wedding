@@ -124,6 +124,7 @@
             async: false,
             success: function(data) {
                 undangan_list();
+                Swal.fire('Berhasil', 'Undangan berhasil ditambahkan', 'success')
                 $("#undanganModal").modal("hide")
             }
         });
@@ -140,26 +141,60 @@
 
     $("tbody#zone_data").on("click", "a.copy_link", function() {
         var elem = $(this).attr("link")
-        alert("Berhasil disalin")
+        Swal.fire('Berhasil', 'Link berhasil disalin', 'success')
         copyToClipboard(elem)
     })
 
+    // function hapus(id) {
+    //     if (confirm("Hapus undangan ?")) {
+    //         $.ajax({
+    //             type: 'ajax',
+    //             url: '<?php echo base_url() ?>index.php/undangan/hapus/' + id,
+    //             async: false,
+    //             dataType: 'json',
+    //             success: function(data) {
+    //                 if (data.length === 0) {} else {
+    //                     undangan_list();
+    //                 }
+    //             },
+    //             error: function(x, e) {
+    //                 alert("Gagal Menghapus")
+    //             } //end error
+    //         });
+    //     }
+    // }
+
     function hapus(id) {
-        if (confirm("Hapus undangan ?")) {
-            $.ajax({
-                type: 'ajax',
-                url: '<?php echo base_url() ?>index.php/undangan/hapus/' + id,
-                async: false,
-                dataType: 'json',
-                success: function(data) {
-                    if (data.length === 0) {} else {
-                        undangan_list();
-                    }
-                },
-                error: function(x, e) {
-                    alert("Gagal Menghapus")
-                } //end error
-            });
-        }
+        Swal.fire({
+            title: 'Hapus undangan ?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: `Hapus`,
+            denyButtonText: `Batal`,
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: 'ajax',
+                    url: '<?php echo base_url() ?>index.php/undangan/hapus/' + id,
+                    async: false,
+                    dataType: 'json',
+                    success: function(data) {
+                        if (data.length === 0) {} else {
+                            undangan_list();
+                            Swal.fire('Terhapus!', 'Undangan telah terhapus', 'success')
+                        }
+                    },
+                    error: function(x, e) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Proses Gagal'
+                        })
+                    } //end error
+                });
+
+            }
+        })
     }
 </script>

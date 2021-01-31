@@ -62,6 +62,7 @@
 <!-- /.content-wrapper -->
 <script>
   $(function() {
+
     foto_list();
   });
 
@@ -101,6 +102,13 @@
 
 
   $('#submit_album').submit(function(e) {
+    Swal.fire({
+      title: 'Proses Upload gambar...',
+      icon: 'info',
+      allowOutsideClick: false,
+      showConfirmButton: false,
+    })
+
     e.preventDefault();
     $.ajax({
       url: '<?php echo base_url(); ?>index.php/upload/simpan',
@@ -111,46 +119,81 @@
       cache: false,
       async: false,
       success: function(data) {
+        swal.close()
         foto_list();
+        Swal.fire({
+          title: 'Berhasil',
+          icon: 'success',
+        })
       }
     });
   })
 
   function hapus(id) {
-    if (confirm("Hapus gambar ?")) {
-      $.ajax({
-        type: 'ajax',
-        url: '<?php echo base_url() ?>index.php/upload/hapus/' + id,
-        async: false,
-        dataType: 'json',
-        success: function(data) {
-          if (data.length === 0) {} else {
-            foto_list();
-          }
-        },
-        error: function(x, e) {
-          alert("Gagal Menghapus")
-        } //end error
-      });
-    }
+    Swal.fire({
+      title: 'Hapus gambar ?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: `Hapus`,
+      denyButtonText: `Batal`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        $.ajax({
+          type: 'ajax',
+          url: '<?php echo base_url() ?>index.php/upload/hapus/' + id,
+          async: false,
+          dataType: 'json',
+          success: function(data) {
+            if (data.length === 0) {} else {
+              foto_list();
+              Swal.fire('Terhapus!', 'Gambar berhasil dihapus', 'success')
+            }
+          },
+          error: function(x, e) {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Proses Gagal'
+            })
+          } //end error
+        });
+
+      }
+    })
   }
 
   function galeri(id) {
-    if (confirm("Ganti status gambar ?")) {
-      $.ajax({
-        type: 'ajax',
-        url: '<?php echo base_url() ?>index.php/upload/galeri/' + id,
-        async: false,
-        dataType: 'json',
-        success: function(data) {
-          if (data.length === 0) {} else {
-            foto_list();
-          }
-        },
-        error: function(x, e) {
-          alert("Gagal Menghapus")
-        } //end error
-      });
-    }
+    Swal.fire({
+      title: 'Ganti status gambar ?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: `Ganti`,
+      denyButtonText: `Batal`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        $.ajax({
+          type: 'ajax',
+          url: '<?php echo base_url() ?>index.php/upload/galeri/' + id,
+          async: false,
+          dataType: 'json',
+          success: function(data) {
+            if (data.length === 0) {} else {
+              foto_list();
+              Swal.fire('Berhasil', 'Status berhasil diganti', 'success')
+            }
+          },
+          error: function(x, e) {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Proses Gagal'
+            })
+          } //end error
+        });
+
+      }
+    })
   }
 </script>

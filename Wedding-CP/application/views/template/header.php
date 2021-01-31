@@ -33,6 +33,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="<?php echo base_url(); ?>assets/theme/plugins/summernote/summernote-bs4.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/theme/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/theme/plugins/inputmask/jquery.inputmask.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/sweetalert.min.js"></script>
   <style media="screen">
     .masonry-container {
       -webkit-column-count: 3;
