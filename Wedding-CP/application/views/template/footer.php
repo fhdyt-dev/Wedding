@@ -21,11 +21,8 @@
     </div>
     <hr>
     <div class="row">
-      <!-- <div class="col-md-12 image_list"> -->
       <div class="col-md-12 image_list masonry-container">
-        <!-- <img src="<?php echo base_url() ?>uploads/cover/ebc31d486420ef43d1bf9fe3e748b3711ca76ac9.jpg" width="200" height="121" class="img-thumbnail" alt="...">
-            <img src="<?php echo base_url() ?>uploads/cover/f7a998df0829e873fc480fa4999b9932de93305c.png" width="200" height="121" class="img-thumbnail" alt="...">
-            <img src="<?php echo base_url() ?>uploads/cover/not_found.jpg" width="200" height="121" class="img-thumbnail" alt="..."> -->
+        <div class="loader"></div>
       </div>
     </div>
 

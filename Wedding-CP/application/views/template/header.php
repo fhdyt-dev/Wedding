@@ -79,6 +79,37 @@ scratch. This page gets rid of all links and provides the needed markup only.
         column-gap: 15px;
       }
     }
+
+    .loader {
+      border: 10px solid #f3f3f3;
+      border-radius: 80%;
+      border-top: 10px solid blue;
+      border-bottom: 10px solid blue;
+      width: 80px;
+      height: 80px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   </style>
 </head>
 
