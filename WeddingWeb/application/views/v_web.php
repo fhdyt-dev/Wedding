@@ -2270,7 +2270,7 @@
 					<div class="row">
 
 						<div class="col-lg-6 col-md-6 d-flex align-items-stretch">
-							<div class="aos-item" data-aos="flip-down" data-aos-duration="1000">
+							<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
 								<div class="member">
 									<div class="member-img">
 										<img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_PRIA_FOTO ?>" class="img-fluid" alt="">
@@ -2285,7 +2285,7 @@
 						</div>
 
 						<div class="col-lg-6 col-md-6 d-flex align-items-stretch">
-							<div class="aos-item" data-aos="flip-down" data-aos-duration="1000">
+							<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
 								<div class="member">
 									<div class="member-img">
 										<img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_WANITA_FOTO ?>" class="img-fluid" alt="">
@@ -2537,7 +2537,7 @@
 							<?php
 							foreach ($galeri as $row) {
 							?>
-								<div class="aos-item" data-aos="flip-up" data-aos-duration="1000">
+								<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
 									<div class="masonry-item">
 										<a href=""><img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $row->ALBUM_USER_FOTO; ?>" /></a>
 									</div>
@@ -2557,7 +2557,7 @@
 								<p></p>
 							</div>
 						</div>
-						<div class="aos-item" data-aos="flip-down" data-aos-duration="1000">
+						<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
 							<div class="row content">
 								<style>
 									iframe {
