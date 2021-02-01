@@ -176,8 +176,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="index3.html" class="brand-link">
-        <img src="<?php echo base_url(); ?>assets/theme/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <a href="/" class="brand-link">
+        <img src="<?php echo base_url(); ?>assets/theme/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image">
         <span class="brand-text font-weight-light">Client Area</span>
       </a>
 

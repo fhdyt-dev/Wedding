@@ -2375,7 +2375,7 @@
 			if ($detail[0]->KONF_JADWAL_COVID19 == "on") {
 			?>
 				<!-- ======= Features Section ======= -->
-				<section id="features" class="features">
+				<section id="pricing" class="features">
 					<div class="container">
 						<div class="section-title">
 							<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
@@ -2420,6 +2420,34 @@
 					</div>
 				</section><!-- End Features Section -->
 			<?php } ?>
+
+			<?php
+			if ($detail[0]->KONF_LIVE_STATUS == "on") {
+			?>
+				<!-- ======= Cta Section ======= -->
+				<section id="pricing" class="about section-bg">
+					<div class="container">
+						<div class="section-title">
+							<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
+								<div class="ornamen colored"></div>
+							</div>
+							<div class="aos-item" data-aos="fade-up" data-aos-duration="1000">
+								<h3><span>Live Streaming</span></h3>
+							</div>
+						</div>
+						<div class="aos-item" data-aos="zoom-in" data-aos-duration="1000">
+							<img class="logo_streaming" height="70" src="http://localhost/Wedding/Wedding-CP/uploads/live/<?php echo $detail[0]->KONF_LIVE_PLATFORM; ?>.png">
+							<div class="row content">
+								<div class="col-lg-12">
+									<p style="text-align:center;padding-bottom:20px; font-size:18px;"><?php echo $detail[0]->KONF_LIVE_KETERANGAN; ?></p>
+								</div>
+								<a href="<?php echo $detail[0]->KONF_LIVE_LINK; ?>" target="_blank" class="btn-learn-more">Buka Live Streaming</a>
+							</div>
+						</div>
+					</div>
+				</section><!-- End Cta Section -->
+			<?php } ?>
+
 			<?php
 			if ($detail[0]->KONF_INFORMASI_STATUS == "on") {
 			?>
@@ -2555,32 +2583,6 @@
 				</div>
 			</section><!-- End Portfolio Section -->
 
-			<?php
-			if ($detail[0]->KONF_LIVE_STATUS == "on") {
-			?>
-				<!-- ======= Cta Section ======= -->
-				<section id="about" class="about section-bg">
-					<div class="container">
-						<div class="section-title">
-							<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
-								<div class="ornamen colored"></div>
-							</div>
-							<div class="aos-item" data-aos="fade-up" data-aos-duration="1000">
-								<h3><span>Live Streaming</span></h3>
-							</div>
-						</div>
-						<div class="aos-item" data-aos="zoom-in" data-aos-duration="1000">
-							<img class="logo_streaming" height="70" src="http://localhost/Wedding/Wedding-CP/uploads/live/<?php echo $detail[0]->KONF_LIVE_PLATFORM; ?>.png">
-							<div class="row content">
-								<div class="col-lg-12">
-									<p style="text-align:center;padding-bottom:20px; font-size:18px;"><?php echo $detail[0]->KONF_LIVE_KETERANGAN; ?></p>
-								</div>
-								<a href="<?php echo $detail[0]->KONF_LIVE_LINK; ?>" target="_blank" class="btn-learn-more">Buka Live Streaming</a>
-							</div>
-						</div>
-					</div>
-				</section><!-- End Cta Section -->
-			<?php } ?>
 
 
 			<!-- ======= Contact Section ======= -->
@@ -2629,7 +2631,7 @@
 			</section><!-- End Contact Section -->
 
 			<!-- ======= F.A.Q Section ======= -->
-			<section id="faq" class="faq section-bg">
+			<section id="contact" class="faq section-bg">
 				<div class="container">
 
 					<div class="section-title">
