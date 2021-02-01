@@ -438,7 +438,7 @@
 
 	#hero:before {
 		content: "";
-		background: rgba(0, 0, 0, 0.6);
+		background: linear-gradient(to bottom, rgba(<?php echo $detail[0]->KONF_WEB_WARNA_RGB; ?>, 0.5), rgba(0, 0, 0, 0.3));
 		position: absolute;
 		bottom: 0;
 		top: 0;
@@ -487,6 +487,7 @@
 		color: #eee;
 		margin-bottom: 40px;
 		font-size: 18px;
+		font-weight: bold;
 		padding: 0 100px 0 100px;
 	}
 
