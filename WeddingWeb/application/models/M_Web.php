@@ -11,7 +11,7 @@ class M_Web extends CI_Model
                                 WEB.KONF_LINK=PENGANTIN.KONF_LINK
                                 LEFT JOIN KONF_PEMBUKAAN AS PEMBUKAAN
                                 ON
-                                WEB.KONF_LINK=PENGANTIN.KONF_LINK
+                                WEB.KONF_LINK=PEMBUKAAN.KONF_LINK
                                 LEFT JOIN KONF_JADWAL AS JADWAL
                                 ON
                                 WEB.KONF_LINK=JADWAL.KONF_LINK

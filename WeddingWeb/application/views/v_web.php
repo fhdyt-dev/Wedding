@@ -9,13 +9,18 @@
 	<meta content="" name="descriptison">
 	<meta content="" name="keywords">
 
-	<meta property="og:title" content="<?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> & <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?>">
+	<meta property="og:title" content="<?php if (empty($link)) {
+											echo "";
+										} else {
+											echo "To :" . $link[0]->UNDANGAN_KEPADA . " | ";
+										} ?>
+										<?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> & <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?>">
 	<meta property="og:description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami">
-	<meta property="og:image" content="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
+	<meta property="og:image" content="https://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
 
 	<meta property="twitter:title" content="<?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> & <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?>">
 	<meta property="twitter:description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami">
-	<meta property="twitter:image" content="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
+	<meta property="twitter:image" content="https://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
 	<meta name="twitter:card" content="summary_large_image">
 
 	<meta data-rh="true" name="description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami" />
@@ -91,7 +96,7 @@
 		position: fixed;
 		/* display: none; */
 		right: 15px;
-		bottom: 15px;
+		bottom: 30px;
 		z-index: 99999;
 		transition: 0.5s;
 	}
@@ -100,7 +105,7 @@
 		position: fixed;
 		display: none;
 		right: 15px;
-		bottom: 60px;
+		bottom: 80px;
 		z-index: 99999;
 		transition: 0.5s;
 	}
@@ -431,7 +436,7 @@
 	#hero {
 		width: 100%;
 		height: 100vh;
-		background: url("http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>") top center;
+		background: url("https://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>") top center;
 		background-size: cover;
 		position: relative;
 	}
@@ -1143,7 +1148,7 @@
 		font-weight: 700;
 		margin-bottom: 5px;
 		font-size: 30px;
-		color: #263238;
+		color: <?php echo $detail[0]->KONF_WEB_WARNA ?>;
 		font-family: "<?php echo $detail[0]->KONF_WEB_FONT_JUDUL ?>", sans-serif;
 	}
 
@@ -2167,22 +2172,23 @@
 	.colored {
 		background-color: <?php echo $detail[0]->KONF_WEB_WARNA; ?>;
 		/* defines the background color of the image */
-		mask: url(http://localhost/Wedding/Wedding-CP/uploads/ornamen/<?php echo $detail[0]->KONF_WEB_ORNAMEN; ?>.png) no-repeat center / contain;
-		-webkit-mask: url(http://localhost/Wedding/Wedding-CP/uploads/ornamen/<?php echo $detail[0]->KONF_WEB_ORNAMEN; ?>.png) no-repeat center / contain;
+		/* mask: url("https://get-married.site/uploads/ornamen/<?php echo $detail[0]->KONF_WEB_ORNAMEN; ?>.png") no-repeat center / contain; */
+		-webkit-mask: url("https://cors-anywhere.herokuapp.com/https://www.get-married.site/uploads/ornamen/<?php echo $detail[0]->KONF_WEB_ORNAMEN; ?>.png") no-repeat center / contain;
+
 	}
 </style>
 
 <body>
 
 	<!-- ======= Header ======= -->
-	<header id="header" class="fixed-top ">
+	<!-- <header id="header" class="fixed-top ">
 		<div class="container d-flex align-items-center">
 
-			<h1 class="logo mr-auto"><a href="index.html"><?php echo $detail[0]->KONF_WEB_JUDUL; ?></a></h1>
-			<!-- Uncomment below if you prefer to use an image logo -->
-			<!-- <a href="index.html" class="logo mr-auto"><img src="<?php echo base_url(); ?>assets/theme/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+			<h1 class="logo mr-auto"><a href="index.html"><?php echo $detail[0]->KONF_WEB_JUDUL; ?></a></h1> -->
+	<!-- Uncomment below if you prefer to use an image logo -->
+	<!-- <a href="index.html" class="logo mr-auto"><img src="<?php echo base_url(); ?>assets/theme/assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-			<nav class="nav-menu d-none d-lg-block">
+	<!-- <nav class="nav-menu d-none d-lg-block">
 				<ul>
 					<li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
 					<li><a href="#about">Informasi</a></li>
@@ -2192,9 +2198,9 @@
 					<li><a href="#contact">Pesan</a></li>
 
 				</ul>
-			</nav><!-- .nav-menu -->
+			</nav> -->
 
-		</div>
+	</div>
 	</header><!-- End Header -->
 
 	<!-- ======= Hero Section ======= -->
@@ -2274,7 +2280,7 @@
 							<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
 								<div class="member">
 									<div class="member-img">
-										<img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_PRIA_FOTO ?>" class="img-fluid" alt="">
+										<img src="https://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_PRIA_FOTO ?>" class="img-fluid" alt="">
 
 									</div>
 									<div class="member-info">
@@ -2289,7 +2295,7 @@
 							<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
 								<div class="member">
 									<div class="member-img">
-										<img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_WANITA_FOTO ?>" class="img-fluid" alt="">
+										<img src="https://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_WANITA_FOTO ?>" class="img-fluid" alt="">
 
 									</div>
 									<div class="member-info">
@@ -2437,7 +2443,7 @@
 							</div>
 						</div>
 						<div class="aos-item" data-aos="zoom-in" data-aos-duration="1000">
-							<img class="logo_streaming" height="70" src="http://localhost/Wedding/Wedding-CP/uploads/live/<?php echo $detail[0]->KONF_LIVE_PLATFORM; ?>.png">
+							<img class="logo_streaming" height="70" src="https://get-married.site/uploads/live/<?php echo $detail[0]->KONF_LIVE_PLATFORM; ?>.png">
 							<div class="row content">
 								<div class="col-lg-12">
 									<p style="text-align:center;padding-bottom:20px; font-size:18px;"><?php echo $detail[0]->KONF_LIVE_KETERANGAN; ?></p>
@@ -2540,7 +2546,7 @@
 							?>
 								<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
 									<div class="masonry-item">
-										<a href=""><img src="http://localhost/Wedding/Wedding-CP/uploads/cover/<?php echo $row->ALBUM_USER_FOTO; ?>" /></a>
+										<a href=""><img src="https://get-married.site/uploads/cover/<?php echo $row->ALBUM_USER_FOTO; ?>" /></a>
 									</div>
 								</div>
 							<?php } ?>
@@ -2670,8 +2676,8 @@
 	<!-- ======= Footer ======= -->
 	<footer id="footer">
 		<!-- <audio autoplay loop id="my_audio">
-	<source src="http://localhost/Wedding/Wedding-CP/uploads/mp3/playdate.ogg" type="audio/ogg">
-	<source src="http://localhost/Wedding/Wedding-CP/uploads/mp3/playdate.mp3" type="audio/mpeg">
+	<source src="https://get-married.site/uploads/mp3/playdate.ogg" type="audio/ogg">
+	<source src="https://get-married.site/uploads/mp3/playdate.mp3" type="audio/mpeg">
 	</audio> -->
 		<div class="container d-md-flex py-4">
 
@@ -2719,13 +2725,13 @@
 
 	<!-- Template Main JS File -->
 	<script src="<?php echo base_url(); ?>assets/theme/assets/js/main.js"></script>
-	<iframe src="http://localhost/Wedding/Wedding-CP/uploads/mp3/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+	<iframe src="https://get-married.site/uploads/mp3/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js" integrity="sha512-L6Z/YtIPQ7eU3BProP34WGU5yIRk7tNHk7vaC2dB1Vy1atz6wl9mCkTPPZ2Rn1qPr+vY2mZ9odZLdGYuaBk7dQ==" crossorigin="anonymous"></script>
 	<script>
 		let autoplay = true;
 		let soundID;
 		var sound = new Howl({
-			src: ['http://localhost/Wedding/Wedding-CP/uploads/mp3/<?php echo $nama_musik; ?>'],
+			src: ['https://get-married.site/uploads/mp3/<?php echo $nama_musik; ?>'],
 			autoplay: autoplay,
 			loop: true,
 		});
