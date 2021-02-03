@@ -1043,7 +1043,7 @@
 	}
 
 	.faq .faq-list li {
-		padding: 0 0 20px 25px;
+		padding: 0 0 20px 0;
 		text-align: center;
 	}
 
@@ -2173,7 +2173,7 @@
 		background-color: <?php echo $detail[0]->KONF_WEB_WARNA; ?>;
 		/* defines the background color of the image */
 		/* mask: url("https://get-married.site/uploads/ornamen/<?php echo $detail[0]->KONF_WEB_ORNAMEN; ?>.png") no-repeat center / contain; */
-		-webkit-mask: url("https://cors-anywhere.herokuapp.com/https://www.get-married.site/uploads/ornamen/<?php echo $detail[0]->KONF_WEB_ORNAMEN; ?>.png") no-repeat center / contain;
+		-webkit-mask: url("./assets/ornamen/<?php echo $detail[0]->KONF_WEB_ORNAMEN; ?>.png") no-repeat center / contain;
 
 	}
 </style>
