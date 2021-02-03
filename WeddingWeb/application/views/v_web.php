@@ -2683,7 +2683,7 @@
 
 			<div class="mr-md-auto text-center text-md-left">
 				<div class="copyright">
-					&copy; Copyright <strong><span>segeranikah.id</span></strong>. All Rights Reserved
+					&copy; Copyright <strong><span><a href="https://mengundang.co.id/">mengundang.co.id</a></span></strong>. All Rights Reserved
 				</div>
 				<div class="credits">
 					<!-- All the links in the footer should remain intact. -->
