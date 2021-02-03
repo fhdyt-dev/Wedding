@@ -23,6 +23,12 @@
 }
 ?>
 
+<style>
+  select,
+  option {
+    font-size: 24px;
+  }
+</style>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -134,15 +140,15 @@
                         <select class="form-control" name="font_intro">
                           <?php foreach ($font as $key) {
                           ?>
-                            <optgroup style="font-family:<?php echo $key->FONT_NAMA ?>;font-size:25px">
-                              <option <?php
-                                      if ($key->FONT_NAMA == $web_font_intro) {
-                                        echo "selected";
-                                      } else {
-                                        echo "";
-                                      }
-                                      ?>><?php echo $key->FONT_NAMA ?></option>
-                            </optgroup>
+                            <!-- <optgroup style="font-family:<?php echo $key->FONT_NAMA ?>;font-size:25px"> -->
+                            <option <?php
+                                    if ($key->FONT_NAMA == $web_font_intro) {
+                                      echo "selected";
+                                    } else {
+                                      echo "";
+                                    }
+                                    ?> style="font-family:<?php echo $key->FONT_NAMA ?>"><?php echo $key->FONT_NAMA ?></option>
+                            <!-- </optgroup> -->
                           <?php
                           } ?>
                         </select>
@@ -164,15 +170,13 @@
                         <select class="form-control" name="font_judul">
                           <?php foreach ($font as $key) {
                           ?>
-                            <optgroup style="font-family:<?php echo $key->FONT_NAMA ?>;font-size:25px">
-                              <option <?php
-                                      if ($key->FONT_NAMA == $web_font_judul) {
-                                        echo "selected";
-                                      } else {
-                                        echo "";
-                                      }
-                                      ?>><?php echo $key->FONT_NAMA ?></option>
-                            </optgroup>
+                            <option <?php
+                                    if ($key->FONT_NAMA == $web_font_judul) {
+                                      echo "selected";
+                                    } else {
+                                      echo "";
+                                    }
+                                    ?> style="font-family:<?php echo $key->FONT_NAMA ?>"><?php echo $key->FONT_NAMA ?></option>
                           <?php
                           } ?>
                         </select>
@@ -194,15 +198,13 @@
                         <select class="form-control" name="font">
                           <?php foreach ($font as $key) {
                           ?>
-                            <optgroup style="font-family:<?php echo $key->FONT_NAMA ?>;font-size:25px">
-                              <option <?php
-                                      if ($key->FONT_NAMA == $web_font) {
-                                        echo "selected";
-                                      } else {
-                                        echo "";
-                                      }
-                                      ?>><?php echo $key->FONT_NAMA ?></option>
-                            </optgroup>
+                            <option <?php
+                                    if ($key->FONT_NAMA == $web_font) {
+                                      echo "selected";
+                                    } else {
+                                      echo "";
+                                    }
+                                    ?> style="font-family:<?php echo $key->FONT_NAMA ?>"><?php echo $key->FONT_NAMA ?></option>
                           <?php
                           } ?>
                         </select>
