@@ -16,11 +16,11 @@
 										} ?>
 										<?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> & <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?>">
 	<meta property="og:description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami">
-	<meta property="og:image" content="https://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
+	<meta property="og:image" content="https://mengundang.co.id/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
 
 	<meta property="twitter:title" content="<?php echo $detail[0]->KONF_WEB_JUDUL; ?>, <?php echo $detail[0]->KONF_PENGANTIN_PRIA_NAMA; ?> & <?php echo $detail[0]->KONF_PENGANTIN_WANITA_NAMA; ?>">
 	<meta property="twitter:description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami">
-	<meta property="twitter:image" content="https://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
+	<meta property="twitter:image" content="https://mengundang.co.id/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>">
 	<meta name="twitter:card" content="summary_large_image">
 
 	<meta data-rh="true" name="description" content="Turut mengundang teman-teman, sahabat dan keluarga menyaksikan pengesahan kisah cinta Kami" />
@@ -436,7 +436,7 @@
 	#hero {
 		width: 100%;
 		height: 100vh;
-		background: url("https://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>") top center;
+		background: url("https://mengundang.co.id/uploads/cover/<?php echo $detail[0]->KONF_WEB_SAMPUL ?>") top center;
 		background-size: cover;
 		position: relative;
 	}
@@ -2172,7 +2172,7 @@
 	.colored {
 		background-color: <?php echo $detail[0]->KONF_WEB_WARNA; ?>;
 		/* defines the background color of the image */
-		/* mask: url("https://get-married.site/uploads/ornamen/<?php echo $detail[0]->KONF_WEB_ORNAMEN; ?>.png") no-repeat center / contain; */
+		/* mask: url("https://mengundang.co.id/uploads/ornamen/<?php echo $detail[0]->KONF_WEB_ORNAMEN; ?>.png") no-repeat center / contain; */
 		-webkit-mask: url("./assets/ornamen/<?php echo $detail[0]->KONF_WEB_ORNAMEN; ?>.png") no-repeat center / contain;
 
 	}
@@ -2280,7 +2280,7 @@
 							<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
 								<div class="member">
 									<div class="member-img">
-										<img src="https://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_PRIA_FOTO ?>" class="img-fluid" alt="">
+										<img src="https://mengundang.co.id/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_PRIA_FOTO ?>" class="img-fluid" alt="">
 
 									</div>
 									<div class="member-info">
@@ -2295,7 +2295,7 @@
 							<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
 								<div class="member">
 									<div class="member-img">
-										<img src="https://get-married.site/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_WANITA_FOTO ?>" class="img-fluid" alt="">
+										<img src="https://mengundang.co.id/uploads/cover/<?php echo $detail[0]->KONF_PENGANTIN_WANITA_FOTO ?>" class="img-fluid" alt="">
 
 									</div>
 									<div class="member-info">
@@ -2443,7 +2443,7 @@
 							</div>
 						</div>
 						<div class="aos-item" data-aos="zoom-in" data-aos-duration="1000">
-							<img class="logo_streaming" height="70" src="https://get-married.site/uploads/live/<?php echo $detail[0]->KONF_LIVE_PLATFORM; ?>.png">
+							<img class="logo_streaming" height="70" src="https://mengundang.co.id/uploads/live/<?php echo $detail[0]->KONF_LIVE_PLATFORM; ?>.png">
 							<div class="row content">
 								<div class="col-lg-12">
 									<p style="text-align:center;padding-bottom:20px; font-size:18px;"><?php echo $detail[0]->KONF_LIVE_KETERANGAN; ?></p>
@@ -2546,7 +2546,7 @@
 							?>
 								<div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
 									<div class="masonry-item">
-										<a href=""><img src="https://get-married.site/uploads/cover/<?php echo $row->ALBUM_USER_FOTO; ?>" /></a>
+										<a href=""><img src="https://mengundang.co.id/uploads/cover/<?php echo $row->ALBUM_USER_FOTO; ?>" /></a>
 									</div>
 								</div>
 							<?php } ?>
@@ -2676,8 +2676,8 @@
 	<!-- ======= Footer ======= -->
 	<footer id="footer">
 		<!-- <audio autoplay loop id="my_audio">
-	<source src="https://get-married.site/uploads/mp3/playdate.ogg" type="audio/ogg">
-	<source src="https://get-married.site/uploads/mp3/playdate.mp3" type="audio/mpeg">
+	<source src="https://mengundang.co.id/uploads/mp3/playdate.ogg" type="audio/ogg">
+	<source src="https://mengundang.co.id/uploads/mp3/playdate.mp3" type="audio/mpeg">
 	</audio> -->
 		<div class="container d-md-flex py-4">
 
@@ -2725,13 +2725,13 @@
 
 	<!-- Template Main JS File -->
 	<script src="<?php echo base_url(); ?>assets/theme/assets/js/main.js"></script>
-	<iframe src="https://get-married.site/uploads/mp3/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+	<iframe src="https://mengundang.co.id/uploads/mp3/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js" integrity="sha512-L6Z/YtIPQ7eU3BProP34WGU5yIRk7tNHk7vaC2dB1Vy1atz6wl9mCkTPPZ2Rn1qPr+vY2mZ9odZLdGYuaBk7dQ==" crossorigin="anonymous"></script>
 	<script>
 		let autoplay = true;
 		let soundID;
 		var sound = new Howl({
-			src: ['https://get-married.site/uploads/mp3/<?php echo $nama_musik; ?>'],
+			src: ['https://mengundang.co.id/uploads/mp3/<?php echo $nama_musik; ?>'],
 			autoplay: autoplay,
 			loop: true,
 		});

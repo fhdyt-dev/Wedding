@@ -24,7 +24,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = 'http://localhost/Wedding/Wedding-CP';
-$config['base_url'] = 'https://get-married.site';
+$config['base_url'] = 'https://mengundang.co.id';
 
 /*
 |--------------------------------------------------------------------------
