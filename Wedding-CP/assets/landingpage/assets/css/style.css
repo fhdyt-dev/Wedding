@@ -922,8 +922,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-	background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)),
-		url("../img/cta-bg.jpg") fixed center center;
+	background-color: #343a40;
 	background-size: cover;
 	padding: 120px 0;
 }
@@ -1863,9 +1862,8 @@ section {
 
 #footer .credits a {
 	transition: 0.3s;
-	color: #fff;
+	color: #343a40;
 }
-
 
 @media (max-width: 768px) {
 	#footer .footer-bottom {

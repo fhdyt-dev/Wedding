@@ -35,14 +35,6 @@
             </div>
           </div>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="email" placeholder="Email" required>
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-envelope"></span>
-              </div>
-            </div>
-          </div>
-          <div class="input-group mb-3">
             <input type="text" class="form-control" name="username" placeholder="Username" required>
             <div class="input-group-append">
               <div class="input-group-text">
@@ -51,7 +43,7 @@
             </div>
           </div>
           <div class="input-group mb-3">
-            <input type="password" class="form-control" name="password" placeholder="Password" required>
+            <input type="password" class="form-control password" name="password" onkeyup="check_password()" placeholder="Password" required>
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
@@ -59,19 +51,27 @@
             </div>
           </div>
           <div class="input-group mb-3">
-            <input type="password" class="form-control" name="retype_password" placeholder="Ulangi Password" required>
+            <input type="password" class="form-control" name="retype_password" id="retype_password" onkeyup="check_password()" placeholder="Ulangi Password" required>
+
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
               </div>
             </div>
+            <div id="validationServer03Feedback" class="invalid-feedback">
+              Password tidak sesuai.
+            </div>
+            <div class="valid-feedback">
+              Password Sesuai.
+            </div>
+
           </div>
           <div class="row">
             <div class="col-8">
             </div>
             <!-- /.col -->
             <div class="col-4">
-              <button type="submit" class="btn btn-primary btn-block">Daftar</button>
+              <button type="submit" class="btn btn-primary btn-block simpan_btn">Daftar</button>
             </div>
             <!-- /.col -->
           </div>
@@ -88,6 +88,22 @@
   <script src="<?php echo base_url(); ?>assets/theme/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
   <script src="<?php echo base_url(); ?>assets/theme/dist/js/adminlte.min.js"></script>
+  <script>
+    function check_password() {
+      var password = $('.password').val()
+      var password_confirm = $('#retype_password').val()
+      if (password == password_confirm) {
+        console.log("Sukses")
+        $('.simpan_btn').attr('disabled', false)
+        $('#retype_password').attr('class', 'form-control is-valid')
+
+      } else {
+        console.log("Password tidak sama")
+        $('.simpan_btn').attr('disabled', true)
+        $('#retype_password').attr('class', 'form-control is-invalid')
+      }
+    }
+  </script>
 </body>
 
 </html>

@@ -295,7 +295,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?php echo base_url(); ?>Password" class="nav-link">
+              <a href="<?php echo base_url(); ?>gantipassword" class="nav-link <?php if ($this->uri->segment(1) == "album") {
+                                                                                  echo "active";
+                                                                                } ?>">
                 <i class="nav-icon fas fa-key"></i>
                 <p>
                   Ganti Password

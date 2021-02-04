@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Undangan Pernikahan Online | Mengundang.co.id</title>
+  <title>Undangan Pernikahan Online | MENGUNDANG.co.id</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -51,6 +51,7 @@
           <li class="active"><a href="index.html">Home</a></li>
           <li><a href="#main">Manfaat</a></li>
           <li><a href="#services">Fitur</a></li>
+          <li><a href="#portfolio">Contoh Tema</a></li>
           <li><a href="#team">Testimoni</a></li>
           <li><a href="#pricing">Paket</a></li>
           <li><a href="#faq">Pertanyaan</a></li>
@@ -245,8 +246,88 @@
       </div>
     </section><!-- End Services Section -->
 
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
 
+        <div class="section-title">
+          <h2>Contoh Tema</h2>
+          <p>Semua tema tergantung pilihan anda, anda dapat mengkombinasikan antara Warna, Jenis Font, dan bahkan Background untuk undangan anda.</p>
+        </div>
+        <div class="row content">
+          <style media="screen">
+            .masonry-container {
+              -webkit-column-count: 2;
+              -moz-column-count: 2;
+              column-count: 2;
 
+              -webkit-column-gap: 15px;
+              -moz-column-gap: 15px;
+              column-gap: 15px;
+            }
+
+            .masonry-item {
+              display: inline-block;
+              width: 100%;
+            }
+
+            .masonry-item img {
+              display: block;
+              width: 100%;
+            }
+
+            /* Just for decoration: */
+            .masonry-item span {
+              font-family: sans-serif;
+              display: block;
+              padding: 10px;
+            }
+
+            .masonry-item {
+              margin-bottom: 15px;
+              border-radius: 5px;
+            }
+
+            @media (max-width: 768px) {
+              .masonry-container {
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                column-count: 2;
+
+                -webkit-column-gap: 15px;
+                -moz-column-gap: 15px;
+                column-gap: 15px;
+              }
+            }
+          </style>
+
+          <div class="masonry-container">
+            <?php
+            for ($x = 1; $x <= 6; $x++) {
+            ?>
+              <div class="aos-item" data-aos="fade-down" data-aos-duration="1000">
+                <div class="masonry-item">
+                  <a href=""><img src="<?php echo base_url(); ?>assets/tema/<?php echo $x; ?>.png" /></a>
+                </div>
+              </div>
+            <?php } ?>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+          <div class="col-lg-12 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="https://demo.mengundang.co.id">Lihat Contoh Undangan</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
       <div class="container" data-aos="fade-up">
@@ -321,7 +402,8 @@
               <ul>
                 <li><i class="bx bx-check"></i> Domain <b>namapasangan.mengundang.co.id</b></li>
                 <li><i class="bx bx-check"></i> Semua Fitur yang kami Tawarkan.</li>
-                <li><i class="bx bx-check"></i> Pusat Bantuan</li>
+                <li><i class="bx bx-check"></i> Bebas Request Musik.</li>
+                <li><i class="bx bx-check"></i> Pusat Bantuan.</li>
               </ul>
               <a href="#" class="buy-btn" target="_blank" href="https://wa.me/6282228899882?text=Halo, Saya berminat untuk membuat Web Undangan Online.">Pesan Sekarang</a>
             </div>
@@ -334,7 +416,8 @@
               <ul>
                 <li><i class="bx bx-check"></i> Custom Domain <b>namapasangan.com</b></li>
                 <li><i class="bx bx-check"></i> Semua Fitur yang kami Tawarkan.</li>
-                <li><i class="bx bx-check"></i> Pusat Bantuan</li>
+                <li><i class="bx bx-check"></i> Bebas Request Musik.</li>
+                <li><i class="bx bx-check"></i> Pusat Bantuan.</li>
               </ul>
               <a href="#" class="buy-btn">Pesan Sekarang</a>
             </div>
@@ -384,23 +467,23 @@
               </div>
             </li>
 
-            <li data-aos="fade-up" data-aos-delay="400">
+            <!-- <li data-aos="fade-up" data-aos-delay="400">
               <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-parent=".faq-list">
                 <p>
                   Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
                 </p>
               </div>
-            </li>
+            </li> -->
 
-            <li data-aos="fade-up" data-aos-delay="500">
+            <!-- <li data-aos="fade-up" data-aos-delay="500">
               <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-5" class="collapse" data-parent=".faq-list">
                 <p>
                   Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
                 </p>
               </div>
-            </li>
+            </li> -->
 
           </ul>
         </div>

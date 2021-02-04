@@ -21,7 +21,11 @@ class Register extends CI_Controller
 	 */
 	public function index()
 	{
-		$this->load->view('register');
+		if (!empty($this->session->userdata('is_login'))) {
+			redirect('dashboard');
+		} else {
+			$this->load->view('register');
+		}
 	}
 
 	public function proses()
